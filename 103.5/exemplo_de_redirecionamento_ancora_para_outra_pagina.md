@@ -1,0 +1,1 @@
+<span style="color:red">Para entender sobre Load Average, acesse o link <a href="1035.html#Load">O que é Load Average?</a></span>
