@@ -29,4 +29,4 @@ Na produção deste documento, buscou-se obter o máximo de qualidade possível,
 [Início](markdown/main.md)
 
 ### Para começar a lêr em HTML, acesse o link abaixo:
-[Início](https://sysnetbr.eng.br/LPIC-1/html/main.html)
+[Início](http://sysnetbr.eng.br/LPIC-1/html/main.html)
