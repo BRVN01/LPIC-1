@@ -27,3 +27,6 @@ Na produção deste documento, buscou-se obter o máximo de qualidade possível,
 
 ### Para começar a lêr no Github, acesse o link abaixo:
 [Início](markdown/main.md)
+
+### Para começar a lêr em HTML, acesse o link abaixo:
+[Início](https://sysnetbr.eng.br/LPIC-1/html/main.html)
