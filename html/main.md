@@ -22,19 +22,19 @@ Simulados
 Conteúdo para estudo
 ----------------------------------------------------------------------------------------------------------------------
 
-[Introdução](intro.md)
+[Introdução](intro.html)
 
 **103: Comandos GNU e Unix**
 
-​		[103.1 - Trabalhando na linha de comando](103.1/1031.md)
-​		[103.2 - Processar fluxo de texto usando filtro](103.2/1032.md)
-​		[103.3 - Realizar o Gerenciamento Básico de Arquivos](103.3/1033.md)
-​		[103.4 Usar Streams, pipes e redirecionadores](103.4/1034.md)
-​		[103.5 Criar, monitorar e eliminar processos](103.5/1035.md)
-​		[103.6 Modificar o NI de execução de processos](103.6/1036.md)
-​		[103.7 Expressões regulares](103.7/1037.md)
-​		[103.8 Editção básica de texto](103.8/1038.md)
+​		[103.1 - Trabalhando na linha de comando](103.1/1031.html)
+​		[103.2 - Processar fluxo de texto usando filtro](103.2/1032.html)
+​		[103.3 - Realizar o Gerenciamento Básico de Arquivos](103.3/1033.html)
+​		[103.4 Usar Streams, pipes e redirecionadores](103.4/1034.html)
+​		[103.5 Criar, monitorar e eliminar processos](103.5/1035.html)
+​		[103.6 Modificar o NI de execução de processos](103.6/1036.html)
+​		[103.7 Expressões regulares](103.7/1037.html)
+​		[103.8 Editção básica de texto](103.8/1038.html)
 
 **101 Arquitetura do Sistema**
 
-​		[101.1 Identificar e configurar hardware ](101.1/1011.md)
+​		[101.1 Identificar e configurar hardware ](101.1/1011.html)
