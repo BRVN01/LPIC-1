@@ -1,0 +1,21 @@
+Um Nice valor é um espaço do usuário e PR de prioridade é a prioridade real do processo que usa pelo kernel do Linux. No sistema Linux, as prioridades são de 0 a 139, 
+sendo de 0 a 99 para tempo real e de 100 a 139 para usuários. o intervalo de valores Nice é de -20 a +19, onde -20 é o mais alto, o padrão 0 e +19 é o mais baixo. relação entre valor agradável e prioridade é:
+
+PR = 20 + (-20 a +19) é de 0 a 39 que mapeia de 100 a 139.
+
+
+
+ h: PR  --  Priority
+      The priority of the task.
+      
+      : NI  --  Nice value
+      The nice value of the task.  A negative nice value means higher  priority,
+      whereas  a  positive  nice value means lower priority.  Zero in this field
+      simply means priority will not be adjusted in determining  a  task’s  dis-
+      patchability.
+      
+      
+      
+      
+      
+      chrt -r 90 top

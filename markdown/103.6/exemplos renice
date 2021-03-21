@@ -1,0 +1,39 @@
+linux:~$ ps -la | sed -n '1p; /ping/p'
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1001    5775    5669  0  80   0 -  1832 -      pts/1    00:00:00 ping
+linux:~$ sudo nice -n 15 5775
+nice: ‘5775’: No such file or directory
+linux:~$ sudo renice -n 15 5775
+5775 (process ID) old priority 0, new priority 15
+linux:~$ ps -la | sed -n '1p; /ping/p'
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1001    5775    5669  0  95  15 -  1832 -      pts/1    00:00:00 ping
+linux:~$ sudo renice -n -15 5775
+5775 (process ID) old priority 15, new priority -15
+linux:~$ ps -la | sed -n '1p; /ping/p'
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1001    5775    5669  0  65 -15 -  1832 -      pts/1    00:00:00 ping
+linux:~$ sudo renice --17 5775
+renice: invalid priority '--17'
+Try 'renice --help' for more information.
+linux:~$ sudo renice -17 5775
+5775 (process ID) old priority -15, new priority -17
+linux:~$ ps -la | sed -n '1p; /ping/p'
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1001    5775    5669  0  63 -17 -  1832 -      pts/1    00:00:00 ping
+linux:~$ sudo renice 17 5775
+5775 (process ID) old priority -17, new priority 17
+linux:~$ ps -la | sed -n '1p; /ping/p'
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1001    5775    5669  0  97  17 -  1832 -      pts/1    00:00:00 ping
+linux:~$ sudo renice -n 19 5775
+5775 (process ID) old priority 17, new priority 19
+linux:~$ ps -la | sed -n '1p; /ping/p'
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1001    5775    5669  0  99  19 -  1832 -      pts/1    00:00:00 ping
+linux:~$ sudo renice -n -19 5775
+5775 (process ID) old priority 19, new priority -19
+linux:~$ ps -la | sed -n '1p; /ping/p'
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1001    5775    5669  0  61 -19 -  1832 -      pts/1    00:00:00 ping
+

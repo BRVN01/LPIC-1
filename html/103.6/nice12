@@ -1,0 +1,60 @@
+linux:~$ echo -e "\n\nSAIDA DO TOP\n" && top -u bruno -b -d 1 -n 1 | sed -n '7p; /ping/p' && echo -e "\n\nSAIDA DO PS\n" && ps -la | sed -n '1p; /ping/p'
+
+
+SAIDA DO TOP
+
+Tasks: 260 total,   1 running, 259 sleeping,   0 stopped,   0 zombie
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+   4460 bruno     20   0    7328   2488   2212 S   0.0   0.0   0:00.00 ping
+
+
+SAIDA DO PS
+
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000    4460    4367  0  80   0 -  1832 -      pts/2    00:00:00 ping
+
+_________________________________________________________________________________________________
+linux:~$ echo -e "\n\nSAIDA DO TOP\n" && top -u bruno -b -d 1 -n 1 | sed -n '7p; /ping/p' && echo -e "\n\nSAIDA DO PS\n" && ps -la | sed -n '1p; /ping/p'
+
+
+SAIDA DO TOP
+
+Tasks: 260 total,   1 running, 259 sleeping,   0 stopped,   0 zombie
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+   4460 bruno      0 -20    7328   2488   2212 S   0.0   0.0   0:00.00 ping
+
+
+SAIDA DO PS
+
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000    4460    4367  0  60 -20 -  1832 -      pts/2    00:00:00 ping
+_________________________________________________________________________________________________
+linux:~$ echo -e "\n\nSAIDA DO TOP\n" && top -u bruno -b -d 1 -n 1 | sed -n '7p; /ping/p' && echo -e "\n\nSAIDA DO PS\n" && ps -la | sed -n '1p; /ping/p'
+
+
+SAIDA DO TOP
+
+Tasks: 260 total,   1 running, 259 sleeping,   0 stopped,   0 zombie
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+   4460 bruno     39  19    7328   2488   2212 S   0.0   0.0   0:00.00 ping
+
+
+SAIDA DO PS
+
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000    4460    4367  0  99  19 -  1832 -      pts/2    00:00:00 ping
+_________________________________________________________________________________________________
+linux:~$ echo -e "\n\nSAIDA DO TOP\n" && top -u bruno -b -d 1 -n 1 | sed -n '7p; /ping/p' && echo -e "\n\nSAIDA DO PS\n" && ps -la | sed -n '1p; /ping/p'
+
+
+SAIDA DO TOP
+
+Tasks: 260 total,   1 running, 259 sleeping,   0 stopped,   0 zombie
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+   4460 bruno     35  15    7328   2488   2212 S   0.0   0.0   0:00.00 ping
+
+
+SAIDA DO PS
+
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000    4460    4367  0  95  15 -  1832 -      pts/2    00:00:00 ping
