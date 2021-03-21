@@ -47,6 +47,6 @@ Conteúdo para estudo
 [103.8 Editção básica de texto](103.8/1038.md)
 
 
-**101.1 Arquitetura do Sistema**
+**101 Arquitetura do Sistema**
 
 [101.1 Identificar e configurar hardware ](101.1/1011.md)
