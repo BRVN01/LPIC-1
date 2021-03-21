@@ -10,6 +10,7 @@ Treinamentos
 ----------------------------------------------------------------------------------------------------------------------
 
 [Treinamento de graça - 1](https://www.theurbanpenguin.com/lpi-training-from-theurbanpenguin/lpic-1-linux-server-professional/)
+
 [Treinamento de graça - 101 - Oficial](https://learning.lpi.org/en/learning-materials/101-500/)
 [Treinamento de graça - 102 - Oficial](https://learning.lpi.org/en/learning-materials/102-500/)
 
