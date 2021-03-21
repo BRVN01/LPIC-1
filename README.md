@@ -24,3 +24,6 @@ Na produção deste documento, buscou-se obter o máximo de qualidade possível,
 #### Este documento é distribuido sem qualquer garantia, implícita e/ou explícita da Linux Professional Institute.
 
 É concedida permissão para copiar, distribuir e/ou modificar este Tutorial da LPIC-1.
+
+### Para começar a lêr no Github, acesse o link abaixo:
+[Início](markdown/main.md)
