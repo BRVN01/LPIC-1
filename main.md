@@ -30,21 +30,21 @@ Conteúdo para estudo
 
 [103: Comandos GNU e Unix](103.1/1031.html)
 
-         [103.1 - Trabalhando na linha de comando](103.1/1031.html)
+   [103.1 - Trabalhando na linha de comando](103.1/1031.html)
 
-         [103.2 - Processar fluxo de texto usando filtro](103.2/1032.html)
+   [103.2 - Processar fluxo de texto usando filtro](103.2/1032.html)
 
-         [103.3 - Realizar o Gerenciamento Básico de Arquivos](103.3/1033.html)
+   [103.3 - Realizar o Gerenciamento Básico de Arquivos](103.3/1033.html)
 
-         [103.4 Usar Streams, pipes e redirecionadores](103.4/1034.html)
+   [103.4 Usar Streams, pipes e redirecionadores](103.4/1034.html)
 
-         [103.5 Criar, monitorar e eliminar processos](103.5/1035.html)
+   [103.5 Criar, monitorar e eliminar processos](103.5/1035.html)
 
-         [103.6 Modificar o NI de execução de processos](103.6/1036.html)
+   [103.6 Modificar o NI de execução de processos](103.6/1036.html)
 
-         [103.7 Expressões regulares](103.7/1037.html)
+   [103.7 Expressões regulares](103.7/1037.html)
 
-         [103.8 Editção básica de texto](103.8/1038.html)
+   [103.8 Editção básica de texto](103.8/1038.html)
 
 
 
