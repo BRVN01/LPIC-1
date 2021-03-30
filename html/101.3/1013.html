@@ -1,0 +1,1285 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>1013</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+/* Alterado por mim 01/08/2020 */
+
+/* code color */
+.cm-s-inner .cm-keyword {
+    color: #bb7fc3;
+
+}
+
+.cm-s-inner .cm-atom,
+.cm-s-inner.cm-atom {
+    color: #C7C7C7;
+}
+
+.cm-s-inner .cm-number {
+    color: #88b2a1;
+}
+
+.cm-s-inner .cm-def {
+    color: #7f7fff;
+}
+
+.cm-s-inner .cm-variable {
+    color: #C7C7C7;
+}
+
+.cm-s-inner .cm-variable-2 {
+    color: #C7C7C7;
+}
+
+.cm-s-inner .cm-variable-3 {
+    color: #C7C7C7;
+}
+
+.cm-s-inner .cm-string {
+    color: #d48888;
+}
+
+.cm-s-inner .cm-property {
+    color: #efefef;
+}
+
+.cm-s-inner .cm-operator {
+    color: #cb8c8c;
+}
+
+.cm-s-inner .cm-comment,
+.cm-s-inner.cm-comment {
+    color: hsl(0, 0%, 35%);
+}
+
+.cm-s-inner .cm-string-2 {
+    color: #ffaa7f;
+}
+
+.cm-s-inner .cm-meta {
+    color: hsl(0, 0%, 33%);
+}
+
+.cm-s-inner .cm-qualifier {
+    color: hsl(0, 0%, 33%);
+}
+
+.cm-s-inner .cm-builtin {
+    color: #997fd4;
+}
+
+.cm-s-inner .cm-bracket {
+    color: #ccccbb;
+}
+
+.cm-s-inner .cm-tag {
+    color: #88bb7f;
+}
+
+.cm-s-inner .cm-attribute {
+    color: #7f7fe5;
+}
+
+.cm-s-inner .cm-header,
+.cm-s-inner.cm-header {
+    color: #7f7fff;
+}
+
+.cm-s-inner .cm-quote,
+.cm-s-inner.cm-quote {
+    color: #7fcc7f;
+}
+
+.cm-s-inner .cm-hr,
+.cm-s-inner.cm-hr {
+    color: hsl(0, 0%, 60%);
+}
+
+.cm-s-inner .cm-link,
+.cm-s-inner.cm-link {
+    color: #7f7fe5;
+}
+
+.cm-negative {
+    color: #eea1a1;
+}
+
+.cm-positive {
+    color: #90cc90;
+}
+
+.cm-header,
+.cm-strong {
+    font-weight: 700;
+}
+
+.cm-error {
+    color: #ff7f7f;
+}
+
+.cm-invalidchar {
+    color: #ff7f7f;
+}
+
+.cm-constant {
+    color: #0092ce;
+}
+
+.cm-defined {
+    color: #dac37f;
+}
+
+div.CodeMirror span.CodeMirror-matchingbracket {
+    color: #7fff7f;
+}
+
+div.CodeMirror span.CodeMirror-nonmatchingbracket {
+    color: #ff9090;
+}
+:root {
+    --fg-color: #696969;
+    --bg-color: #0a0a0a;
+
+    /* Cor do comentário */
+    --fg-comment: #c2884f;
+
+    /* Cor de background do código (quando usa ``) */
+    --bg-trans-d: #0a0a0a;
+    
+    --bg-trans-l: hsla(0, 0%, 100%, 10%);
+
+    /* Cor das letras no código (quando usa ``) */
+/*    --theme-vim-yl: #3ab5ae;*/
+    --theme-vim-yl: #61cfc9;
+
+    /* Cor da barra dentro do bloco de código (quando usa ```) */
+    --theme-vim-gn: #ffffff;
+
+    --theme-vim-bl: #22a2c9;
+    --table-bg: hsla(0, 0%, 100%, 6%);
+    --table-bg-dim: hsla(0, 0%, 100%, 2%);
+
+    /* Barra de indice lateral */
+    --side-bar-bg-color: #c7c1c1;
+
+    --control-text-color: #0e0808;
+
+    /* Cor quando seleciona o texto*/
+    --select-text-bg-color: hsl(153, 47%, 40%);
+
+    --select-text-font-color: #fff;
+
+    --item-hover-bg-color: #fff;
+
+    /* Cor do bloco de código */
+    --fence-bg: #1a1a1a;
+/*    --fence-bg: hsl(0, 0%, 10%);*/
+}
+
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif !important;
+    color: var(--fg-color);
+    background-color: var(--bg-color);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6rem;
+    letter-spacing: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#write {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 20px 30px 40px 30px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+#write p {
+    line-height: 1.6rem;
+    word-spacing: 0.05rem;
+}
+
+#write ol li {
+    padding-left: 0.5rem;
+}
+
+#write > ul:first-child,
+#write > ol:first-child {
+    margin-top: 30px;
+}
+
+body > *:first-child {
+    margin-top: 0 !important;
+}
+
+body > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+a {
+    /* Cor do indice (toc) */
+    color: #41b883;
+    font-weight: 600;
+    padding: 0px 2px;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+
+/* h2 a,
+h3 a {
+    color: #34495e;
+} */
+
+h1 {
+    padding-bottom: 0.4rem;
+    font-size: 2.2rem;
+    line-height: 1.3;
+    color: #e87800;
+}
+
+h2 {
+    font-size: 1.75rem;
+    line-height: 1.225;
+    margin: 35px 0px 15px 0px;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid hsl(0, 0%, 20%);
+    color: #d86c00;
+}
+
+h3 {
+    font-size: 1.4rem;
+    line-height: 1.43;
+    margin: 20px 0px 7px 0px;
+    color: #ff860c;
+}
+
+h4 {
+    font-size: 1.2rem;
+    color: #de9d04;
+}
+
+h5 {
+    font-size: 1rem;
+    color: #debd04;
+}
+
+h6 {
+    font-size: 1rem;
+    color: #e8c500;
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+
+/*table {
+    margin: 0.8em 0;
+}*/
+
+li > ol,
+li > ul {
+    margin: 0 0;
+}
+
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: hsl(0, 0%, 18%);
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    margin-top: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+ul,
+ol {
+    padding-left: 30px;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+/* Citação */
+
+blockquote {
+    border-left: 4px solid #0092ce;
+    padding: 10px 0px 10px 15px;
+    color: #696969;
+/*    background-color: rgba(66, 185, 131, 0.1);*/
+    background-color: rgba(66, 132, 183, 0.1);
+}
+
+table {
+    font-family: Roboto Mono, Source Sans Pro, Monaco, courier, monospace !important;
+    font-size: 0.85rem;
+    padding: 0;
+    word-break: initial;
+}
+
+table tr {
+    border-top: 1px solid hsl(210, 10%, 11%);
+    margin: 0;
+    padding: 0;
+}
+
+table tr:nth-child(2n),
+thead {
+    background-color: var(--table-bg);
+}
+
+table tr,
+thead {
+    background-color: var(--table-bg-dim);
+}
+
+table tr th {
+    font-weight: bold;
+   border: 1px solid hsl(210, 10%, 11%);
+/*    border: transparent;*/
+    border-bottom: 0;
+/*    text-align: left;*/
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table tr td {
+    border: 1px solid #1d1d1d;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+#write strong {
+    padding: 0px 1px 0 1px;
+}
+
+#write em {
+    padding: 0px 5px 0 2px;
+}
+
+#write table thead th {
+    /* background-color: hsl(0, 0%, 5%); */
+    background-color: hsl(0, 0%, 9%);
+}
+
+#write .CodeMirror-gutters {
+    border-right: none;
+}
+
+#write .md-fences {
+    border: 1px solid hsl(0, 0%, 11%);
+    -webkit-font-smoothing: initial;
+    margin: 0.8rem 0 !important;
+    padding: 0.3rem 0rem !important;
+    line-height: 1.43rem;
+
+    /* Cor do texto dentro do bloco de código */
+    color: hsl(0, 0%, 78%);
+    
+    background-color: var(--fence-bg) !important;
+    border-radius: 2px;
+    font-family: Roboto Mono, Source Sans Pro, Monaco, courier, monospace !important;
+    font-weight: bold;
+    font-size: 0.85rem;
+    word-wrap: normal;
+}
+
+#write .CodeMirror-wrap .CodeMirror-code pre {
+    padding-left: 12px;
+}
+
+/* Código `exemplo` */
+#write code,
+tt {
+    margin: 0 0.03px;
+    padding: 0.03px 0.2px;
+    border-radius: 0.2px;
+/*    font-family: Roboto Mono, Source Sans Pro, Monaco, courier, monospace !important;*/
+    font-family: latin-ext !important;
+    font-weight: normal;
+    /* tamanho das letras dentro do código: */
+    font-size: 1rem;
+    color: var(--theme-vim-yl);
+    background-color: var(--bg-trans-d);
+}
+
+#write .md-footnote {
+    color: var(--theme-vim-yl);
+    background-color: var(--bg-trans-d);
+}
+
+/* heighlight. */
+#write mark {
+    background-color: #ebffeb;
+    border-radius: 2px;
+    padding: 2px 4px;
+    margin: 0 2px;
+    color: #222;
+    font-weight: 500;
+}
+
+#write del {
+    padding: 1px 2px;
+}
+
+.cm-s-inner .cm-link,
+.cm-s-inner.cm-link {
+    color: var(--theme-vim-bl);
+}
+
+.cm-s-inner .cm-string {
+    color: var(--theme-vim-bl);
+}
+
+.md-task-list-item > input {
+    margin-left: -1.3em;
+}
+
+@media screen and (min-width: 914px) {
+    /*body {
+        width: 854px;
+        margin: 0 auto;
+    }*/
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+#write pre.md-meta-block {
+    padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: hsl(0, 0%, 3%);
+    border: 0;
+    border-radius: 3px;
+    color: hsl(0, 0%, 53%);
+    margin-top: 0 !important;
+}
+
+.mathjax-block > .code-tooltip {
+    bottom: 0.375rem;
+}
+
+#write > h3.md-focus:before {
+    left: -1.5625rem;
+    top: 0.375rem;
+}
+
+#write > h4.md-focus:before {
+    left: -1.5625rem;
+    top: 0.285714286rem;
+}
+
+#write > h5.md-focus:before {
+    left: -1.5625rem;
+    top: 0.285714286rem;
+}
+
+#write > h6.md-focus:before {
+    left: -1.5625rem;
+    top: 0.285714286rem;
+}
+
+.md-image > .md-meta {
+    border-radius: 3px;
+    font-family: Consolas, 'Liberation Mono', Courier, monospace;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: inherit;
+}
+
+.md-toc {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: hsl(0, 0%, 2%);
+    border-color: hsl(0, 0%, 0%) hsl(0, 0%, 10%) hsl(0, 0%, 10%) hsl(0, 0%, 7%);
+    border-style: solid;
+    border-width: 1px;
+}
+
+#md-notification:before {
+    top: 10px;
+}
+
+/** focus mode */
+
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header,
+.context-menu,
+.megamenu-content,
+footer {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: hsl(0, 0%, 2%);
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: var(--theme-vim-gn);
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: hsl(215, 92%, 5%);
+}
+
+#typora-sidebar {
+    /* font-family: Roboto Mono, Source Sans Pro, Monaco, courier, monospace !important; */
+    font-family: Helvetica, Arial !important;
+    font-weight: bold;
+}
+
+.file-list-item-summary {
+    font-family: Helvetica, Arial !important;
+    font-weight: 400;
+}
+
+.file-list-item {
+    border-bottom: 0.15rem solid hsl(0, 0%, 18%);
+}
+
+.file-list-item.active {
+    background: hsl(0, 0%, 15%) !important;
+}
+
+.file-node-background {
+    height: 29px;
+}
+
+#toc-dropmenu {
+    background: hsl(0, 0%, 18%) !important;
+    /* font-family: Roboto Mono, Source Sans Pro, Monaco, courier, monospace !important; */
+    font-weight: bold;
+}
+
+#toc-content {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#toc-content a:hover {
+    text-decoration: none;
+}
+
+.outline-item {
+    /* transition: color 150ms, background-color 150ms; */
+    transition: color 150ms;
+}
+
+.outline-item:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--theme-vim-gn);
+}
+
+.sidebar-footer {
+    border-top: 2px solid hsl(0, 0%, 15%) !important;
+}
+
+.footer-item:hover,
+.sidebar-footer-item:hover {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.file-tree-node.active > .file-node-background {
+    background-color: hsl(0, 0%, 15%) !important;
+}
+
+.file-node-content:hover {
+    color: #fff;
+}
+
+html {
+    background: #1f1f1f !important;
+}
+
+.outline-title-wrapper {
+    display: none;
+}
+
+.dropdown-menu .divider {
+    display: none;
+    height: 2px;
+    background-color: hsl(0, 0%, 13%);
+}
+
+.dropdown-menu > li > a {
+    color: #fff;
+}
+
+.autoComplt-hint {
+    color: var(--theme-vim-gn) !important;
+    /* border-color: transparent !important */
+}
+
+.auto-suggest-container {
+    color: var(--theme-vim-gn) !important;
+    font-family: Roboto Mono, Source Sans Pro, Monaco, courier, monospace !important;
+    font-weight: bold !important;
+    border-color: var(--theme-vim-gn) !important;
+    border-radius: 8px !important;
+    border-width: 2px !important;
+    margin-top: 5px;
+    overflow: hidden !important;
+    box-shadow: 0 0 1rem hsla(153, 47%, 49%, 0.3);
+}
+
+/* .auto-suggest-container li { */
+/* transition: all 150ms; */
+/* text-align: center !important; */
+/* } */
+
+.auto-suggest-container li:hover {
+    color: #fff !important;
+    background-color: var(--theme-vim-gn) !important;
+    /* text-align: right !important; */
+}
+
+/* windows */
+/* .modal-dialog { */
+/* color: #000; */
+/* } */
+
+.typora-sourceview-on #toggle-sourceview-btn {
+    background-color: var(--theme-vim-gn);
+}
+
+/* cursor */
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+    border-left: 0.2px solid var(--theme-vim-gn);
+}
+
+.CodeMirror div.CodeMirror-cursor {
+    /* 1px é a grossura da paleta (quando em ```) */
+    border-left: 0.2px solid var(--theme-vim-gn);
+    z-index: 3;
+}
+
+.form-control {
+    background-color: var(--bg-trans-d);
+    border-color: var(--bg-color);
+}
+
+.modal-header,
+.modal-footer {
+    border-color: var(--bg-trans-l);
+    border-width: 2px;
+}
+
+.btn:hover {
+    background-color: var(--theme-vim-gn);
+}
+
+.md-rawblock-on-edit > .md-rawblock-tooltip,
+.md-rawblock:hover > .md-rawblock-container,
+.md-rawblock:hover > .md-rawblock-tooltip {
+    transition: background 0.5s linear;
+    background-color: var(--fence-bg) !important;
+    display: block;
+}
+
+.md-rawblock-control:not(.md-rawblock-tooltip) {
+    background-color: var(--fence-bg) !important;
+}
+
+/* windows */
+
+:root {
+    --text-color: var(--fg-color);
+    --btn-border-color: hsla(0, 0%, 100%, 0.1);
+    --item-hover-bg-color: var(--select-text-bg-color);
+}
+
+.megamenu-menu-header {
+    border-color: var(--btn-border-color);
+}
+
+.megamenu-opened header {
+    background-image: none;
+}
+
+.megamenu-menu {
+    background-color: var(--side-bar-bg-color);
+}
+
+.megamenu-content {
+    background: var(--bg-color);
+}
+
+.modal-content {
+    border-color: var(--btn-border-color);
+}
+
+.long-btn {
+    border-color: var(--btn-border-color);
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: transparent;
+}
+
+footer.ty-footer {
+    border-top: 1px solid var(--table-bg);
+}
+
+#recent-file-panel-action-btn {
+    background-color: transparent;
+}
+
+/* improvement */
+
+.dropdown-menu {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-box-shadow: 0 0 0 0 transparent;
+}
+
+
+/* links */
+
+a {
+        text-decoration: none;
+        color: #0092ce;
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+table {
+    margin: 0.4em 0;
+    /*     margin: 0.8rem 0 0 0 ; */
+}
+/* snappy scheme */
+.cm-s-inner .cm-keyword {
+    color: #C7C7C7;
+}
+
+.cm-s-inner .cm-atom,
+.cm-s-inner.cm-atom {
+    color: #C7C7C7;
+}
+
+.cm-s-inner .cm-number {
+    color: #C7C7C7;
+}
+
+/* Variáveis */
+.cm-s-inner .cm-def {
+    color: #C7C7C7;
+}
+
+.cm-s-inner .cm-variable,
+.cm-s-inner .cm-variable-2,
+.cm-s-inner .cm-variable-3 {
+    color: #e3e2e0;
+}
+
+/* coisas entre aspas */
+.cm-s-inner .cm-string,
+.cm-s-inner .cm-string-2 {
+    color: #C7C7C7;
+}
+
+.cm-s-inner .cm-property {
+    color: #e3e2e0;
+}
+
+.cm-s-inner .cm-operator {
+    color: #C7C7C7;
+}
+
+/* Cor de comentario dentro de bloco de código (como ```) */
+.cm-s-inner .cm-comment,
+.cm-s-inner.cm-comment {
+    color: var(--fg-comment);
+    font-weight: normal;
+}
+
+.cm-s-inner .cm-meta {
+    color: #ffffff;
+}
+
+/* Cor do bloco de código (esse é o código mesmo, depois do PS1) (dentro de ```)*/
+.cm-s-inner .cm-builtin {
+    color: hsl(0, 0%, 78%);
+/*    color: #9088cc;*/
+}
+
+.cm-s-inner .cm-bracket {
+    color: white;
+    /* < > </ > */
+}
+
+.cm-s-inner .cm-tag {
+    color: #4ea1df;
+}
+
+.cm-s-inner .cm-attribute {
+    color: #C7C7C7;
+}
+
+.cm-s-inner .cm-header,
+.cm-s-inner.cm-header {
+    color: #e3e2e0;
+}
+
+/* Barra da citação */
+.cm-s-inner .cm-quote,
+.cm-s-inner.cm-quote {
+    color: #4ea1df;
+}
+
+.cm-s-inner .cm-hr,
+.cm-s-inner.cm-hr {
+    color: #e3e2e0;
+}
+
+.cm-s-inner .cm-link,
+.cm-s-inner.cm-link {
+    /* color: #0000cc */
+    color: #f66153;
+}
+
+.cm-negative {
+    color: #e61f44;
+}
+
+.cm-positive {
+    color: #a6e22e;
+}
+
+
+
+</style>
+</head>
+<body class='typora-export'>
+<div id='write'  class=''><h1><a name="índice" class="md-header-anchor"></a><span>Índice</span></h1><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n394"><a class="md-toc-inner" href="#índice">Índice</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n399"><a class="md-toc-inner" href="#1013-runlevel-shutdown-e-reboot">101.3 Runlevel, Shutdown e Reboot</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n408"><a class="md-toc-inner" href="#sysv-init">SysV init</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n447"><a class="md-toc-inner" href="#systemd">SystemD</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n487"><a class="md-toc-inner" href="#upstart">UPSTART</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n492"><a class="md-toc-inner" href="#shutdown-e-restart">Shutdown e Restart</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n504"><a class="md-toc-inner" href="#wall">WALL</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n509"><a class="md-toc-inner" href="#acpid---advanced-configuration-and-power-interface">ACPID - Advanced Configuration and Power Interface</a></span></p></div><p><a href='../101.2/1012.html'><span style="color:yellow"><span>Voltar</span></span></a>
+<a href='../102.1/1021.html'><span style="color:yellow"><span>Próximo</span></span></a><span> </span>
+<a href='../main.html'><span style="color:yellow"><span>Índice Geral</span></span></a></p><p>&nbsp;</p><h1><a name="1013-runlevel-shutdown-e-reboot" class="md-header-anchor"></a><span>101.3 Runlevel, Shutdown e Reboot</span></h1><p><span>O processo INIT é o pai de todos os processos no sistema, isso porque ele tem ID 1, é o primeiro processo do Linux, hoje em dia temos alguns tipos de INIT:</span></p><ul><li><span>SystemV (SysV) - Init original;</span></li><li><span>SystemD (mais atual) - Gerenciador de sistemas e serviços compatível com SysV;</span></li><li><span>Upstart (Muito usado também) - Gerenciador de serviços substituto ao INIT, possui compatibilidade.</span></li></ul><h2><a name="sysv-init" class="md-header-anchor"></a><span>SysV init</span></h2><p><span>O SystemV (SysV) trabalha com </span><code>runlevels</code><span> ou níveis de execução. Cada </span><code>runlevel</code><span> carrega conjunto de Programas, Scripts e Serviços na inicialização do sistema.</span></p><p><span>As configurações principais ficam em </span><code>/etc/inittab</code><span>, e os scripts ficam em </span><code>/etc/init.d/</code><span> (Scripts de inicialização de cada Serviço) e </span><code>/etc/rcX.d/</code><span> (onde X é o valor do Runlevel. Lista dos serviços que devam ser inicializados em cada Runlevel, Serviços começando com </span><code>S</code><span> serão iniciados (Start) e Serviços começando com </span><code>K</code><span> não serão (Kill)).</span></p><p>&nbsp;</p><p><span>Códigos do Runlevels</span></p><figure><table><thead><tr><th><span>Códigos</span></th><th><span>Descrição</span></th></tr></thead><tbody><tr><td><span>0</span></td><td><span>Desligamento</span></td></tr><tr><td><span>1, s, S ou Single</span></td><td><span>Single User (Usado para manutenção), só permite 1 usuário.</span></td></tr><tr><td><span>2</span></td><td><span>MultiUser sem rede</span></td></tr><tr><td><span>3</span></td><td><span>MultiUser com rede</span></td></tr><tr><td><span>4</span></td><td><span>MultiUser definido pelo user</span></td></tr><tr><td><span>5</span></td><td><span>MultiUser com rede e Interface gráfica (usado em desktops)</span></td></tr><tr><td><span>6</span></td><td><span>Reinicialização</span></td></tr></tbody></table></figure><p><span>Podemos ver o INIT default olhando o no arquivo </span><code>/etc/inittab</code><span>, o comando </span><code>runlevel</code><span> exibe o runlevel atual, os comando </span><code>init X</code><span> e </span><code>telinit X</code><span> (Onde X é o valor do Runlevel) são usados para mudar de Runlevel.</span>
+<span>O comando </span><code>telinit Q</code><span> ou </span><code>telinit q</code><span> recarrega o daemon levando em consideração o arquivo </span><code>/etc/inittab</code><span>, já as opções </span><code>U</code><span> ou </span><code>u</code><span> faz um reload sem olhar o arquivo.</span></p><p>&nbsp;</p><p><span>Exemplo de inittab (Debian 5):</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># /etc/inittab: init(8) configuration.</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># $Id: inittab,v 1.91 2002/01/25 13:35:21 miquels Exp $</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># The default runlevel.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">id:2:initdefault:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># Boot-time system configuration/initialization script.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># This is run first except when booting in emergency (-b) mode.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">si::sysinit:/etc/init.d/rcS</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># What to do in single-user mode.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">~~:S:wait:/sbin/sulogin</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># /etc/init.d executes the S and K scripts upon change</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># of runlevel.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">#</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># Runlevel 0 is halt.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># Runlevel 1 is single-user.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># Runlevels 2-5 are multi-user.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># Runlevel 6 is reboot.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">#id:runlevels:actions:process (wait = O init vai esperar o comando terminar)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># process é o script passando o parametro</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">l0:0:wait:/etc/init.d/rc 0</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">l1:1:wait:/etc/init.d/rc 1</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">l2:2:wait:/etc/init.d/rc 2</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">l3:3:wait:/etc/init.d/rc 3</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">l4:4:wait:/etc/init.d/rc 4</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">l5:5:wait:/etc/init.d/rc 5</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">l6:6:wait:/etc/init.d/rc 6</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># Normally not reached, but fallthrough in case of emergency.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">z6:6:respawn:/sbin/sulogin</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># What to do when CTRL-ALT-DEL is pressed.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">ca:12345:ctrlaltdel:/sbin/shutdown -t1 -a -r now</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># Action on special keypress (ALT-UpArrow).</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">#kb::kbrequest:/bin/echo "Keyboard Request--edit /etc/inittab to let this work."</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># What to do when the power fails/returns.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pf::powerwait:/etc/init.d/powerfail start</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pn::powerfailnow:/etc/init.d/powerfail now</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">po::powerokwait:/etc/init.d/powerfail stop</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># /sbin/getty invocations for the runlevels.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">#</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># The "id" field MUST be the same as the last</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># characters of the device (after "tty").</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">#</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># Format:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">#  &lt;id&gt;:&lt;runlevels&gt;:&lt;action&gt;:&lt;process&gt;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">#</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># Note that on most Debian systems tty7 is used by the X Window System,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># so if you want to add more getty's go ahead but skip tty7 if you run X.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">#</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">1:2345:respawn:/sbin/getty 38400 tty1</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">2:23:respawn:/sbin/getty 38400 tty2</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">3:23:respawn:/sbin/getty 38400 tty3</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">4:23:respawn:/sbin/getty 38400 tty4</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">5:23:respawn:/sbin/getty 38400 tty5</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">6:23:respawn:/sbin/getty 38400 tty6</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># Example how to put a getty on a serial line (for a terminal)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">#</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">#T0:23:respawn:/sbin/getty -L ttyS0 9600 vt100</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">#T1:23:respawn:/sbin/getty -L ttyS1 9600 vt100</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># Example how to put a getty on a modem line.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">#</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">#T3:23:respawn:/sbin/mgetty -x0 -s 57600 ttyS3</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 1540px;"></div><div class="CodeMirror-gutters" style="display: none; height: 1540px;"></div></div></div></pre><p>&nbsp;</p><p><span>Scripts de inicialização:</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Vendo os scripts de inicialização do Runlevel 3:</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ ls</span> <span class="cm-attribute">-lh</span> /etc/rc3.d/</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">total <span class="cm-number">0</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">14</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01cups <span class="cm-attribute">-</span>&gt; ../init.d/cups</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">27</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01speech-dispatcher <span class="cm-attribute">-</span>&gt; ../init.d/speech-dispatcher</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">15</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> S01acpid <span class="cm-attribute">-</span>&gt; ../init.d/acpid</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">17</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> S01anacron <span class="cm-attribute">-</span>&gt; ../init.d/anacron</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">22</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> S01avahi-daemon <span class="cm-attribute">-</span>&gt; ../init.d/avahi-daemon</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">24</span> Nov <span class="cm-number">13</span> <span class="cm-number">17</span>:45 S01binfmt-support <span class="cm-attribute">-</span>&gt; ../init.d/binfmt-support</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">19</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> S01bluetooth <span class="cm-attribute">-</span>&gt; ../init.d/bluetooth</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">26</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> S01console-setup.sh <span class="cm-attribute">-</span>&gt; ../init.d/console-setup.sh</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">14</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> S01cron <span class="cm-attribute">-</span>&gt; ../init.d/cron</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">22</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> S01cups-browsed <span class="cm-attribute">-</span>&gt; ../init.d/cups-browsed</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">14</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> S01dbus <span class="cm-attribute">-</span>&gt; ../init.d/dbus</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">17</span> Mar <span class="cm-number">19</span> <span class="cm-number">16</span>:59 S01glances <span class="cm-attribute">-</span>&gt; ../init.d/glances</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">21</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> S01grub-common <span class="cm-attribute">-</span>&gt; ../init.d/grub-common</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">17</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> S01hddtemp <span class="cm-attribute">-</span>&gt; ../init.d/hddtemp</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">20</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> S01irqbalance <span class="cm-attribute">-</span>&gt; ../init.d/irqbalance</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">20</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> S01kerneloops <span class="cm-attribute">-</span>&gt; ../init.d/kerneloops</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">17</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> S01lightdm <span class="cm-attribute">-</span>&gt; ../init.d/lightdm</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">23</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> S01lvm2-lvmpolld <span class="cm-attribute">-</span>&gt; ../init.d/lvm2-lvmpolld</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">20</span> Jan <span class="cm-number">12</span> <span class="cm-number">19</span>:13 S01mintsystem <span class="cm-attribute">-</span>&gt; ../init.d/mintsystem</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">27</span> Feb <span class="cm-number">28</span> <span class="cm-number">20</span>:58 S01nfs-kernel-server <span class="cm-attribute">-</span>&gt; ../init.d/nfs-kernel-server</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">17</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> S01openvpn <span class="cm-attribute">-</span>&gt; ../init.d/openvpn</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">18</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> S01plymouth <span class="cm-attribute">-</span>&gt; ../init.d/plymouth</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">37</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> S01pulseaudio-enable-autospawn <span class="cm-attribute">-</span>&gt; ../init.d/pulseaudio-enable-autospawn</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">15</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> S01rsync <span class="cm-attribute">-</span>&gt; ../init.d/rsync</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">17</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> S01rsyslog <span class="cm-attribute">-</span>&gt; ../init.d/rsyslog</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">15</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> S01saned <span class="cm-attribute">-</span>&gt; ../init.d/saned</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">23</span> Mar <span class="cm-number">19</span> <span class="cm-number">09</span>:29 S01smartmontools <span class="cm-attribute">-</span>&gt; ../init.d/smartmontools</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">23</span> Mar <span class="cm-number">26</span> <span class="cm-number">11</span>:47 S01spice-vdagent <span class="cm-attribute">-</span>&gt; ../init.d/spice-vdagent</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">13</span> Jan <span class="cm-number">22</span> <span class="cm-number">19</span>:02 S01ssh <span class="cm-attribute">-</span>&gt; ../init.d/ssh</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">15</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> S01uuidd <span class="cm-attribute">-</span>&gt; ../init.d/uuidd</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">20</span> Mar <span class="cm-number">22</span> <span class="cm-number">12</span>:33 S01virtualbox <span class="cm-attribute">-</span>&gt; ../init.d/virtualbox</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Verificando do Runlevel 1:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ ls</span> <span class="cm-attribute">-lh</span> /etc/rc1.d/</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">total <span class="cm-number">0</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">20</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01alsa-utils <span class="cm-attribute">-</span>&gt; ../init.d/alsa-utils</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">22</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01avahi-daemon <span class="cm-attribute">-</span>&gt; ../init.d/avahi-daemon</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">19</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01bluetooth <span class="cm-attribute">-</span>&gt; ../init.d/bluetooth</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">14</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01cups <span class="cm-attribute">-</span>&gt; ../init.d/cups</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">22</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01cups-browsed <span class="cm-attribute">-</span>&gt; ../init.d/cups-browsed</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">17</span> Mar <span class="cm-number">19</span> <span class="cm-number">16</span>:59 K01glances <span class="cm-attribute">-</span>&gt; ../init.d/glances</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">17</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01hddtemp <span class="cm-attribute">-</span>&gt; ../init.d/hddtemp</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">20</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01irqbalance <span class="cm-attribute">-</span>&gt; ../init.d/irqbalance</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">20</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01kerneloops <span class="cm-attribute">-</span>&gt; ../init.d/kerneloops</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">17</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01lightdm <span class="cm-attribute">-</span>&gt; ../init.d/lightdm</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">23</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01lvm2-lvmpolld <span class="cm-attribute">-</span>&gt; ../init.d/lvm2-lvmpolld</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">20</span> Feb <span class="cm-number">28</span> <span class="cm-number">20</span>:58 K01nfs-common <span class="cm-attribute">-</span>&gt; ../init.d/nfs-common</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">27</span> Feb <span class="cm-number">28</span> <span class="cm-number">20</span>:58 K01nfs-kernel-server <span class="cm-attribute">-</span>&gt; ../init.d/nfs-kernel-server</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">17</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01openvpn <span class="cm-attribute">-</span>&gt; ../init.d/openvpn</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">37</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01pulseaudio-enable-autospawn <span class="cm-attribute">-</span>&gt; ../init.d/pulseaudio-enable-autospawn</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">17</span> Feb <span class="cm-number">28</span> <span class="cm-number">20</span>:58 K01rpcbind <span class="cm-attribute">-</span>&gt; ../init.d/rpcbind</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">17</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01rsyslog <span class="cm-attribute">-</span>&gt; ../init.d/rsyslog</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">15</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01saned <span class="cm-attribute">-</span>&gt; ../init.d/saned</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">23</span> Mar <span class="cm-number">19</span> <span class="cm-number">09</span>:29 K01smartmontools <span class="cm-attribute">-</span>&gt; ../init.d/smartmontools</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">27</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01speech-dispatcher <span class="cm-attribute">-</span>&gt; ../init.d/speech-dispatcher</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">23</span> Mar <span class="cm-number">26</span> <span class="cm-number">11</span>:47 K01spice-vdagent <span class="cm-attribute">-</span>&gt; ../init.d/spice-vdagent</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">13</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01ufw <span class="cm-attribute">-</span>&gt; ../init.d/ufw</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">15</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01uuidd <span class="cm-attribute">-</span>&gt; ../init.d/uuidd</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">20</span> Mar <span class="cm-number">22</span> <span class="cm-number">12</span>:33 K01virtualbox <span class="cm-attribute">-</span>&gt; ../init.d/virtualbox</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Runlevel 0 (desligar) e 6 (reiniciar) devem matar os processos para tal efeito:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ ls</span> <span class="cm-attribute">-lh</span> /etc/rc6.d/</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">total <span class="cm-number">0</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">20</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01alsa-utils <span class="cm-attribute">-</span>&gt; ../init.d/alsa-utils</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">22</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01avahi-daemon <span class="cm-attribute">-</span>&gt; ../init.d/avahi-daemon</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">19</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01bluetooth <span class="cm-attribute">-</span>&gt; ../init.d/bluetooth</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">20</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01cryptdisks <span class="cm-attribute">-</span>&gt; ../init.d/cryptdisks</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">26</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01cryptdisks-early <span class="cm-attribute">-</span>&gt; ../init.d/cryptdisks-early</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">22</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01cups-browsed <span class="cm-attribute">-</span>&gt; ../init.d/cups-browsed</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">17</span> Mar <span class="cm-number">19</span> <span class="cm-number">16</span>:59 K01glances <span class="cm-attribute">-</span>&gt; ../init.d/glances</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">17</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01hddtemp <span class="cm-attribute">-</span>&gt; ../init.d/hddtemp</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">20</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01irqbalance <span class="cm-attribute">-</span>&gt; ../init.d/irqbalance</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">20</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01kerneloops <span class="cm-attribute">-</span>&gt; ../init.d/kerneloops</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">17</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01lightdm <span class="cm-attribute">-</span>&gt; ../init.d/lightdm</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">23</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01lvm2-lvmpolld <span class="cm-attribute">-</span>&gt; ../init.d/lvm2-lvmpolld</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">20</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01networking <span class="cm-attribute">-</span>&gt; ../init.d/networking</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">20</span> Feb <span class="cm-number">28</span> <span class="cm-number">20</span>:58 K01nfs-common <span class="cm-attribute">-</span>&gt; ../init.d/nfs-common</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">27</span> Feb <span class="cm-number">28</span> <span class="cm-number">20</span>:58 K01nfs-kernel-server <span class="cm-attribute">-</span>&gt; ../init.d/nfs-kernel-server</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">17</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01openvpn <span class="cm-attribute">-</span>&gt; ../init.d/openvpn</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">18</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01plymouth <span class="cm-attribute">-</span>&gt; ../init.d/plymouth</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">37</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01pulseaudio-enable-autospawn <span class="cm-attribute">-</span>&gt; ../init.d/pulseaudio-enable-autospawn</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">17</span> Feb <span class="cm-number">28</span> <span class="cm-number">20</span>:58 K01rpcbind <span class="cm-attribute">-</span>&gt; ../init.d/rpcbind</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">17</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01rsyslog <span class="cm-attribute">-</span>&gt; ../init.d/rsyslog</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">15</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01saned <span class="cm-attribute">-</span>&gt; ../init.d/saned</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">23</span> Mar <span class="cm-number">19</span> <span class="cm-number">09</span>:29 K01smartmontools <span class="cm-attribute">-</span>&gt; ../init.d/smartmontools</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">27</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01speech-dispatcher <span class="cm-attribute">-</span>&gt; ../init.d/speech-dispatcher</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">23</span> Mar <span class="cm-number">26</span> <span class="cm-number">11</span>:47 K01spice-vdagent <span class="cm-attribute">-</span>&gt; ../init.d/spice-vdagent</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">14</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01udev <span class="cm-attribute">-</span>&gt; ../init.d/udev</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">15</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01uuidd <span class="cm-attribute">-</span>&gt; ../init.d/uuidd</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">20</span> Mar <span class="cm-number">22</span> <span class="cm-number">12</span>:33 K01virtualbox <span class="cm-attribute">-</span>&gt; ../init.d/virtualbox</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Runlvel 0</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ ls</span> <span class="cm-attribute">-lh</span> /etc/rc0.d/</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">total <span class="cm-number">0</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">20</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01alsa-utils <span class="cm-attribute">-</span>&gt; ../init.d/alsa-utils</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">22</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01avahi-daemon <span class="cm-attribute">-</span>&gt; ../init.d/avahi-daemon</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">19</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01bluetooth <span class="cm-attribute">-</span>&gt; ../init.d/bluetooth</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">20</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01cryptdisks <span class="cm-attribute">-</span>&gt; ../init.d/cryptdisks</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">26</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01cryptdisks-early <span class="cm-attribute">-</span>&gt; ../init.d/cryptdisks-early</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">22</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01cups-browsed <span class="cm-attribute">-</span>&gt; ../init.d/cups-browsed</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">17</span> Mar <span class="cm-number">19</span> <span class="cm-number">16</span>:59 K01glances <span class="cm-attribute">-</span>&gt; ../init.d/glances</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">17</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01hddtemp <span class="cm-attribute">-</span>&gt; ../init.d/hddtemp</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">20</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01irqbalance <span class="cm-attribute">-</span>&gt; ../init.d/irqbalance</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">20</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01kerneloops <span class="cm-attribute">-</span>&gt; ../init.d/kerneloops</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">17</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01lightdm <span class="cm-attribute">-</span>&gt; ../init.d/lightdm</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">23</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01lvm2-lvmpolld <span class="cm-attribute">-</span>&gt; ../init.d/lvm2-lvmpolld</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">20</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01networking <span class="cm-attribute">-</span>&gt; ../init.d/networking</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">20</span> Feb <span class="cm-number">28</span> <span class="cm-number">20</span>:58 K01nfs-common <span class="cm-attribute">-</span>&gt; ../init.d/nfs-common</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">27</span> Feb <span class="cm-number">28</span> <span class="cm-number">20</span>:58 K01nfs-kernel-server <span class="cm-attribute">-</span>&gt; ../init.d/nfs-kernel-server</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">17</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01openvpn <span class="cm-attribute">-</span>&gt; ../init.d/openvpn</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">18</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01plymouth <span class="cm-attribute">-</span>&gt; ../init.d/plymouth</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">37</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01pulseaudio-enable-autospawn <span class="cm-attribute">-</span>&gt; ../init.d/pulseaudio-enable-autospawn</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">17</span> Feb <span class="cm-number">28</span> <span class="cm-number">20</span>:58 K01rpcbind <span class="cm-attribute">-</span>&gt; ../init.d/rpcbind</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">17</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01rsyslog <span class="cm-attribute">-</span>&gt; ../init.d/rsyslog</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">15</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01saned <span class="cm-attribute">-</span>&gt; ../init.d/saned</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">23</span> Mar <span class="cm-number">19</span> <span class="cm-number">09</span>:29 K01smartmontools <span class="cm-attribute">-</span>&gt; ../init.d/smartmontools</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">27</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01speech-dispatcher <span class="cm-attribute">-</span>&gt; ../init.d/speech-dispatcher</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">23</span> Mar <span class="cm-number">26</span> <span class="cm-number">11</span>:47 K01spice-vdagent <span class="cm-attribute">-</span>&gt; ../init.d/spice-vdagent</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">14</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01udev <span class="cm-attribute">-</span>&gt; ../init.d/udev</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">15</span> Aug <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> K01uuidd <span class="cm-attribute">-</span>&gt; ../init.d/uuidd</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">20</span> Mar <span class="cm-number">22</span> <span class="cm-number">12</span>:33 K01virtualbox <span class="cm-attribute">-</span>&gt; ../init.d/virtualbox</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 2838px;"></div><div class="CodeMirror-gutters" style="display: none; height: 2838px;"></div></div></div></pre><p>&nbsp;</p><p>&nbsp;</p><h2><a name="systemd" class="md-header-anchor"></a><span>SystemD</span></h2><p><span>Traz melhorias de paralelização, usado apara dBus e etc. Não existe mais runlevels, agora é chamado de </span><strong><span>Units</span></strong><span>, um </span><strong><span>Target</span></strong><span> é um grupo de </span><strong><span>Unit</span></strong><span>, equivalente ao Runlevel.</span></p><p><span>As Unidades podem ser do tipo:</span></p><ul><li><span>Service - Onde ficam os daemons como sshd.service, bind.service, apache2.service entre outros.</span></li><li><span>Socket</span></li><li><span>Device</span></li><li><span>Mount</span></li><li><span>Automount</span></li><li><span>Target - Equivalente ao Runlevel (Existe um Target default)</span></li><li><span>Snapchat</span></li><li><span>Timer</span></li></ul><p><span>As Units (Unidades, descrito acima) do sistema ficam em </span><code>/lib/systemd/system</code><span>, aqui temos todos eles misturados (.service, .target, .socket etc). Uma unidade é composta por </span><code>UNIT = NOME.TIPO</code><span>, alguns exemplos:</span></p><ul><li><span>httpd.service - Nome=httpd, Tipo=service</span></li><li><span>initrd.target - Nome=initrd, Tipo=target</span></li><li><span>apt-daily.timer - Nome=apt-daily, Tipo=timer</span></li><li><span>systemd-fsckd.socket - Nome=systemd-fsckd, Tipo=socket</span></li></ul><p>&nbsp;</p><p><span>Para criar uma compatibilidade, temos runlevels apontando para </span><code>targets</code><span>:</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">#### Listando os targets que fazem compatibilidade com os Runlevels:</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ ls</span> <span class="cm-attribute">-lh</span> /lib/systemd/system/runle*</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">/lib/systemd/system/runlevel0.target <span class="cm-attribute">-</span>&gt; poweroff.target</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">/lib/systemd/system/runlevel1.target <span class="cm-attribute">-</span>&gt; rescue.target</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">/lib/systemd/system/runlevel2.target <span class="cm-attribute">-</span>&gt; multi-user.target</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">/lib/systemd/system/runlevel3.target <span class="cm-attribute">-</span>&gt; multi-user.target</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">/lib/systemd/system/runlevel4.target <span class="cm-attribute">-</span>&gt; multi-user.target</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">/lib/systemd/system/runlevel5.target <span class="cm-attribute">-</span>&gt; graphical.target</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">/lib/systemd/system/runlevel6.target <span class="cm-attribute">-</span>&gt; reboot.target</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Vendo o Target/Runlevel default:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ ls</span> <span class="cm-attribute">-l</span> /lib/systemd/system/default.target </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">/lib/systemd/system/default.target <span class="cm-attribute">-</span>&gt; graphical.target</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Vendo o Target/Runlevel default através do systemctl:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ systemctl</span> get-default </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">graphical.target</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">#### Podemos configurar um novo target default (runlevel) com o comando:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> systemctl set-default multi-user.target</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Created symlink /etc/systemd/system/default.target → /lib/systemd/system/multi-user.target.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Consulte novamente:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ systemctl</span> get-default </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">multi-user.target</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Para mudar apenas de target (não muda o default)</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ systemctl</span> isolate nome.target</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Iniciar o target Default</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ systemctl</span> default</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">### Listando as Units</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ systemctl</span> list-units</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 748px;"></div><div class="CodeMirror-gutters" style="display: none; height: 748px;"></div></div></div></pre><p><span>Segue a imagem do comando acima:</span></p><p><img src="IMG/dlmfawperikngpoiwrgn.png" referrerpolicy="no-referrer" alt="dlmfawperikngpoiwrgn"></p><p><span>Existe também o diretório </span><code>/etc/systemd/system</code><span> onde possamos criar serviços, targets entre outros tipos de de Unidades.</span></p><p>&nbsp;</p><p><span>Comandos no SystemD:</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Reiniciar </span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> systemctl reboot</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Desligar</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> systemctl poweroff</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Verificar estatus do serviço</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> systemctl status nome.service</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Reiniciar o serviço</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> systemctl <span class="cm-builtin">restart</span> nome.service</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Parar um serviço</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> systemctl <span class="cm-builtin">stop</span> nome.service</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Habilitar um serviço na inicialização</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> systemctl enable nome.service</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Para desabilitar da inicialização</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> systemctl disable nome.service</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Para verificar se está habilitado na inicialização</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> systemctl is-enabled sshd.service</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 506px;"></div><div class="CodeMirror-gutters" style="display: none; height: 506px;"></div></div></div></pre><p>&nbsp;</p><h2><a name="upstart" class="md-header-anchor"></a><span>UPSTART</span></h2><p><span>Gerenciador de inicialização substituto ao Init. Ainda usa os scripts em </span><code>/etc/init.d/</code><span> por compatibilidade, os arquivos de configuração ficam em </span><code>/etc/init/</code><span>.</span></p><p><span>Os comandos principais são:</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Lista os trabalhos e instancias conhecidas, exibe o status de cada um numa saída padrão.</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ initctl</span> list</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Exibir o status</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ initctl</span> status SERVIÇO</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Iniciar o serviço</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ initctl</span> <span class="cm-builtin">start</span> SERVIÇO</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Para o serviço</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ initctl</span> <span class="cm-builtin">stop</span> SERVIÇO</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 242px;"></div><div class="CodeMirror-gutters" style="display: none; height: 242px;"></div></div></div></pre><p>&nbsp;</p><h2><a name="shutdown-e-restart" class="md-header-anchor"></a><span>Shutdown e Restart</span></h2><p><span>Reinicia ou Desliga o computador, enviando mensagens de aviso para todos os usuários conectados no sistema, podemos também agendar o desligamento.</span></p><p><span>Opções:</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">-P<span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">    </span>= Desliga o Linux e a máquina</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">-h<span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">    </span>= Desliga o Linux mas não a máquina (depende do hardware)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">-r<span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">    </span>= Reinicia</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">-c<span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">    </span>= Cancela o desligamento</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 96px;"></div><div class="CodeMirror-gutters" style="display: none; height: 96px;"></div></div></div></pre><p><span>Por padrão ele notifica os usuários que será feito o desligamento. Primeiro ele envia um SIGTERM e depois um SIGKILL.</span></p><p>&nbsp;</p><p><span>Programando os desligamentos:</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">#### Default desligar depois de 1 minuto ####</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">#### +N agenda para N minutos o desligamento.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Agendar para daqui 3 minutos</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ date</span> ; <span class="cm-builtin">sudo</span> shutdown <span class="cm-operator">+</span><span class="cm-number">3</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Tue Mar <span class="cm-number">30</span> <span class="cm-number">18</span>:00:12 UTC <span class="cm-number">2021</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Shutdown scheduled <span class="cm-keyword">for</span> Tue <span class="cm-number">2021</span><span class="cm-attribute">-03-30</span> <span class="cm-number">18</span>:03:12 UTC, use <span class="cm-string">'shutdown -c'</span> to cancel.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Escolher um horario para desligar:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> shutdown <span class="cm-number">17</span>:24</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Escolher um horario para desligar com power off:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> shutdown <span class="cm-attribute">-P</span> <span class="cm-number">17</span>:24</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Escolher um horario para reiniciar:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> shutdown <span class="cm-attribute">-r</span> <span class="cm-number">17</span>:24</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Para desligar ou reiniciar agora, usar 'now':</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> shutdown <span class="cm-attribute">-P</span> now</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> shutdown <span class="cm-attribute">-r</span> now</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 440px;"></div><div class="CodeMirror-gutters" style="display: none; height: 440px;"></div></div></div></pre><p>&nbsp;</p><p><span>Outros comandos que fazem isso:</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Desligar</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">poweroff</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">halt</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">systemctl poweroff</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">systemctl halt</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Reiniciar</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">reboot</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">systemctl reboot</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 198px;"></div><div class="CodeMirror-gutters" style="display: none; height: 198px;"></div></div></div></pre><p>&nbsp;</p><h2><a name="wall" class="md-header-anchor"></a><span>WALL</span></h2><p><span>Usado para enviar uma mensagem para todos os usuários do sistema, ou para um grupo de usuários.</span></p><p>&nbsp;</p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># enviar a mensagem</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ wall</span> <span class="cm-string">"vamos desligar o sistema"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Broadcast message from vagrant@debian10.localdomain (pts/0) (Tue Mar <span class="cm-number">30</span> <span class="cm-number">18</span>:16:3</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">vamos desligar o sistema</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 132px;"></div><div class="CodeMirror-gutters" style="display: none; height: 132px;"></div></div></div></pre><p>&nbsp;</p><h2><a name="acpid---advanced-configuration-and-power-interface" class="md-header-anchor"></a><span>ACPID - Advanced Configuration and Power Interface</span></h2><p><span>Responsãvel por cuidar de todos os processos relacionados a energia no hardware. O daemon é chamado de </span><code>acpid</code><span>.</span></p><p><span>Pode não vir instalado em algumas distros.</span></p><p>&nbsp;</p><p>&nbsp;</p><p><a href='../101.2/1012.html'><span style="color:yellow"><span>Voltar</span></span></a>
+<a href='../102.1/1021.html'><span style="color:yellow"><span>Próximo</span></span></a><span> </span>
+<a href='../main.html'><span style="color:yellow"><span>Índice Geral</span></span></a></p><p>&nbsp;</p></div>
+</body>
+</html>
