@@ -38,3 +38,13 @@ Conteúdo para estudo
 **101 Arquitetura do Sistema**
 
 ​		[101.1 Identificar e configurar hardware ](101.1/1011.html)
+​		[101.2 Arquitetura do Sistema ](101.2/1012.html)
+​		[101.3 Runlevel, Shutdown e Reboot ](101.3/1013.html)
+
+**102 Instalação do Linux e Gerenciamento de Pacotes**
+
+​		[102.1 Design do HD ](102.1/1021.html)
+​		[102.2 Instalação e configuração do Boot Manager ](102.2/1022.html)
+​		[102.3 Gerenciamento de Bibliotecas compartilhadas ](102.3/1023.html)
+​		[102.4 Gerenciamento de pacotes Debian ](102.4/1024.html)
+
