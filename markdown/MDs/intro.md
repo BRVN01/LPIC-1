@@ -19,10 +19,10 @@ Na produção deste documento, buscou-se obter o máximo de qualidade possível,
 Segue abaixo as convenções usadas no decorrer do documento:
 
 `EXEMPLO` = Comando ou código curto.
-<span style="color:#FFFFFF">**EXEMPLO**</span> = Destaque, para manter o foco no que está sendo explicado.
+<span style="color:#FFFFFF">**EXEMPLO** = Destaque, para manter o foco no que está sendo explicado.
 
 
 
-[<span style="color:yellow">**Voltar**</span>](main.html)
+[**Voltar**](main.html)
 
-[<span style="color:yellow">**Próximo**</span>](103.1/1031.html)
+[**Próximo**](103.1/1031.html)
