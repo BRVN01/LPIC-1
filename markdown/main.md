@@ -29,16 +29,19 @@ Simulados
 #### Simulados LPI-101/LX0-103
 
 **1- Arquitetura de Sistema:**
+
 [Simulado 1](https://www.proprofs.com/quiz-school/story.php?title=otmxndiwob3g&fbclid=IwAR32H6SW4-EASUEqtkobwi404yR75QJwrlW290ONa4z2KfFujFwbZUuw-WA)
 
 [Simulado 2](https://www.proprofs.com/quiz-school/story.php?title=lpi-101-arquitetura-de-sistema-2-marcus-vinicius-braga-alcantara&fbclid=IwAR0UMq2d8PH4dIliMVv9YVfpM4IY7VaWnhPIvpE86m1iQd_graWAMDgUEWs)
 
 **2- Instalação e Gerenciamento de Pacotes:**
+
 [Simulado 1](https://www.proprofs.com/quiz-school/story.php?title=lpi-101-instalao-e-gerenciamento-de-pacotes-marcus-vincius-braga-alcntara&fbclid=IwAR11NvLLalajPkK4ns1WrBrvQnaa0Np91fgA1CzcXOgtFYadKYzYrpn3o90)
 
 [Simulado 2](https://www.proprofs.com/quiz-school/story.php?title=lpi-101-instalacao-e-gerenciamento-de-pacotes-2-marcus-vinicius-braga-alcantara&fbclid=IwAR0rHvWtxLpwG8ffIhbA0IMYcLEiDSc1MbwjiqKUQyvQMIxA8mgSJkffChY)
 
 **3- Comandos GNU/LINUX:**
+
 [Simulado 1](https://www.proprofs.com/quiz-school/story.php?title=lpi-101-comandos-gnulinux-marcus-vincius-braga-alcntara_2JR&fbclid=IwAR2fQokWltvR-nXFc29RNIIP61HpViS9TqXi5oIqMzW8uJA9P7TWvg9gtKo)
 
 [Simulado 2](https://www.proprofs.com/quiz-school/story.php?title=lpi-101-comandos-gnulinux-2-marcus-vinicius-braga-alcantara&fbclid=IwAR34rCvtF46YG17CvM_6yKChnMBnSan_oPIx9ZA534yrdVaixvvnRlTusZk)
@@ -48,6 +51,7 @@ Simulados
 [Simulado 4](https://www.proprofs.com/quiz-school/story.php?title=lpi-101-comandos-gnulinux-4-marcus-vinicius-braga-alcantara&fbclid=IwAR1q1ChSPLJwErgFtEaf1pUvvciz1YjuzngWNj0SLAiN04jrWrM11FEybNE)
 
 **4- Devices, Linux Filesystems, FHS:**
+
 [Simulado 1](https://www.proprofs.com/quiz-school/story.php?title=lpi-101-devices-linux-filesystems-fhs-marcus-vincius-braga-alcntara&fbclid=IwAR2CXfdHQv0dsZGJ36yt7wPDmRAADav_6QZJgrGtxz_HVEb80hxbBBJICi8)
 
 [Simulado 2](https://www.proprofs.com/quiz-school/story.php?title=lpi-101-devices-linux-filesystems-fhs-2-marcus-vinicius-braga-alcantara&fbclid=IwAR0YVcHQvscabJZTVvuPCIcz0uHZFBCy_sh3qQ7-2GzzZ9Tz51yc0HiXlXM)
@@ -56,30 +60,35 @@ Simulados
 
 #### Simulados LPI-102/LX0-104
 **1- Shells, Scripting and Data Management**
+
 [Simulado 1](https://www.proprofs.com/quiz-school/story.php?title=lpi-102-shells-scripting-and-data-management&fbclid=IwAR0JbQ4ouwUrQ564VamXzksEPmoDh76lIS3udYiEaF1ydt60EoCc-Uk5tfI)
 
 [Simulado 2](https://www.proprofs.com/quiz-school/story.php?title=lpi-102-shells-scripting-and-data-management-2-marcus-vinicius-braga-alcantara&fbclid=IwAR11NvLLalajPkK4ns1WrBrvQnaa0Np91fgA1CzcXOgtFYadKYzYrpn3o90)
 
 **2- Interfaces de usuário e Desktops:**
+
 [Simulado 1](www.proprofs.com/quiz-school/story.php?title=102-interfaces-de-usurio-e-desktops&fbclid=IwAR3bO7v3SpA_pJ5NDuy9X7FOq4D_o-2pOIoP9xdYZvB2wpz3sSfsC2ISoRM)
 
 **3- Tarefas Administrativas:**
+
 [Simulado 1](https://www.proprofs.com/quiz-school/story.php?title=lpi-102-tarefas-administrativas&fbclid=IwAR10uXLgqSaDInq1muetUAxgnLTLCvknzNwD614svKG7gZOOqi-oJW5bQxo)
 
 [Simulado 2](https://www.proprofs.com/quiz-school/story.php?title=lpi-102-tarefas-administrativas-2-marcus-vincius-braga-alcntara&fbclid=IwAR37xihtJ4ey_u2tA4n4pddPAuFIiBp_ESaopcF8q8GNCFipeVdwGD64frI)
 
-**4- Serviços Essenciais do Sistema:*
+**4- Serviços Essenciais do Sistema:**
 
 [Simulado 1](https://www.proprofs.com/quiz-school/story.php?title=lpi-102-servios-essenciais-do-sistema&fbclid=IwAR1Rpm3w_ZejSL4BiyKCx5DNbBGj8fY-vh8liJ2wwGRPktaa3nsT8Yj6JWw)
 
 [Simulado 2](https://www.proprofs.com/quiz-school/story.php?title=mtkxmjq0nw52od&fbclid=IwAR2WV3s9pruwPaW5dVbysvoSDpeZ06nomKTpb81FzESQeJLYRqQL7hLmr2g)
 
 **5- Fundamentos de Rede:**
+
 [Simulado 1](https://www.proprofs.com/quiz-school/story.php?title=lpi-102-fundamentos-de-rede&fbclid=IwAR0rHvWtxLpwG8ffIhbA0IMYcLEiDSc1MbwjiqKUQyvQMIxA8mgSJkffChY)
 
 [Simulado 2](https://www.proprofs.com/quiz-school/story.php?title=untitled-quizlpi-102-fundamentos-de-rede-2-marcus-vincius-braga-alcntara&fbclid=IwAR0JbQ4ouwUrQ564VamXzksEPmoDh76lIS3udYiEaF1ydt60EoCc-Uk5tfI)
 
 **6- Segurança:**
+
 [Simulado 1](https://www.proprofs.com/quiz-school/story.php?title=lpi-102-segurana&fbclid=IwAR1xeRdlHBBucKE3zLNOiVMlj17_2-4VHBmGVi5UKN7yDghdq7AXGcKwAMU)
 
 [Simulado 2](https://www.proprofs.com/quiz-school/story.php?title=lpi-102-segurana-2-marcus-vincius-braga-alcntara&fbclid=IwAR3Z8lOQkuOjyS7jQ4sBzqPVV93SrRg6f0-2OfJRT5bQGxrfKGj3d3GyfZw)
