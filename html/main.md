@@ -105,3 +105,42 @@ Conteúdo para estudo
 **105 Shell e Shell Scripting**
 
 ​		[105.1 Customizando e usando Ambiente Shell ](105.1/1051.html)
+
+**106 Interface de Usuário e Desktop**
+
+​		[106.1 Instalar e Configurar o X11 ](106.1/1061.html)
+
+​		[106.2 Não fiz ](106.2/1062.html)
+
+​		[106.3 Não fiz ](106.3/1063.html)
+
+**107 Tarefas Administrativas**
+
+​		[107.1 Gerenciamento de usuários e grupos ](107.1/1071.html)
+
+​		[107.2 Agendamento de tarefas ](107.2/1072.html)
+
+​		[107.3 Localização e Internacionalização ](107.3/1073.html)
+
+**108 Serviços Essenciais do Sistema**
+
+​		[108.1 Manutenção do Horário do Sistema ](108.1/1081.html)
+
+​		[108.2 Sistema de Logs ](108.2/1082.html)
+
+​		[108.3 Básico sobre E-mail ](108.3/1083.html)
+
+​		[108.4 Gerenciamento de Impressora ](108.4/1084.html)
+
+**109 Fundamentos de Redes**
+
+​		[109.1 Fundamentos de Protocolos da Internet ](109.1/1091.html)
+
+​		[109.2 Configuração Persistente de Rede ](109.2/1092.html)
+
+
+
+
+
+
+

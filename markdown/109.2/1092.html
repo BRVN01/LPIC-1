@@ -1,0 +1,1284 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>1092</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+/* Alterado por mim 01/08/2020 */
+
+/* code color */
+.cm-s-inner .cm-keyword {
+    color: #bb7fc3;
+
+}
+
+.cm-s-inner .cm-atom,
+.cm-s-inner.cm-atom {
+    color: #C7C7C7;
+}
+
+.cm-s-inner .cm-number {
+    color: #88b2a1;
+}
+
+.cm-s-inner .cm-def {
+    color: #7f7fff;
+}
+
+.cm-s-inner .cm-variable {
+    color: #C7C7C7;
+}
+
+.cm-s-inner .cm-variable-2 {
+    color: #C7C7C7;
+}
+
+.cm-s-inner .cm-variable-3 {
+    color: #C7C7C7;
+}
+
+.cm-s-inner .cm-string {
+    color: #d48888;
+}
+
+.cm-s-inner .cm-property {
+    color: #efefef;
+}
+
+.cm-s-inner .cm-operator {
+    color: #cb8c8c;
+}
+
+.cm-s-inner .cm-comment,
+.cm-s-inner.cm-comment {
+    color: hsl(0, 0%, 35%);
+}
+
+.cm-s-inner .cm-string-2 {
+    color: #ffaa7f;
+}
+
+.cm-s-inner .cm-meta {
+    color: hsl(0, 0%, 33%);
+}
+
+.cm-s-inner .cm-qualifier {
+    color: hsl(0, 0%, 33%);
+}
+
+.cm-s-inner .cm-builtin {
+    color: #997fd4;
+}
+
+.cm-s-inner .cm-bracket {
+    color: #ccccbb;
+}
+
+.cm-s-inner .cm-tag {
+    color: #88bb7f;
+}
+
+.cm-s-inner .cm-attribute {
+    color: #7f7fe5;
+}
+
+.cm-s-inner .cm-header,
+.cm-s-inner.cm-header {
+    color: #7f7fff;
+}
+
+.cm-s-inner .cm-quote,
+.cm-s-inner.cm-quote {
+    color: #7fcc7f;
+}
+
+.cm-s-inner .cm-hr,
+.cm-s-inner.cm-hr {
+    color: hsl(0, 0%, 60%);
+}
+
+.cm-s-inner .cm-link,
+.cm-s-inner.cm-link {
+    color: #7f7fe5;
+}
+
+.cm-negative {
+    color: #eea1a1;
+}
+
+.cm-positive {
+    color: #90cc90;
+}
+
+.cm-header,
+.cm-strong {
+    font-weight: 700;
+}
+
+.cm-error {
+    color: #ff7f7f;
+}
+
+.cm-invalidchar {
+    color: #ff7f7f;
+}
+
+.cm-constant {
+    color: #0092ce;
+}
+
+.cm-defined {
+    color: #dac37f;
+}
+
+div.CodeMirror span.CodeMirror-matchingbracket {
+    color: #7fff7f;
+}
+
+div.CodeMirror span.CodeMirror-nonmatchingbracket {
+    color: #ff9090;
+}
+:root {
+    --fg-color: #696969;
+    --bg-color: #0a0a0a;
+
+    /* Cor do comentário */
+    --fg-comment: #c2884f;
+
+    /* Cor de background do código (quando usa ``) */
+    --bg-trans-d: #0a0a0a;
+    
+    --bg-trans-l: hsla(0, 0%, 100%, 10%);
+
+    /* Cor das letras no código (quando usa ``) */
+/*    --theme-vim-yl: #3ab5ae;*/
+    --theme-vim-yl: #61cfc9;
+
+    /* Cor da barra dentro do bloco de código (quando usa ```) */
+    --theme-vim-gn: #ffffff;
+
+    --theme-vim-bl: #22a2c9;
+    --table-bg: hsla(0, 0%, 100%, 6%);
+    --table-bg-dim: hsla(0, 0%, 100%, 2%);
+
+    /* Barra de indice lateral */
+    --side-bar-bg-color: #c7c1c1;
+
+    --control-text-color: #0e0808;
+
+    /* Cor quando seleciona o texto*/
+    --select-text-bg-color: hsl(153, 47%, 40%);
+
+    --select-text-font-color: #fff;
+
+    --item-hover-bg-color: #fff;
+
+    /* Cor do bloco de código */
+    --fence-bg: #1a1a1a;
+/*    --fence-bg: hsl(0, 0%, 10%);*/
+}
+
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif !important;
+    color: var(--fg-color);
+    background-color: var(--bg-color);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6rem;
+    letter-spacing: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#write {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 20px 30px 40px 30px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+#write p {
+    line-height: 1.6rem;
+    word-spacing: 0.05rem;
+}
+
+#write ol li {
+    padding-left: 0.5rem;
+}
+
+#write > ul:first-child,
+#write > ol:first-child {
+    margin-top: 30px;
+}
+
+body > *:first-child {
+    margin-top: 0 !important;
+}
+
+body > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+a {
+    /* Cor do indice (toc) */
+    color: #41b883;
+    font-weight: 600;
+    padding: 0px 2px;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+
+/* h2 a,
+h3 a {
+    color: #34495e;
+} */
+
+h1 {
+    padding-bottom: 0.4rem;
+    font-size: 2.2rem;
+    line-height: 1.3;
+    color: #e87800;
+}
+
+h2 {
+    font-size: 1.75rem;
+    line-height: 1.225;
+    margin: 35px 0px 15px 0px;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid hsl(0, 0%, 20%);
+    color: #d86c00;
+}
+
+h3 {
+    font-size: 1.4rem;
+    line-height: 1.43;
+    margin: 20px 0px 7px 0px;
+    color: #ff860c;
+}
+
+h4 {
+    font-size: 1.2rem;
+    color: #de9d04;
+}
+
+h5 {
+    font-size: 1rem;
+    color: #debd04;
+}
+
+h6 {
+    font-size: 1rem;
+    color: #e8c500;
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+
+/*table {
+    margin: 0.8em 0;
+}*/
+
+li > ol,
+li > ul {
+    margin: 0 0;
+}
+
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: hsl(0, 0%, 18%);
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    margin-top: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+ul,
+ol {
+    padding-left: 30px;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+/* Citação */
+
+blockquote {
+    border-left: 4px solid #0092ce;
+    padding: 10px 0px 10px 15px;
+    color: #696969;
+/*    background-color: rgba(66, 185, 131, 0.1);*/
+    background-color: rgba(66, 132, 183, 0.1);
+}
+
+table {
+    font-family: Roboto Mono, Source Sans Pro, Monaco, courier, monospace !important;
+    font-size: 0.85rem;
+    padding: 0;
+    word-break: initial;
+}
+
+table tr {
+    border-top: 1px solid hsl(210, 10%, 11%);
+    margin: 0;
+    padding: 0;
+}
+
+table tr:nth-child(2n),
+thead {
+    background-color: var(--table-bg);
+}
+
+table tr,
+thead {
+    background-color: var(--table-bg-dim);
+}
+
+table tr th {
+    font-weight: bold;
+   border: 1px solid hsl(210, 10%, 11%);
+/*    border: transparent;*/
+    border-bottom: 0;
+/*    text-align: left;*/
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table tr td {
+    border: 1px solid #1d1d1d;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+#write strong {
+    padding: 0px 1px 0 1px;
+}
+
+#write em {
+    padding: 0px 5px 0 2px;
+}
+
+#write table thead th {
+    /* background-color: hsl(0, 0%, 5%); */
+    background-color: hsl(0, 0%, 9%);
+}
+
+#write .CodeMirror-gutters {
+    border-right: none;
+}
+
+#write .md-fences {
+    border: 1px solid hsl(0, 0%, 11%);
+    -webkit-font-smoothing: initial;
+    margin: 0.8rem 0 !important;
+    padding: 0.3rem 0rem !important;
+    line-height: 1.43rem;
+
+    /* Cor do texto dentro do bloco de código */
+    color: hsl(0, 0%, 78%);
+    
+    background-color: var(--fence-bg) !important;
+    border-radius: 2px;
+    font-family: Roboto Mono, Source Sans Pro, Monaco, courier, monospace !important;
+    font-weight: bold;
+    font-size: 0.85rem;
+    word-wrap: normal;
+}
+
+#write .CodeMirror-wrap .CodeMirror-code pre {
+    padding-left: 12px;
+}
+
+/* Código `exemplo` */
+#write code,
+tt {
+    margin: 0 0.03px;
+    padding: 0.03px 0.2px;
+    border-radius: 0.2px;
+/*    font-family: Roboto Mono, Source Sans Pro, Monaco, courier, monospace !important;*/
+    font-family: latin-ext !important;
+    font-weight: normal;
+    /* tamanho das letras dentro do código: */
+    font-size: 1rem;
+    color: var(--theme-vim-yl);
+    background-color: var(--bg-trans-d);
+}
+
+#write .md-footnote {
+    color: var(--theme-vim-yl);
+    background-color: var(--bg-trans-d);
+}
+
+/* heighlight. */
+#write mark {
+    background-color: #ebffeb;
+    border-radius: 2px;
+    padding: 2px 4px;
+    margin: 0 2px;
+    color: #222;
+    font-weight: 500;
+}
+
+#write del {
+    padding: 1px 2px;
+}
+
+.cm-s-inner .cm-link,
+.cm-s-inner.cm-link {
+    color: var(--theme-vim-bl);
+}
+
+.cm-s-inner .cm-string {
+    color: var(--theme-vim-bl);
+}
+
+.md-task-list-item > input {
+    margin-left: -1.3em;
+}
+
+@media screen and (min-width: 914px) {
+    /*body {
+        width: 854px;
+        margin: 0 auto;
+    }*/
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+#write pre.md-meta-block {
+    padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: hsl(0, 0%, 3%);
+    border: 0;
+    border-radius: 3px;
+    color: hsl(0, 0%, 53%);
+    margin-top: 0 !important;
+}
+
+.mathjax-block > .code-tooltip {
+    bottom: 0.375rem;
+}
+
+#write > h3.md-focus:before {
+    left: -1.5625rem;
+    top: 0.375rem;
+}
+
+#write > h4.md-focus:before {
+    left: -1.5625rem;
+    top: 0.285714286rem;
+}
+
+#write > h5.md-focus:before {
+    left: -1.5625rem;
+    top: 0.285714286rem;
+}
+
+#write > h6.md-focus:before {
+    left: -1.5625rem;
+    top: 0.285714286rem;
+}
+
+.md-image > .md-meta {
+    border-radius: 3px;
+    font-family: Consolas, 'Liberation Mono', Courier, monospace;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: inherit;
+}
+
+.md-toc {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: hsl(0, 0%, 2%);
+    border-color: hsl(0, 0%, 0%) hsl(0, 0%, 10%) hsl(0, 0%, 10%) hsl(0, 0%, 7%);
+    border-style: solid;
+    border-width: 1px;
+}
+
+#md-notification:before {
+    top: 10px;
+}
+
+/** focus mode */
+
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header,
+.context-menu,
+.megamenu-content,
+footer {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: hsl(0, 0%, 2%);
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: var(--theme-vim-gn);
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: hsl(215, 92%, 5%);
+}
+
+#typora-sidebar {
+    /* font-family: Roboto Mono, Source Sans Pro, Monaco, courier, monospace !important; */
+    font-family: Helvetica, Arial !important;
+    font-weight: bold;
+}
+
+.file-list-item-summary {
+    font-family: Helvetica, Arial !important;
+    font-weight: 400;
+}
+
+.file-list-item {
+    border-bottom: 0.15rem solid hsl(0, 0%, 18%);
+}
+
+.file-list-item.active {
+    background: hsl(0, 0%, 15%) !important;
+}
+
+.file-node-background {
+    height: 29px;
+}
+
+#toc-dropmenu {
+    background: hsl(0, 0%, 18%) !important;
+    /* font-family: Roboto Mono, Source Sans Pro, Monaco, courier, monospace !important; */
+    font-weight: bold;
+}
+
+#toc-content {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#toc-content a:hover {
+    text-decoration: none;
+}
+
+.outline-item {
+    /* transition: color 150ms, background-color 150ms; */
+    transition: color 150ms;
+}
+
+.outline-item:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--theme-vim-gn);
+}
+
+.sidebar-footer {
+    border-top: 2px solid hsl(0, 0%, 15%) !important;
+}
+
+.footer-item:hover,
+.sidebar-footer-item:hover {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.file-tree-node.active > .file-node-background {
+    background-color: hsl(0, 0%, 15%) !important;
+}
+
+.file-node-content:hover {
+    color: #fff;
+}
+
+html {
+    background: #1f1f1f !important;
+}
+
+.outline-title-wrapper {
+    display: none;
+}
+
+.dropdown-menu .divider {
+    display: none;
+    height: 2px;
+    background-color: hsl(0, 0%, 13%);
+}
+
+.dropdown-menu > li > a {
+    color: #fff;
+}
+
+.autoComplt-hint {
+    color: var(--theme-vim-gn) !important;
+    /* border-color: transparent !important */
+}
+
+.auto-suggest-container {
+    color: var(--theme-vim-gn) !important;
+    font-family: Roboto Mono, Source Sans Pro, Monaco, courier, monospace !important;
+    font-weight: bold !important;
+    border-color: var(--theme-vim-gn) !important;
+    border-radius: 8px !important;
+    border-width: 2px !important;
+    margin-top: 5px;
+    overflow: hidden !important;
+    box-shadow: 0 0 1rem hsla(153, 47%, 49%, 0.3);
+}
+
+/* .auto-suggest-container li { */
+/* transition: all 150ms; */
+/* text-align: center !important; */
+/* } */
+
+.auto-suggest-container li:hover {
+    color: #fff !important;
+    background-color: var(--theme-vim-gn) !important;
+    /* text-align: right !important; */
+}
+
+/* windows */
+/* .modal-dialog { */
+/* color: #000; */
+/* } */
+
+.typora-sourceview-on #toggle-sourceview-btn {
+    background-color: var(--theme-vim-gn);
+}
+
+/* cursor */
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+    border-left: 0.2px solid var(--theme-vim-gn);
+}
+
+.CodeMirror div.CodeMirror-cursor {
+    /* 1px é a grossura da paleta (quando em ```) */
+    border-left: 0.2px solid var(--theme-vim-gn);
+    z-index: 3;
+}
+
+.form-control {
+    background-color: var(--bg-trans-d);
+    border-color: var(--bg-color);
+}
+
+.modal-header,
+.modal-footer {
+    border-color: var(--bg-trans-l);
+    border-width: 2px;
+}
+
+.btn:hover {
+    background-color: var(--theme-vim-gn);
+}
+
+.md-rawblock-on-edit > .md-rawblock-tooltip,
+.md-rawblock:hover > .md-rawblock-container,
+.md-rawblock:hover > .md-rawblock-tooltip {
+    transition: background 0.5s linear;
+    background-color: var(--fence-bg) !important;
+    display: block;
+}
+
+.md-rawblock-control:not(.md-rawblock-tooltip) {
+    background-color: var(--fence-bg) !important;
+}
+
+/* windows */
+
+:root {
+    --text-color: var(--fg-color);
+    --btn-border-color: hsla(0, 0%, 100%, 0.1);
+    --item-hover-bg-color: var(--select-text-bg-color);
+}
+
+.megamenu-menu-header {
+    border-color: var(--btn-border-color);
+}
+
+.megamenu-opened header {
+    background-image: none;
+}
+
+.megamenu-menu {
+    background-color: var(--side-bar-bg-color);
+}
+
+.megamenu-content {
+    background: var(--bg-color);
+}
+
+.modal-content {
+    border-color: var(--btn-border-color);
+}
+
+.long-btn {
+    border-color: var(--btn-border-color);
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: transparent;
+}
+
+footer.ty-footer {
+    border-top: 1px solid var(--table-bg);
+}
+
+#recent-file-panel-action-btn {
+    background-color: transparent;
+}
+
+/* improvement */
+
+.dropdown-menu {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-box-shadow: 0 0 0 0 transparent;
+}
+
+
+/* links */
+
+a {
+        text-decoration: none;
+        color: #0092ce;
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+table {
+    margin: 0.4em 0;
+    /*     margin: 0.8rem 0 0 0 ; */
+}
+/* snappy scheme */
+.cm-s-inner .cm-keyword {
+    color: #C7C7C7;
+}
+
+.cm-s-inner .cm-atom,
+.cm-s-inner.cm-atom {
+    color: #C7C7C7;
+}
+
+.cm-s-inner .cm-number {
+    color: #C7C7C7;
+}
+
+/* Variáveis */
+.cm-s-inner .cm-def {
+    color: #C7C7C7;
+}
+
+.cm-s-inner .cm-variable,
+.cm-s-inner .cm-variable-2,
+.cm-s-inner .cm-variable-3 {
+    color: #e3e2e0;
+}
+
+/* coisas entre aspas */
+.cm-s-inner .cm-string,
+.cm-s-inner .cm-string-2 {
+    color: #C7C7C7;
+}
+
+.cm-s-inner .cm-property {
+    color: #e3e2e0;
+}
+
+.cm-s-inner .cm-operator {
+    color: #C7C7C7;
+}
+
+/* Cor de comentario dentro de bloco de código (como ```) */
+.cm-s-inner .cm-comment,
+.cm-s-inner.cm-comment {
+    color: var(--fg-comment);
+    font-weight: normal;
+}
+
+.cm-s-inner .cm-meta {
+    color: #ffffff;
+}
+
+/* Cor do bloco de código (esse é o código mesmo, depois do PS1) (dentro de ```)*/
+.cm-s-inner .cm-builtin {
+    color: hsl(0, 0%, 78%);
+/*    color: #9088cc;*/
+}
+
+.cm-s-inner .cm-bracket {
+    color: white;
+    /* < > </ > */
+}
+
+.cm-s-inner .cm-tag {
+    color: #4ea1df;
+}
+
+.cm-s-inner .cm-attribute {
+    color: #C7C7C7;
+}
+
+.cm-s-inner .cm-header,
+.cm-s-inner.cm-header {
+    color: #e3e2e0;
+}
+
+/* Barra da citação */
+.cm-s-inner .cm-quote,
+.cm-s-inner.cm-quote {
+    color: #4ea1df;
+}
+
+.cm-s-inner .cm-hr,
+.cm-s-inner.cm-hr {
+    color: #e3e2e0;
+}
+
+.cm-s-inner .cm-link,
+.cm-s-inner.cm-link {
+    /* color: #0000cc */
+    color: #f66153;
+}
+
+.cm-negative {
+    color: #e61f44;
+}
+
+.cm-positive {
+    color: #a6e22e;
+}
+
+
+
+</style>
+</head>
+<body class='typora-export'>
+<div id='write'  class=''><h1><a name="índice" class="md-header-anchor"></a><span>Índice</span></h1><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#índice">Índice</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n5"><a class="md-toc-inner" href="#1092-configurações-persistentes-de-redes">109.2 Configurações Persistentes de Redes</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n8"><a class="md-toc-inner" href="#etchostname">/etc/hostname</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n13"><a class="md-toc-inner" href="#etchosts">/etc/hosts</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n18"><a class="md-toc-inner" href="#etcnsswitchconf">/etc/nsswitch.conf</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n27"><a class="md-toc-inner" href="#etcnetworks">/etc/networks</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n31"><a class="md-toc-inner" href="#etcresolvconf">/etc/resolv.conf</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n37"><a class="md-toc-inner" href="#network-manager">Network Manager</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n132"><a class="md-toc-inner" href="#systemd-networkd">SystemD-NetworkD</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n141"><a class="md-toc-inner" href="#ifupdown">Ifupdown</a></span></p></div><p><a href='../109.2/1092.md'><span>Voltar</span></a>
+<a href='../109.3/1093.md'><span>Próximo</span></a><span> </span>
+<a href='../main.md'><span>Índice Geral</span></a></p><p>&nbsp;</p><h1><a name="1092-configurações-persistentes-de-redes" class="md-header-anchor"></a><span>109.2 Configurações Persistentes de Redes</span></h1><p><span>Vamos ver como fazer algumas alterações que vão persistir ao desligamento do comuptador.</span></p><p>&nbsp;</p><h2><a name="etchostname" class="md-header-anchor"></a><span>/etc/hostname</span></h2><p><span>Aqui mantemos armazenado o nome do computador.</span></p><p><span>Uma forma de ver o hostname da máquina é usando os comando abaixo:</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><span><span>​</span>x</span></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ hostname</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">ubuntu2004.localdomain</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ hostnamectl</span> </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; Static hostname: ubuntu2004.localdomain</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; Icon name: computer-vm</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Chassis: vm</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  Machine ID: 0db238bbaac2472387dfec9d0bb721de</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Boot ID: f1f155c978cc4be985283b3e878949cb</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  Virtualization: kvm</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  Operating System: Ubuntu <span class="cm-number">20</span>.04.2 LTS</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Kernel: Linux <span class="cm-number">5</span>.4.0-70-generic</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  Architecture: x86-64</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Alterar o hostname de forma NÃO persistente:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> hostname novo-nome</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ cat</span> /etc/hostname </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">ubuntu2004.localdomain</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ hostname</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">novo-nome</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Alterando de forma persistente:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> hostnamectl set-hostname novo-nome</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ cat</span> /etc/hostname </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">novo-nome</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ hostname</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">novo-nome</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 594px;"></div><div class="CodeMirror-gutters" style="display: none; height: 594px;"></div></div></div></pre><p>&nbsp;</p><h2><a name="etchosts" class="md-header-anchor"></a><span>/etc/hosts</span></h2><p><span>É um arquivo de texto simples usado para fazer o mapeamento de IP para alguns nomesde host.</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ cat</span> /etc/hosts</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-number">127</span>.0.0.1<span class="cm-tab" role="presentation" cm-text="	">   </span>localhost</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-number">127</span>.0.1.1<span class="cm-tab" role="presentation" cm-text="	">   </span>ubuntu2004.localdomain</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># The following lines are desirable for IPv6 capable hosts</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">::1 &nbsp; &nbsp; localhost ip6-localhost ip6-loopback</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">ff02::1 ip6-allnodes</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">ff02::2 ip6-allrouters</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Ao mudar o nome da máquina, é bom alterar nesse arquivo aqui também.</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 224px;"></div><div class="CodeMirror-gutters" style="display: none; height: 224px;"></div></div></div></pre><p><span>Esse arquivo seria uma tabela DNS usada há muitos anos atrás, onde você mapeava o nome da máquina, domínio ao IP.</span></p><p>&nbsp;</p><h2><a name="etcnsswitchconf" class="md-header-anchor"></a><span>/etc/nsswitch.conf</span></h2><p><span>Armazena principalmente meios de autenticação, por exemplo, para serviço de autenticação, qual serviços vamos usar (pode ser system, compat, nis, sss entre outros).</span></p><p><span>Para fazer buscar de IP para domínio, vamos usar dns primeiro ou vamos olhar o </span><code>/etc/host</code><span> (conhecido como </span><code>file</code><span> nesse arquivo) primeiro. </span></p><p><span>Aqui você consegue mudar alguns padrões no sistema.</span></p><p><span>Para a prova vamos focar em 2, sendo o </span><code>Hosts</code><span> e </span><code>Networks</code><span>, vejo o arquivo completo abaixo:</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># /etc/nsswitch.conf</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">#</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Example configuration of GNU Name Service Switch functionality.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># If you have the `glibc-doc-reference' and `info' packages installed, try:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># `info libc "Name Service Switch"' for information about this file.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">passwd: &nbsp; &nbsp; &nbsp; &nbsp; files systemd</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">group: &nbsp; &nbsp; &nbsp; &nbsp;  files systemd</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">shadow: &nbsp; &nbsp; &nbsp; &nbsp; files</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">gshadow: &nbsp; &nbsp; &nbsp;  files</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">hosts: &nbsp; &nbsp; &nbsp; &nbsp;  files dns</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">networks: &nbsp; &nbsp; &nbsp; files</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">protocols: &nbsp; &nbsp;  db files</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">services: &nbsp; &nbsp; &nbsp; db files</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">ethers: &nbsp; &nbsp; &nbsp; &nbsp; db files</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">rpc: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  db files</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">netgroup: &nbsp; &nbsp; &nbsp; nis</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 440px;"></div><div class="CodeMirror-gutters" style="display: none; height: 440px;"></div></div></div></pre><p><span>O </span><code>file</code><span> em hosts e network é o arquivo </span><code>/etc/hosts</code><span>, então informações sobre máquinas, o sistema vai primeiro procurar em </span><code>/etc/hosts</code><span> e depois vai consultar o DNS.</span></p><p><span>Para informações de redes ele vai olhar somente no </span><code>/etc/hosts</code><span>.</span></p><p>&nbsp;</p><h2><a name="etcnetworks" class="md-header-anchor"></a><span>/etc/networks</span></h2><p><span>Parecido com o </span><code>/etc/hosts</code><span>, esse arquivo serve para dar nome a rede, pode exemplo, você pode colocar a rede </span><code>192.168.10.0/24</code><span> e chamar ela de </span><code>rede-financeiro</code><span>, e assim as redes terão nomes.</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ cat</span> /etc/networks </span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># symbolic names for networks, see networks(5) for more information</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">link-local <span class="cm-number">169</span>.254.0.0</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 66px;"></div><div class="CodeMirror-gutters" style="display: none; height: 66px;"></div></div></div></pre><p>&nbsp;</p><h2><a name="etcresolvconf" class="md-header-anchor"></a><span>/etc/resolv.conf</span></h2><p><span>Usado para determinar qual servidor DNS vai ser usado pelo sistema. Para isso usamos o nome </span><code>nameserver</code><span> e depois colocamos o IP do servidor DNS que vamos usar.</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ cat</span> /etc/resolv.conf </span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># This file is managed by man:systemd-resolved(8). Do not edit.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">#</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># This is a dynamic resolv.conf file for connecting local clients to the</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># internal DNS stub resolver of systemd-resolved. This file lists all</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># configured search domains.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">#</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Run "resolvectl status" to see details about the uplink DNS servers</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># currently in use.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">#</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Third party programs must not access this file directly, but only through the</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># symlink at /etc/resolv.conf. To manage man:resolv.conf(5) in a different way,</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># replace this symlink by a static file or a different symlink.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">#</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># See man:systemd-resolved.service(8) for details about the supported modes of</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># operation for /etc/resolv.conf.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">nameserver <span class="cm-number">127</span>.0.0.53</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">options edns0 trust-ad</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 418px;"></div><div class="CodeMirror-gutters" style="display: none; height: 418px;"></div></div></div></pre><p><span>Vale ressaltar que esse arquivo é um link para outro arquivo, como informa até dentro desse arquivo (resolv.conf), ele é um arquivo dinamicamente gerado, quem gera esse arquivo é o </span><code>systemd-resolved</code><span>, e caso entre uma noca conexão, seja por uma segunda interface ou até mesmo VPN, esse serviço do systemd vai regerar esse arquivo adicionando os novos servidores DNS nesse arquivo.</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ ls</span> <span class="cm-attribute">-lh</span> /etc/resolv.conf </span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lrwxrwxrwx <span class="cm-number">1</span> root root <span class="cm-number">39</span> Apr &nbsp;<span class="cm-number">2</span> <span class="cm-number">12</span>:32 /etc/resolv.conf <span class="cm-attribute">-</span>&gt; /run/systemd/resolve/stub-resolv.conf</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 66px;"></div><div class="CodeMirror-gutters" style="display: none; height: 66px;"></div></div></div></pre><p>&nbsp;</p><h2><a name="network-manager" class="md-header-anchor"></a><span>Network Manager</span></h2><p><span>O daemon NetworkManager tenta tornar a configuração e operação de rede o mais simples e automática possível, gerenciando a conexão de rede primária e outras interfaces de rede, como Ethernet, Wi-Fi e dispositivos de banda larga móvel.</span></p><p><span>O NetworkManager conectará qualquer dispositivo de rede quando uma conexão para aquele dispositivo se tornar disponível, a menos que esse comportamento seja desabilitado. As informações sobre a rede são exportadas por meio de uma interface D-Bus para qualquer aplicativo interessado, fornecendo uma API rica para inspecionar e controlar as configurações e a operação da rede.</span></p><p><span>Era um projeto da Redhat, mas hoje tem sido mantido pela Gnome, por isso em distribuições que não usem o Gnome pode ser que você não encontre o Network Manager, mas é dificil, normalmente você deve ve-lô.</span></p><p><span>Ele é voltado mais para configurações onde tem interface gráfica, em servidores que não tem, você vai ver um maior uso do </span><code>networkd</code><span>, mas isso varia de distribuição para distribuição.</span></p><p><span>Por padrão ele sempre vai usar uma rede com fio, e sempre vai primeiramente usar DHCP, a menos que isso seja modificado.</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Verificando o status do serviço:</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> systemctl status NetworkManager</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">● NetworkManager.service <span class="cm-attribute">-</span> Network Manager</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; Loaded: loaded (/lib/systemd/system/NetworkManager.service; enabled; vendor preset: enabled)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; Active: active (running) since Sat <span class="cm-number">2021</span><span class="cm-attribute">-06-19</span> <span class="cm-number">19</span>:32:37 <span class="cm-attribute">-03</span>; 23h ago</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; Docs: man:NetworkManager(8)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; Main PID: <span class="cm-number">974</span> (NetworkManager)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  Tasks: <span class="cm-number">3</span> (limit: <span class="cm-number">18960</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; Memory: <span class="cm-number">16</span>.2M</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; CGroup: /system.slice/NetworkManager.service</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; └─974 /usr/sbin/NetworkManager <span class="cm-attribute">--no-daemon</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">jun <span class="cm-number">20</span> <span class="cm-number">18</span>:09:38 krypton NetworkManager[974]: &lt;info&gt;  [1624223378.2691] device (vnet0): state change: config <span class="cm-attribute">-</span>&gt; ip-config (reason <span class="cm-string">'none'</span>, sys-iface-state: <span class="cm-string">'external'</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">jun <span class="cm-number">20</span> <span class="cm-number">18</span>:09:38 krypton NetworkManager[974]: &lt;info&gt;  [1624223378.2749] device (virbr1): bridge port vnet0 was attached</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">jun <span class="cm-number">20</span> <span class="cm-number">18</span>:09:38 krypton NetworkManager[974]: &lt;info&gt;  [1624223378.2750] device (vnet0): Activation: connection <span class="cm-string">'vnet0'</span> enslaved, continuing activation</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">jun <span class="cm-number">20</span> <span class="cm-number">18</span>:09:38 krypton NetworkManager[974]: &lt;info&gt;  [1624223378.2752] device (vnet0): state change: ip-config <span class="cm-attribute">-</span>&gt; ip-check (reason <span class="cm-string">'none'</span>, sys-iface-state: <span class="cm-string">'external'</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">jun <span class="cm-number">20</span> <span class="cm-number">18</span>:09:38 krypton NetworkManager[974]: &lt;info&gt;  [1624223378.2946] device (vnet0): state change: ip-check <span class="cm-attribute">-</span>&gt; secondaries (reason <span class="cm-string">'none'</span>, sys-iface-state: <span class="cm-string">'external'</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">jun <span class="cm-number">20</span> <span class="cm-number">18</span>:09:38 krypton NetworkManager[974]: &lt;info&gt;  [1624223378.2949] device (vnet0): state change: secondaries <span class="cm-attribute">-</span>&gt; activated (reason <span class="cm-string">'none'</span>, sys-iface-state: <span class="cm-string">'external'</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">jun <span class="cm-number">20</span> <span class="cm-number">18</span>:09:38 krypton NetworkManager[974]: &lt;info&gt;  [1624223378.2957] device (vnet0): Activation: successful, device activated.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">jun <span class="cm-number">20</span> <span class="cm-number">18</span>:09:42 krypton NetworkManager[974]: &lt;info&gt;  [1624223382.2697] device (virbr1): carrier: link connected</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">jun <span class="cm-number">20</span> <span class="cm-number">18</span>:14:12 krypton NetworkManager[974]: &lt;info&gt;  [1624223652.3841] manager: NetworkManager state is now CONNECTED_SITE</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">jun <span class="cm-number">20</span> <span class="cm-number">18</span>:14:12 krypton NetworkManager[974]: &lt;info&gt;  [1624223652.7080] manager: NetworkManager state is now CONNECTED_GLOBAL</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">bsilva@krypton:~/vagrant/ubuntu2004<span class="cm-def">$ </span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 748px;"></div><div class="CodeMirror-gutters" style="display: none; height: 748px;"></div></div></div></pre><p><span>O NetworkManager usa o HAL para fazer a detecção das interfaces disponíveis e configuração.</span></p><blockquote><p><span>A </span><strong><span>camada de abstracção de hardware</span></strong><span> em português, ou HAL, Hardware Abstraction Layer em inglês, é a camada entre o hardware físico de um computador e o software que corre nesse computador. A sua função é ocultar diferenças em  hardware e, consequentemente, disponibilizar uma plataforma consistente  para correr aplicações. </span></p><p><span>Os sistemas operativos baseados em BSD, Linux e o Windows possuem uma HAL. Estes sistemas operativos possuem subsistemas diferentes para funções específicas, tais como som e gráficos.</span></p></blockquote><p>&nbsp;</p><p><span>A linha de comando usado para interagir com o NetoworkManager é a </span><code>nmcli</code><span>. Já os arquivos de configuração ficam em </span><code>/etc/NetworkManager/</code><span>.</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ ls</span> <span class="cm-attribute">-lh</span> /etc/NetworkManager/</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">total 24K</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">drwxr-xr-x <span class="cm-number">2</span> root root <span class="cm-number">4</span>,0K fev &nbsp;<span class="cm-number">5</span> <span class="cm-number">14</span>:54 conf.d</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">drwxr-xr-x <span class="cm-number">5</span> root root <span class="cm-number">4</span>,0K abr <span class="cm-number">22</span> <span class="cm-number">14</span>:14 dispatcher.d</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">drwxr-xr-x <span class="cm-number">2</span> root root <span class="cm-number">4</span>,0K mar <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> dnsmasq.d</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">drwxr-xr-x <span class="cm-number">2</span> root root <span class="cm-number">4</span>,0K mar <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> dnsmasq-shared.d</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-attribute">-rw-r--r--</span> <span class="cm-number">1</span> root root &nbsp; <span class="cm-number">98</span> mar <span class="cm-number">13</span> &nbsp;<span class="cm-number">2020</span> NetworkManager.conf</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">drwxr-xr-x <span class="cm-number">2</span> root root <span class="cm-number">4</span>,0K jun <span class="cm-number">18</span> <span class="cm-number">14</span>:53 system-connections</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Em 'system-connections' ficam as redes conhecidas.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">### Exemplo de uma rede wifi conhecida:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> <span class="cm-builtin">cat</span> /etc/NetworkManager/system-connections/NOME_da_rede.nmconnection</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">[connection]</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">id</span><span class="cm-operator">=</span>Nome_da_rede</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">uuid</span><span class="cm-operator">=</span>ccd5f680-d491-40bb-bcff-f613b5f3e30e</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">type</span><span class="cm-operator">=</span>wifi</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">interface-name</span><span class="cm-operator">=</span>wlp58s0</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">permissions</span><span class="cm-operator">=</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">[wifi]</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">mac-address-blacklist</span><span class="cm-operator">=</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">mode</span><span class="cm-operator">=</span>infrastructure</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">ssid</span><span class="cm-operator">=</span>Nome_da_rede</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">[wifi-security]</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">auth-alg</span><span class="cm-operator">=</span>open</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">key-mgmt</span><span class="cm-operator">=</span>wpa-psk</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">psk</span><span class="cm-operator">=</span>SENHA</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">[ipv4]</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">dns-search</span><span class="cm-operator">=</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">method</span><span class="cm-operator">=</span>auto</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">[ipv6]</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">addr-gen-mode</span><span class="cm-operator">=</span>stable-privacy</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">dns-search</span><span class="cm-operator">=</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">method</span><span class="cm-operator">=</span>auto</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">[proxy]</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 902px;"></div><div class="CodeMirror-gutters" style="display: none; height: 902px;"></div></div></div></pre><p>&nbsp;</p><figure><table><thead><tr><th><span>Opções</span></th><th><span>Descrição</span></th></tr></thead><tbody><tr><td><span>Sem argumentos</span></td><td><span>Vai mostrar uma prévia de todas as interfaces com algumas configurações.</span></td></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><strong><span>connection</span></strong></td><td><span>Se baseia no nome da conexão para algum tipo de gerencia. Sem argumento mostra todas as conexões.</span></td></tr><tr><td><span>down &quot;conneciton-name&quot;</span></td><td><span>Desativa a conexão.</span></td></tr><tr><td><span>up &quot;conneciton-name&quot;</span></td><td><span>Ativa a conexão.</span></td></tr><tr><td><span>add</span></td><td><span>Adiciona uma conexão.</span></td></tr><tr><td><span>type </span><span>&lt;</span><span>connection-type&gt;</span></td><td><span>Informa o tipo de conexão (ethernet, wifi, pppoe, bluetooth, vlan, bond., bond-slave, bridge, vpn, tun, vxlan entre muitos outros).</span></td></tr><tr><td><span>con-name </span><span>&lt;</span><span>connection-name&gt;</span></td><td><span>Adiciona o nome para essa conexão.</span></td></tr><tr><td><span>ifname </span><span>&lt;</span><span>interface&gt;</span></td><td><span>Informa o nome da interface.</span></td></tr><tr><td><span>ip4 </span><span>&lt;</span><span>IPv4&gt;</span></td><td><span>Informa o endereço IPv4 que será usado.</span></td></tr><tr><td><span>gw4 </span><span>&lt;</span><span>IPv4&gt;</span></td><td><span>Informa o IPv4 do gateway a ser usado.</span></td></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><strong><span>Device</span></strong></td><td><span>Se baseia no nome da interface para algum tipo de gerencia. Sem argumento mostra todas as interfaces.</span></td></tr><tr><td><span>show </span><span>&lt;</span><span>interface&gt;</span></td><td><span>Mostra mais informações sobre essa interface.</span></td></tr><tr><td><span>disconnect </span><span>&lt;</span><span>interface&gt;</span></td><td><span>Desativa a conexão usando o nome da interface.</span></td></tr><tr><td><span>connect </span><span>&lt;</span><span>interface&gt;</span></td><td><span>Ativa a conexão usando o nome da interface.</span></td></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><strong><span>Opções gerais</span></strong></td><td>&nbsp;</td></tr><tr><td><span>networking</span></td><td><span>Verifica se o controle do NetworkManager está habilitada ou desabilitada na interface padrão</span></td></tr><tr><td><span>networking on</span></td><td><span>Habilita o controle da interface pelo NetworkManager na interface padrão</span></td></tr><tr><td><span>networking off</span></td><td><span>Desabilita o controle da interface pelo NetworkManager na interface padrão</span></td></tr><tr><td><span>general status</span></td><td><span>Verificar o status da conexão</span></td></tr><tr><td><span>radio wifi off</span></td><td><span>Desabilita o wifi.</span></td></tr><tr><td><span>radio wifi on</span></td><td><span>Ativa o wifi.</span></td></tr></tbody></table></figure><p><span>Vamos fazer alguns testes:</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ nmcli</span> </span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">enxa44cc8f1a2d9: conectado para Conexão cabeada <span class="cm-number">1</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string">"Realtek RTL8153"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  ethernet (r8152), A4:4C:C8:F1:A2:D9, hw, mtu <span class="cm-number">1500</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  padrão ip4</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  inet4 <span class="cm-number">192</span>.168.1.148/24</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  route4 <span class="cm-number">0</span>.0.0.0/0</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  route4 <span class="cm-number">192</span>.168.1.0/24</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  inet6 fe80::6534:bbf3:99f3:892d/64</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  route6 fe80::/64</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">wlp58s0: conectado para NOME-DA-REDE-WIFI</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string">"Qualcomm Atheros QCA6174"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  wifi (ath10k_pci), 9C:B6:D0:EF:5B:FF, hw, mtu <span class="cm-number">1500</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  inet4 <span class="cm-number">192</span>.168.1.144/24</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  route4 <span class="cm-number">0</span>.0.0.0/0</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  route4 <span class="cm-number">192</span>.168.1.0/24</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  inet6 fe80::3288:28ac:8b4d:db43/64</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  route6 fe80::/64</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">virbr0: conectado para virbr0</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string">"virbr0"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  bridge, <span class="cm-number">52</span>:54:00:EA:B8:82, sw, mtu <span class="cm-number">1500</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  inet4 <span class="cm-number">192</span>.168.122.1/24</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  route4 <span class="cm-number">192</span>.168.122.0/24</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">virbr1: conectado para virbr1</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string">"virbr1"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  bridge, <span class="cm-number">52</span>:54:00:DF:41:96, sw, mtu <span class="cm-number">1500</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  inet4 <span class="cm-number">192</span>.168.121.1/24</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  route4 <span class="cm-number">192</span>.168.121.0/24</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">virbr2: conectado para virbr2</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string">"virbr2"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  bridge, <span class="cm-number">52</span>:54:00:AD:73:5C, sw, mtu <span class="cm-number">1500</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  inet4 <span class="cm-number">192</span>.168.100.1/24</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  route4 <span class="cm-number">169</span>.254.0.0/16</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  route4 <span class="cm-number">192</span>.168.100.0/24</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">vnet0: conectado para vnet0</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string">"vnet0"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  tun, FE:54:00:0B:4D:7B, sw, mtu <span class="cm-number">1500</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  mestre virbr1</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">p2p-dev-wlp58s0: desconectado</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Vendo mais informações sobre uma interface:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ nmcli</span> device show enxa44cc8f1a2d9</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">GENERAL.DEVICE: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; enxa44cc8f1a2d9</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">GENERAL.TYPE: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ethernet</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">GENERAL.HWADDR: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; A4:4C:C8:F1:A2:D9</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">GENERAL.MTU: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">1500</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">GENERAL.STATE: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">100</span> (conectado)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">GENERAL.CONNECTION: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Conexão cabeada <span class="cm-number">1</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">GENERAL.CON-PATH: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /org/freedesktop/NetworkManager/ActiveConnection/10</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">WIRED-PROPERTIES.CARRIER: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ligado</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">IP4.ADDRESS[1]: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-number">192</span>.168.1.148/24</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">IP4.GATEWAY: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">192</span>.168.1.1</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">IP4.ROUTE[1]: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dst <span class="cm-operator">=</span> <span class="cm-number">0</span>.0.0.0/0, nh <span class="cm-operator">=</span> <span class="cm-number">192</span>.168.1.1, mt <span class="cm-operator">=</span> <span class="cm-number">100</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">IP4.ROUTE[2]: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dst <span class="cm-operator">=</span> <span class="cm-number">192</span>.168.1.0/24, nh <span class="cm-operator">=</span> <span class="cm-number">0</span>.0.0.0, mt <span class="cm-operator">=</span> <span class="cm-number">100</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">IP4.DNS[1]: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-number">8</span>.8.8.8</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">IP4.DOMAIN[1]: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  lan</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">IP6.ADDRESS[1]: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; fe80::6534:bbf3:99f3:892d/64</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">IP6.GATEWAY: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-attribute">--</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">IP6.ROUTE[1]: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dst <span class="cm-operator">=</span> fe80::/64, nh <span class="cm-operator">=</span> ::, mt <span class="cm-operator">=</span> <span class="cm-number">100</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">### Verificar o status da conexão (wifi):</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> nmcli general status </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">STATE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; CONNECTIVITY  WIFI-HW &nbsp; &nbsp; WIFI &nbsp; &nbsp; &nbsp;  WWAN-HW &nbsp; &nbsp; WWAN &nbsp; &nbsp; &nbsp; </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">conectado (somente site)  limitada &nbsp; &nbsp;  habilitado  habilitado  habilitado  habilitado </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">## Cabeada:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ nmcli</span> general status </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">STATE &nbsp; &nbsp;  CONNECTIVITY  WIFI-HW &nbsp; &nbsp; WIFI &nbsp; &nbsp; &nbsp;  WWAN-HW &nbsp; &nbsp; WWAN &nbsp; &nbsp; &nbsp; </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">conectado  completa &nbsp; &nbsp;  habilitado  habilitado  habilitado  habilitado</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Verificando se o controle do NetworkManager está habilitada ou desabilitada na interface padrão:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ nmcli</span> networking </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">enabled</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">## Desabilitando controle da interface pelo NetworkManager:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> nmcli networking off</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ nmcli</span> networking </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">disabled</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">## Habilitando controle da interface pelo NetworkManager:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> nmcli networking on</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ nmcli</span> networking </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">enabled</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">## Desabilitando o controle do wifi pelo NetworkManager:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> <span class="cm-builtin">sudo</span> nmcli radio wifi off</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> <span class="cm-builtin">sudo</span> nmcli radio wifi</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">disabled</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">## Habilitando o controle do wifi pelo NetworkManager:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> <span class="cm-builtin">sudo</span> nmcli radio wifi on</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> <span class="cm-builtin">sudo</span> nmcli radio wifi</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">enabled</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">### 'Connection' mostra baseado no nome da conexão e 'Device' mostra baseado no nome da interface da rede:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ nmcli</span> connection </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">NAME &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  UUID &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  TYPE &nbsp; &nbsp;  DEVICE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Conexão cabeada <span class="cm-number">1</span> &nbsp; &nbsp; &nbsp; 947c3c9d-b720-391f-8f31-20277cd9c4f4  ethernet  enxa44cc8f1a2d9 </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">REDE-WIFI &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ccd5f680-d491-40bb-bcff-f613b5f3e30e  wifi &nbsp; &nbsp;  wlp58s0 &nbsp; &nbsp; &nbsp; &nbsp; </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">REDE-WIFI &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; c30f6b9b-19da-4a76-b9f1-c2dbf863c473  wifi &nbsp; &nbsp; &nbsp;<span class="cm-attribute">--</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">OnePlus 5T &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  cb8c346a-5983-42c2-8077-db96ba50dfe7  wifi &nbsp; &nbsp; &nbsp;<span class="cm-attribute">--</span> &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ nmcli</span> device </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">DEVICE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; TYPE &nbsp; &nbsp;  STATE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  CONNECTION &nbsp; &nbsp; &nbsp; &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">enxa44cc8f1a2d9  ethernet  conectado &nbsp; &nbsp; &nbsp;  Conexão cabeada <span class="cm-number">1</span> </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">wlp58s0 &nbsp; &nbsp; &nbsp; &nbsp;  wifi &nbsp; &nbsp;  conectado &nbsp; &nbsp; &nbsp;  REDE-WIFI</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">virbr0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; bridge &nbsp;  desconectado &nbsp; &nbsp; <span class="cm-attribute">--</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">virbr2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; bridge &nbsp;  desconectado &nbsp; &nbsp; <span class="cm-attribute">--</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">vnet0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  tun &nbsp; &nbsp; &nbsp; desconectado &nbsp; &nbsp; <span class="cm-attribute">--</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">p2p-dev-wlp58s0  wifi-p2p  desconectado &nbsp; &nbsp; <span class="cm-attribute">--</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">virbr1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; bridge &nbsp;  não gerenciável &nbsp;<span class="cm-attribute">--</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lo &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; loopback  não gerenciável &nbsp;<span class="cm-attribute">--</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">virbr0-nic &nbsp; &nbsp; &nbsp; tun &nbsp; &nbsp; &nbsp; não gerenciável &nbsp;<span class="cm-attribute">--</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">virbr1-nic &nbsp; &nbsp; &nbsp; tun &nbsp; &nbsp; &nbsp; não gerenciável &nbsp;<span class="cm-attribute">--</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">virbr2-nic &nbsp; &nbsp; &nbsp; tun &nbsp; &nbsp; &nbsp; não gerenciável &nbsp;<span class="cm-attribute">--</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Desativando a interface usando o nome da conexão:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> nmcli connection down <span class="cm-string">"Conexão cabeada 1"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Conexão “Conexão cabeada <span class="cm-number">1</span>” desativada com sucesso (caminho D-Bus ativo: /org/freedesktop/NetworkManager/ActiveConnection/15)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ ip</span> addr show enxa44cc8f1a2d9</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-number">2</span>: enxa44cc8f1a2d9: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span class="cm-number">1500</span> qdisc fq_codel state UP group default qlen <span class="cm-number">1000</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  link/ether a4:4c:c8:f1:a2:d9 brd ff:ff:ff:ff:ff:ff</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Ativando:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> nmcli connection up <span class="cm-string">"Conexão cabeada 1"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Conexão ativada com sucesso (caminho D-Bus ativo: /org/freedesktop/NetworkManager/ActiveConnection/18)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ ip</span> addr show enxa44cc8f1a2d9</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-number">2</span>: enxa44cc8f1a2d9: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span class="cm-number">1500</span> qdisc fq_codel state UP group default qlen <span class="cm-number">1000</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  link/ether a4:4c:c8:f1:a2:d9 brd ff:ff:ff:ff:ff:ff</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  inet <span class="cm-number">192</span>.168.1.148/24 brd <span class="cm-number">192</span>.168.1.255 scope global dynamic noprefixroute enxa44cc8f1a2d9</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; valid_lft 86382sec preferred_lft 86382sec</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  inet6 fe80::6534:bbf3:99f3:892d/64 scope link noprefixroute </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; valid_lft forever preferred_lft forever</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Desativando a conexão usando o nome da interface:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> nmcli device disconnect enxa44cc8f1a2d9</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Dispositivo “enxa44cc8f1a2d9” desconectado com sucesso.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ ip</span> addr show enxa44cc8f1a2d9</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-number">2</span>: enxa44cc8f1a2d9: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span class="cm-number">1500</span> qdisc fq_codel state UP group default qlen <span class="cm-number">1000</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  link/ether a4:4c:c8:f1:a2:d9 brd ff:ff:ff:ff:ff:ff</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Ativando a conexão usando o nome da interface:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> nmcli device connect enxa44cc8f1a2d9</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Dispositivo “enxa44cc8f1a2d9” ativado com sucesso com “947c3c9d-b720-391f-8f31-20277cd9c4f4”.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ ip</span> addr show enxa44cc8f1a2d9</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-number">2</span>: enxa44cc8f1a2d9: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span class="cm-number">1500</span> qdisc fq_codel state UP group default qlen <span class="cm-number">1000</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  link/ether a4:4c:c8:f1:a2:d9 brd ff:ff:ff:ff:ff:ff</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  inet <span class="cm-number">192</span>.168.1.148/24 brd <span class="cm-number">192</span>.168.1.255 scope global dynamic noprefixroute enxa44cc8f1a2d9</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; valid_lft 86399sec preferred_lft 86399sec</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  inet6 fe80::6534:bbf3:99f3:892d/64 scope link noprefixroute </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; valid_lft forever preferred_lft forever</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Adicionar uma conexão chamada rede-test</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> nmcli connection add type ethernet con-name rede-test ifname enxa44cc8f1a2d9 ip4 <span class="cm-number">192</span>.168.1.150/24 gw4 <span class="cm-number">192</span>.168.1.1</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">A conexão “rede-test” (a09d5a89-c65a-4724-8c07-c280535158f7) foi adicionada com sucesso.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ nmcli</span> connection  | <span class="cm-builtin">grep</span> rede</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">rede-test &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a09d5a89-c65a-4724-8c07-c280535158f7  ethernet</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Deletar uma conexão:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> nmcli connection del rede-test</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">A conexão “rede-test” (a09d5a89-c65a-4724-8c07-c280535158f7) foi excluída com sucesso.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">### Trabalhando com interfaces Wifi</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Listando as redes do Wifi:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ nmcli</span> device wifi list </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">IN-USE  BSSID &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  SSID &nbsp; &nbsp; &nbsp; &nbsp;  MODE &nbsp; CHAN  RATE &nbsp; &nbsp; &nbsp;  SIGNAL  BARS  SECURITY &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  E0:B9:E5:E3:E1:43  NOME &nbsp; &nbsp; &nbsp; &nbsp; Infra &nbsp;<span class="cm-number">11</span> &nbsp; &nbsp;<span class="cm-number">130</span> Mbit/s &nbsp;<span class="cm-number">100</span> &nbsp; &nbsp; ▂▄▆█  WPA1 WPA2 </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">* &nbsp; &nbsp; &nbsp; E2:B9:E5:E3:E1:4B  NOME &nbsp; &nbsp; &nbsp; &nbsp; Infra &nbsp;<span class="cm-number">157</span> &nbsp; <span class="cm-number">405</span> Mbit/s &nbsp;<span class="cm-number">100</span> &nbsp; &nbsp; ▂▄▆█  WPA1 WPA2 </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">10</span>:13:31:75:B1:B9  NOME &nbsp; &nbsp; &nbsp; &nbsp; Infra &nbsp;<span class="cm-number">1</span> &nbsp; &nbsp; <span class="cm-number">130</span> Mbit/s &nbsp;<span class="cm-number">75</span> &nbsp; &nbsp;  ▂▄▆_  WPA2 &nbsp; &nbsp; &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Caso existe uma rede Wifi mais fraca pode ser que nao seja listado, para isso rode o comando abaixo:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ nmcli</span> device wifi rescan </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># E agora rode novamente o 'list' e você verá que pode ter aparecido novas redes.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Conectando no Wifi:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> nmcli device wifi connect <span class="cm-string">"SSID-NAME"</span> password <span class="cm-string">"SENHA"</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 4334px;"></div><div class="CodeMirror-gutters" style="display: none; height: 4334px;"></div></div></div></pre><p>&nbsp;</p><h2><a name="systemd-networkd" class="md-header-anchor"></a><span>SystemD-NetworkD</span></h2><p><span>Similar ao NetworkManager, o Networkd é outro renderer de redes que temos no Linux a disposição para usar.</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Verificando o serviço:</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> systemctl status systemd-networkd</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">● systemd-networkd.service <span class="cm-attribute">-</span> Network Service</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; Loaded: loaded (/lib/systemd/system/systemd-networkd.service; enabled; vendor preset: enabled)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; Active: active (running) since Sun <span class="cm-number">2021</span><span class="cm-attribute">-06-20</span> <span class="cm-number">23</span>:50:12 UTC; 10min ago</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">TriggeredBy: ● systemd-networkd.socket</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; Docs: man:systemd-networkd.service(8)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; Main PID: <span class="cm-number">1472</span> (systemd-network)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; Status: <span class="cm-string">"Processing requests..."</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  Tasks: <span class="cm-number">1</span> (limit: <span class="cm-number">2280</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; Memory: <span class="cm-number">1</span>.5M</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; CGroup: /system.slice/systemd-networkd.service</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; └─1472 /lib/systemd/systemd-networkd</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Jun <span class="cm-number">20</span> <span class="cm-number">23</span>:50:12 ubuntu2004.localdomain systemd[1]: Starting Network Service...</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Jun <span class="cm-number">20</span> <span class="cm-number">23</span>:50:12 ubuntu2004.localdomain systemd-networkd[1472]: eth0: Gained IPv6LL</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Jun <span class="cm-number">20</span> <span class="cm-number">23</span>:50:12 ubuntu2004.localdomain systemd-networkd[1472]: Enumeration completed</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Jun <span class="cm-number">20</span> <span class="cm-number">23</span>:50:12 ubuntu2004.localdomain systemd[1]: Started Network Service.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Jun <span class="cm-number">20</span> <span class="cm-number">23</span>:50:12 ubuntu2004.localdomain systemd-networkd[1472]: eth0: IPv6 successfully enabled</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Jun <span class="cm-number">20</span> <span class="cm-number">23</span>:50:12 ubuntu2004.localdomain systemd-networkd[1472]: eth0: DHCPv4 address <span class="cm-number">192</span>.168.121.52/24 via <span class="cm-number">192</span>.168.121.1</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 484px;"></div><div class="CodeMirror-gutters" style="display: none; height: 484px;"></div></div></div></pre><p><span>Se não for usar o NetworkManager desative ele, ficar com mais de 1 renderer de rede rodando por causar conflito e pode trazer alguma dor de cabeça no futuro.</span></p><p>&nbsp;</p><p><span>Dentro de </span><code>/run/systemd/network/</code><span>, </span><code>/lib/systemd/network/</code><span> ou </span><code>/etc/systemd/network/</code><span> é criado vários arquivos contendo a configuração de cada interface que foi configurada no Linux. Se você colocar alguma informação de layer 2 na configuração da interface, dentro de </span><code>/run/systemd/network/</code><span> também será criado um mesmo arquivo daquela interface, mas ao invés de termos um arquivo com extensão </span><code>.network</code><span>, vamos ter também outro arquivo com extensão </span><code>.link</code><span>.</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ ls</span> <span class="cm-attribute">-lh</span> /lib/systemd/network/</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">total 32K</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-attribute">-rw-r--r--</span> <span class="cm-number">1</span> root root &nbsp;<span class="cm-number">44</span> Feb <span class="cm-number">23</span> <span class="cm-number">00</span>:18 <span class="cm-number">73</span><span class="cm-attribute">-usb-net-by-mac</span>.link</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-attribute">-rw-r--r--</span> <span class="cm-number">1</span> root root <span class="cm-number">645</span> Apr &nbsp;<span class="cm-number">1</span> &nbsp;<span class="cm-number">2020</span> <span class="cm-number">80</span><span class="cm-attribute">-container-host0</span>.network</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-attribute">-rw-r--r--</span> <span class="cm-number">1</span> root root <span class="cm-number">718</span> Apr &nbsp;<span class="cm-number">1</span> &nbsp;<span class="cm-number">2020</span> <span class="cm-number">80</span><span class="cm-attribute">-container-ve</span>.network</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-attribute">-rw-r--r--</span> <span class="cm-number">1</span> root root <span class="cm-number">704</span> Apr &nbsp;<span class="cm-number">1</span> &nbsp;<span class="cm-number">2020</span> <span class="cm-number">80</span><span class="cm-attribute">-container-vz</span>.network</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-attribute">-rw-r--r--</span> <span class="cm-number">1</span> root root &nbsp;<span class="cm-number">78</span> Apr &nbsp;<span class="cm-number">1</span> &nbsp;<span class="cm-number">2020</span> <span class="cm-number">80</span><span class="cm-attribute">-wifi-adhoc</span>.network</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-attribute">-rw-r--r--</span> <span class="cm-number">1</span> root root <span class="cm-number">101</span> Apr &nbsp;<span class="cm-number">1</span> &nbsp;<span class="cm-number">2020</span> <span class="cm-number">80</span><span class="cm-attribute">-wifi-ap</span>.network.example</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-attribute">-rw-r--r--</span> <span class="cm-number">1</span> root root &nbsp;<span class="cm-number">64</span> Apr &nbsp;<span class="cm-number">1</span> &nbsp;<span class="cm-number">2020</span> <span class="cm-number">80</span><span class="cm-attribute">-wifi-station</span>.network.example</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-attribute">-rw-r--r--</span> <span class="cm-number">1</span> root root <span class="cm-number">491</span> Apr &nbsp;<span class="cm-number">1</span> &nbsp;<span class="cm-number">2020</span> <span class="cm-number">99</span><span class="cm-attribute">-default</span>.link</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 220px;"></div><div class="CodeMirror-gutters" style="display: none; height: 220px;"></div></div></div></pre><p>&nbsp;</p><p>&nbsp;</p><h2><a name="ifupdown" class="md-header-anchor"></a><span>Ifupdown</span></h2><p><span>Talvez seja necessário instalar o pacote </span><code>ifupdown</code><span> para poder mexer com essa funcionalidade já que ele está atrelado ao </span><code>systemd-networkd</code><span>, não confunda com </span><code>network-dispatcher</code><span>.</span></p><p>&nbsp;</p><p><span>Os comandos cobrados pela LPI são: </span><code>ifup</code><span> e  </span><code>ifdown</code><span>, que são usados para ativar e desativar uma interface de rede, mas para isso você precisa estar usando o arquivo de configuração </span><code>/etc/network/interfaces</code><span>, se não tiver configurado nao vai funcionar.</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Ativando:</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> ifup eth0</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Desativando:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> ifdown eth0</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 110px;"></div><div class="CodeMirror-gutters" style="display: none; height: 110px;"></div></div></div></pre><p>&nbsp;</p><p><a href='../109.2/1092.md'><span>Voltar</span></a>
+<a href='../109.3/1093.md'><span>Próximo</span></a><span> </span>
+<a href='../main.md'><span>Índice Geral</span></a></p></div>
+</body>
+</html>
