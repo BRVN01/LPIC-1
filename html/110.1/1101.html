@@ -1,0 +1,1284 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>1101</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+/* Alterado por mim 01/08/2020 */
+
+/* code color */
+.cm-s-inner .cm-keyword {
+    color: #bb7fc3;
+
+}
+
+.cm-s-inner .cm-atom,
+.cm-s-inner.cm-atom {
+    color: #C7C7C7;
+}
+
+.cm-s-inner .cm-number {
+    color: #88b2a1;
+}
+
+.cm-s-inner .cm-def {
+    color: #7f7fff;
+}
+
+.cm-s-inner .cm-variable {
+    color: #C7C7C7;
+}
+
+.cm-s-inner .cm-variable-2 {
+    color: #C7C7C7;
+}
+
+.cm-s-inner .cm-variable-3 {
+    color: #C7C7C7;
+}
+
+.cm-s-inner .cm-string {
+    color: #d48888;
+}
+
+.cm-s-inner .cm-property {
+    color: #efefef;
+}
+
+.cm-s-inner .cm-operator {
+    color: #cb8c8c;
+}
+
+.cm-s-inner .cm-comment,
+.cm-s-inner.cm-comment {
+    color: hsl(0, 0%, 35%);
+}
+
+.cm-s-inner .cm-string-2 {
+    color: #ffaa7f;
+}
+
+.cm-s-inner .cm-meta {
+    color: hsl(0, 0%, 33%);
+}
+
+.cm-s-inner .cm-qualifier {
+    color: hsl(0, 0%, 33%);
+}
+
+.cm-s-inner .cm-builtin {
+    color: #997fd4;
+}
+
+.cm-s-inner .cm-bracket {
+    color: #ccccbb;
+}
+
+.cm-s-inner .cm-tag {
+    color: #88bb7f;
+}
+
+.cm-s-inner .cm-attribute {
+    color: #7f7fe5;
+}
+
+.cm-s-inner .cm-header,
+.cm-s-inner.cm-header {
+    color: #7f7fff;
+}
+
+.cm-s-inner .cm-quote,
+.cm-s-inner.cm-quote {
+    color: #7fcc7f;
+}
+
+.cm-s-inner .cm-hr,
+.cm-s-inner.cm-hr {
+    color: hsl(0, 0%, 60%);
+}
+
+.cm-s-inner .cm-link,
+.cm-s-inner.cm-link {
+    color: #7f7fe5;
+}
+
+.cm-negative {
+    color: #eea1a1;
+}
+
+.cm-positive {
+    color: #90cc90;
+}
+
+.cm-header,
+.cm-strong {
+    font-weight: 700;
+}
+
+.cm-error {
+    color: #ff7f7f;
+}
+
+.cm-invalidchar {
+    color: #ff7f7f;
+}
+
+.cm-constant {
+    color: #0092ce;
+}
+
+.cm-defined {
+    color: #dac37f;
+}
+
+div.CodeMirror span.CodeMirror-matchingbracket {
+    color: #7fff7f;
+}
+
+div.CodeMirror span.CodeMirror-nonmatchingbracket {
+    color: #ff9090;
+}
+:root {
+    --fg-color: #696969;
+    --bg-color: #0a0a0a;
+
+    /* Cor do comentário */
+    --fg-comment: #c2884f;
+
+    /* Cor de background do código (quando usa ``) */
+    --bg-trans-d: #0a0a0a;
+    
+    --bg-trans-l: hsla(0, 0%, 100%, 10%);
+
+    /* Cor das letras no código (quando usa ``) */
+/*    --theme-vim-yl: #3ab5ae;*/
+    --theme-vim-yl: #61cfc9;
+
+    /* Cor da barra dentro do bloco de código (quando usa ```) */
+    --theme-vim-gn: #ffffff;
+
+    --theme-vim-bl: #22a2c9;
+    --table-bg: hsla(0, 0%, 100%, 6%);
+    --table-bg-dim: hsla(0, 0%, 100%, 2%);
+
+    /* Barra de indice lateral */
+    --side-bar-bg-color: #c7c1c1;
+
+    --control-text-color: #0e0808;
+
+    /* Cor quando seleciona o texto*/
+    --select-text-bg-color: hsl(153, 47%, 40%);
+
+    --select-text-font-color: #fff;
+
+    --item-hover-bg-color: #fff;
+
+    /* Cor do bloco de código */
+    --fence-bg: #1a1a1a;
+/*    --fence-bg: hsl(0, 0%, 10%);*/
+}
+
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif !important;
+    color: var(--fg-color);
+    background-color: var(--bg-color);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6rem;
+    letter-spacing: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#write {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 20px 30px 40px 30px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+#write p {
+    line-height: 1.6rem;
+    word-spacing: 0.05rem;
+}
+
+#write ol li {
+    padding-left: 0.5rem;
+}
+
+#write > ul:first-child,
+#write > ol:first-child {
+    margin-top: 30px;
+}
+
+body > *:first-child {
+    margin-top: 0 !important;
+}
+
+body > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+a {
+    /* Cor do indice (toc) */
+    color: #41b883;
+    font-weight: 600;
+    padding: 0px 2px;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+
+/* h2 a,
+h3 a {
+    color: #34495e;
+} */
+
+h1 {
+    padding-bottom: 0.4rem;
+    font-size: 2.2rem;
+    line-height: 1.3;
+    color: #e87800;
+}
+
+h2 {
+    font-size: 1.75rem;
+    line-height: 1.225;
+    margin: 35px 0px 15px 0px;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid hsl(0, 0%, 20%);
+    color: #d86c00;
+}
+
+h3 {
+    font-size: 1.4rem;
+    line-height: 1.43;
+    margin: 20px 0px 7px 0px;
+    color: #ff860c;
+}
+
+h4 {
+    font-size: 1.2rem;
+    color: #de9d04;
+}
+
+h5 {
+    font-size: 1rem;
+    color: #debd04;
+}
+
+h6 {
+    font-size: 1rem;
+    color: #e8c500;
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+
+/*table {
+    margin: 0.8em 0;
+}*/
+
+li > ol,
+li > ul {
+    margin: 0 0;
+}
+
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: hsl(0, 0%, 18%);
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    margin-top: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+ul,
+ol {
+    padding-left: 30px;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+/* Citação */
+
+blockquote {
+    border-left: 4px solid #0092ce;
+    padding: 10px 0px 10px 15px;
+    color: #696969;
+/*    background-color: rgba(66, 185, 131, 0.1);*/
+    background-color: rgba(66, 132, 183, 0.1);
+}
+
+table {
+    font-family: Roboto Mono, Source Sans Pro, Monaco, courier, monospace !important;
+    font-size: 0.85rem;
+    padding: 0;
+    word-break: initial;
+}
+
+table tr {
+    border-top: 1px solid hsl(210, 10%, 11%);
+    margin: 0;
+    padding: 0;
+}
+
+table tr:nth-child(2n),
+thead {
+    background-color: var(--table-bg);
+}
+
+table tr,
+thead {
+    background-color: var(--table-bg-dim);
+}
+
+table tr th {
+    font-weight: bold;
+   border: 1px solid hsl(210, 10%, 11%);
+/*    border: transparent;*/
+    border-bottom: 0;
+/*    text-align: left;*/
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table tr td {
+    border: 1px solid #1d1d1d;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+#write strong {
+    padding: 0px 1px 0 1px;
+}
+
+#write em {
+    padding: 0px 5px 0 2px;
+}
+
+#write table thead th {
+    /* background-color: hsl(0, 0%, 5%); */
+    background-color: hsl(0, 0%, 9%);
+}
+
+#write .CodeMirror-gutters {
+    border-right: none;
+}
+
+#write .md-fences {
+    border: 1px solid hsl(0, 0%, 11%);
+    -webkit-font-smoothing: initial;
+    margin: 0.8rem 0 !important;
+    padding: 0.3rem 0rem !important;
+    line-height: 1.43rem;
+
+    /* Cor do texto dentro do bloco de código */
+    color: hsl(0, 0%, 78%);
+    
+    background-color: var(--fence-bg) !important;
+    border-radius: 2px;
+    font-family: Roboto Mono, Source Sans Pro, Monaco, courier, monospace !important;
+    font-weight: bold;
+    font-size: 0.85rem;
+    word-wrap: normal;
+}
+
+#write .CodeMirror-wrap .CodeMirror-code pre {
+    padding-left: 12px;
+}
+
+/* Código `exemplo` */
+#write code,
+tt {
+    margin: 0 0.03px;
+    padding: 0.03px 0.2px;
+    border-radius: 0.2px;
+/*    font-family: Roboto Mono, Source Sans Pro, Monaco, courier, monospace !important;*/
+    font-family: latin-ext !important;
+    font-weight: normal;
+    /* tamanho das letras dentro do código: */
+    font-size: 1rem;
+    color: var(--theme-vim-yl);
+    background-color: var(--bg-trans-d);
+}
+
+#write .md-footnote {
+    color: var(--theme-vim-yl);
+    background-color: var(--bg-trans-d);
+}
+
+/* heighlight. */
+#write mark {
+    background-color: #ebffeb;
+    border-radius: 2px;
+    padding: 2px 4px;
+    margin: 0 2px;
+    color: #222;
+    font-weight: 500;
+}
+
+#write del {
+    padding: 1px 2px;
+}
+
+.cm-s-inner .cm-link,
+.cm-s-inner.cm-link {
+    color: var(--theme-vim-bl);
+}
+
+.cm-s-inner .cm-string {
+    color: var(--theme-vim-bl);
+}
+
+.md-task-list-item > input {
+    margin-left: -1.3em;
+}
+
+@media screen and (min-width: 914px) {
+    /*body {
+        width: 854px;
+        margin: 0 auto;
+    }*/
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+#write pre.md-meta-block {
+    padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: hsl(0, 0%, 3%);
+    border: 0;
+    border-radius: 3px;
+    color: hsl(0, 0%, 53%);
+    margin-top: 0 !important;
+}
+
+.mathjax-block > .code-tooltip {
+    bottom: 0.375rem;
+}
+
+#write > h3.md-focus:before {
+    left: -1.5625rem;
+    top: 0.375rem;
+}
+
+#write > h4.md-focus:before {
+    left: -1.5625rem;
+    top: 0.285714286rem;
+}
+
+#write > h5.md-focus:before {
+    left: -1.5625rem;
+    top: 0.285714286rem;
+}
+
+#write > h6.md-focus:before {
+    left: -1.5625rem;
+    top: 0.285714286rem;
+}
+
+.md-image > .md-meta {
+    border-radius: 3px;
+    font-family: Consolas, 'Liberation Mono', Courier, monospace;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: inherit;
+}
+
+.md-toc {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: hsl(0, 0%, 2%);
+    border-color: hsl(0, 0%, 0%) hsl(0, 0%, 10%) hsl(0, 0%, 10%) hsl(0, 0%, 7%);
+    border-style: solid;
+    border-width: 1px;
+}
+
+#md-notification:before {
+    top: 10px;
+}
+
+/** focus mode */
+
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header,
+.context-menu,
+.megamenu-content,
+footer {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: hsl(0, 0%, 2%);
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: var(--theme-vim-gn);
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: hsl(215, 92%, 5%);
+}
+
+#typora-sidebar {
+    /* font-family: Roboto Mono, Source Sans Pro, Monaco, courier, monospace !important; */
+    font-family: Helvetica, Arial !important;
+    font-weight: bold;
+}
+
+.file-list-item-summary {
+    font-family: Helvetica, Arial !important;
+    font-weight: 400;
+}
+
+.file-list-item {
+    border-bottom: 0.15rem solid hsl(0, 0%, 18%);
+}
+
+.file-list-item.active {
+    background: hsl(0, 0%, 15%) !important;
+}
+
+.file-node-background {
+    height: 29px;
+}
+
+#toc-dropmenu {
+    background: hsl(0, 0%, 18%) !important;
+    /* font-family: Roboto Mono, Source Sans Pro, Monaco, courier, monospace !important; */
+    font-weight: bold;
+}
+
+#toc-content {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#toc-content a:hover {
+    text-decoration: none;
+}
+
+.outline-item {
+    /* transition: color 150ms, background-color 150ms; */
+    transition: color 150ms;
+}
+
+.outline-item:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--theme-vim-gn);
+}
+
+.sidebar-footer {
+    border-top: 2px solid hsl(0, 0%, 15%) !important;
+}
+
+.footer-item:hover,
+.sidebar-footer-item:hover {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.file-tree-node.active > .file-node-background {
+    background-color: hsl(0, 0%, 15%) !important;
+}
+
+.file-node-content:hover {
+    color: #fff;
+}
+
+html {
+    background: #1f1f1f !important;
+}
+
+.outline-title-wrapper {
+    display: none;
+}
+
+.dropdown-menu .divider {
+    display: none;
+    height: 2px;
+    background-color: hsl(0, 0%, 13%);
+}
+
+.dropdown-menu > li > a {
+    color: #fff;
+}
+
+.autoComplt-hint {
+    color: var(--theme-vim-gn) !important;
+    /* border-color: transparent !important */
+}
+
+.auto-suggest-container {
+    color: var(--theme-vim-gn) !important;
+    font-family: Roboto Mono, Source Sans Pro, Monaco, courier, monospace !important;
+    font-weight: bold !important;
+    border-color: var(--theme-vim-gn) !important;
+    border-radius: 8px !important;
+    border-width: 2px !important;
+    margin-top: 5px;
+    overflow: hidden !important;
+    box-shadow: 0 0 1rem hsla(153, 47%, 49%, 0.3);
+}
+
+/* .auto-suggest-container li { */
+/* transition: all 150ms; */
+/* text-align: center !important; */
+/* } */
+
+.auto-suggest-container li:hover {
+    color: #fff !important;
+    background-color: var(--theme-vim-gn) !important;
+    /* text-align: right !important; */
+}
+
+/* windows */
+/* .modal-dialog { */
+/* color: #000; */
+/* } */
+
+.typora-sourceview-on #toggle-sourceview-btn {
+    background-color: var(--theme-vim-gn);
+}
+
+/* cursor */
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+    border-left: 0.2px solid var(--theme-vim-gn);
+}
+
+.CodeMirror div.CodeMirror-cursor {
+    /* 1px é a grossura da paleta (quando em ```) */
+    border-left: 0.2px solid var(--theme-vim-gn);
+    z-index: 3;
+}
+
+.form-control {
+    background-color: var(--bg-trans-d);
+    border-color: var(--bg-color);
+}
+
+.modal-header,
+.modal-footer {
+    border-color: var(--bg-trans-l);
+    border-width: 2px;
+}
+
+.btn:hover {
+    background-color: var(--theme-vim-gn);
+}
+
+.md-rawblock-on-edit > .md-rawblock-tooltip,
+.md-rawblock:hover > .md-rawblock-container,
+.md-rawblock:hover > .md-rawblock-tooltip {
+    transition: background 0.5s linear;
+    background-color: var(--fence-bg) !important;
+    display: block;
+}
+
+.md-rawblock-control:not(.md-rawblock-tooltip) {
+    background-color: var(--fence-bg) !important;
+}
+
+/* windows */
+
+:root {
+    --text-color: var(--fg-color);
+    --btn-border-color: hsla(0, 0%, 100%, 0.1);
+    --item-hover-bg-color: var(--select-text-bg-color);
+}
+
+.megamenu-menu-header {
+    border-color: var(--btn-border-color);
+}
+
+.megamenu-opened header {
+    background-image: none;
+}
+
+.megamenu-menu {
+    background-color: var(--side-bar-bg-color);
+}
+
+.megamenu-content {
+    background: var(--bg-color);
+}
+
+.modal-content {
+    border-color: var(--btn-border-color);
+}
+
+.long-btn {
+    border-color: var(--btn-border-color);
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: transparent;
+}
+
+footer.ty-footer {
+    border-top: 1px solid var(--table-bg);
+}
+
+#recent-file-panel-action-btn {
+    background-color: transparent;
+}
+
+/* improvement */
+
+.dropdown-menu {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-box-shadow: 0 0 0 0 transparent;
+}
+
+
+/* links */
+
+a {
+        text-decoration: none;
+        color: #0092ce;
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+table {
+    margin: 0.4em 0;
+    /*     margin: 0.8rem 0 0 0 ; */
+}
+/* snappy scheme */
+.cm-s-inner .cm-keyword {
+    color: #C7C7C7;
+}
+
+.cm-s-inner .cm-atom,
+.cm-s-inner.cm-atom {
+    color: #C7C7C7;
+}
+
+.cm-s-inner .cm-number {
+    color: #C7C7C7;
+}
+
+/* Variáveis */
+.cm-s-inner .cm-def {
+    color: #C7C7C7;
+}
+
+.cm-s-inner .cm-variable,
+.cm-s-inner .cm-variable-2,
+.cm-s-inner .cm-variable-3 {
+    color: #e3e2e0;
+}
+
+/* coisas entre aspas */
+.cm-s-inner .cm-string,
+.cm-s-inner .cm-string-2 {
+    color: #C7C7C7;
+}
+
+.cm-s-inner .cm-property {
+    color: #e3e2e0;
+}
+
+.cm-s-inner .cm-operator {
+    color: #C7C7C7;
+}
+
+/* Cor de comentario dentro de bloco de código (como ```) */
+.cm-s-inner .cm-comment,
+.cm-s-inner.cm-comment {
+    color: var(--fg-comment);
+    font-weight: normal;
+}
+
+.cm-s-inner .cm-meta {
+    color: #ffffff;
+}
+
+/* Cor do bloco de código (esse é o código mesmo, depois do PS1) (dentro de ```)*/
+.cm-s-inner .cm-builtin {
+    color: hsl(0, 0%, 78%);
+/*    color: #9088cc;*/
+}
+
+.cm-s-inner .cm-bracket {
+    color: white;
+    /* < > </ > */
+}
+
+.cm-s-inner .cm-tag {
+    color: #4ea1df;
+}
+
+.cm-s-inner .cm-attribute {
+    color: #C7C7C7;
+}
+
+.cm-s-inner .cm-header,
+.cm-s-inner.cm-header {
+    color: #e3e2e0;
+}
+
+/* Barra da citação */
+.cm-s-inner .cm-quote,
+.cm-s-inner.cm-quote {
+    color: #4ea1df;
+}
+
+.cm-s-inner .cm-hr,
+.cm-s-inner.cm-hr {
+    color: #e3e2e0;
+}
+
+.cm-s-inner .cm-link,
+.cm-s-inner.cm-link {
+    /* color: #0000cc */
+    color: #f66153;
+}
+
+.cm-negative {
+    color: #e61f44;
+}
+
+.cm-positive {
+    color: #a6e22e;
+}
+
+
+
+</style>
+</head>
+<body class='typora-export'>
+<div id='write'  class=''><p>&nbsp;</p><h1><a name="índice" class="md-header-anchor"></a><span>Índice</span></h1><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n2"><a class="md-toc-inner" href="#índice">Índice</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n6"><a class="md-toc-inner" href="#1101-tarefas-de-segurança-do-sistema">110.1 Tarefas de Segurança do sistema</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n9"><a class="md-toc-inner" href="#su-e-sudo">Su e Sudo</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n23"><a class="md-toc-inner" href="#who">who</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n27"><a class="md-toc-inner" href="#w">w</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n31"><a class="md-toc-inner" href="#last">last</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n36"><a class="md-toc-inner" href="#lastb">lastb</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n41"><a class="md-toc-inner" href="#lastlog">lastlog</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n45"><a class="md-toc-inner" href="#chage">chage</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n48"><a class="md-toc-inner" href="#passwd">passwd</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n76"><a class="md-toc-inner" href="#usermod">usermod</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n95"><a class="md-toc-inner" href="#suidsgid">SUID/SGID</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n103"><a class="md-toc-inner" href="#ulimit">ulimit</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n123"><a class="md-toc-inner" href="#netstat-ou-ss">netstat ou ss</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n126"><a class="md-toc-inner" href="#lsoft">lsoft</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n140"><a class="md-toc-inner" href="#nmap">nmap</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n157"><a class="md-toc-inner" href="#fuser">fuser</a></span></p></div><p><a href='../109.4/1094.html'><span>Voltar</span></a>
+<a href='../110.2/1102.html'><span>Próximo</span></a><span> </span>
+<a href='../main.html'><span>Índice Geral</span></a></p><p>&nbsp;</p><h1><a name="1101-tarefas-de-segurança-do-sistema" class="md-header-anchor"></a><span>110.1 Tarefas de Segurança do sistema</span></h1><p><span>Vamos ver algumas tarefas de segurança do sistema.</span></p><p>&nbsp;</p><h2><a name="su-e-sudo" class="md-header-anchor"></a><span>Su e Sudo</span></h2><p><span>O comando </span><code>su</code><span> é usado para mudar de usuário, você passa a estar logado com outro usuário e ficará com ele até que decida mudar de volta.</span></p><p><span>Quando você usa o comando </span><code>su - &lt;login&gt;</code><span>, você vai estar mudando de usuário e carregando as variáveis de ambiente do usuário que vai logar, com isso, voce muda a home, as variáveis de ambiente, no caso, está fazendo um novo processo de login. Quando você muda de usuário sem alterar isso, acontece que o usuário muda mas não é feito todo o processo de um novo login.</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># O comando abaixo tem o mesmo efeito que o comando sudo:</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ su</span> <span class="cm-attribute">-c</span> <span class="cm-string">"COMANDO"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># O problema é que aqui, você deve informar a senha do usuário root.</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 88px;"></div><div class="CodeMirror-gutters" style="display: none; height: 88px;"></div></div></div></pre><p>&nbsp;</p><p><span>O comando </span><code>sudo</code><span> é usado para mudar de usuário, normalmente virando um super usuário, mas esse mudança é temporária, você ficará logado somo super usuário somente enquanto o processo que estiver rodando existir, quando o processo morrer, você será deslogado da conta com super usuário e ficará com a conta normal.</span></p><p><span>Exemplo. se voce rodar o comando </span><code>sudo apt update</code><span>, você passará a estar logado como super usuário somente enquanto o </span><code>apt</code><span> estiver sendo atualizado, quando o processo do </span><code>apt</code><span> terminar, você não estará mais logado como super usuário.</span></p><p>&nbsp;</p><p><span>Vamos entender um pouco como funciona o arquivo </span><code>sudoers</code><span>.</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> <span class="cm-builtin">cat</span> /etc/sudoers</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">#</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># This file MUST be edited with the 'visudo' command as root.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">#</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Please consider adding local content in /etc/sudoers.d/ instead of</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># directly modifying this file.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">#</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># See the man page for details on how to write a sudoers file.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">#</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Defaults<span class="cm-tab" role="presentation" cm-text="	">    </span>env_reset</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Defaults<span class="cm-tab" role="presentation" cm-text="	">    </span>mail_badpass</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Defaults<span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-def">secure_path</span><span class="cm-operator">=</span><span class="cm-string">"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Host alias specification</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># User alias specification</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Cmnd alias specification</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># User privilege specification</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">root<span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-def">ALL</span><span class="cm-operator">=</span>(ALL:ALL) ALL</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Members of the admin group may gain root privileges</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">%admin <span class="cm-def">ALL</span><span class="cm-operator">=</span>(ALL) ALL</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Allow members of group sudo to execute any command</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">%sudo<span class="cm-tab" role="presentation" cm-text="	">   </span><span class="cm-def">ALL</span><span class="cm-operator">=</span>(ALL:ALL) ALL</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># See sudoers(5) for more information on "#include" directives:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">#includedir /etc/sudoers.d</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 736px;"></div><div class="CodeMirror-gutters" style="display: none; height: 736px;"></div></div></div></pre><p><span>Tudo que começar com </span><code>%</code><span> indica um grupo, por padrão temos 2 grupos definidos, o grupo </span><code>admin</code><span> e o grupo </span><code>sudo</code><span>.</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">%sudo<span class="cm-tab" role="presentation" cm-text="	">   </span>ALL=(ALL:ALL) ALL</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  │ &nbsp; &nbsp;  │ &nbsp; &nbsp;  │ &nbsp; &nbsp;  │ &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  │ &nbsp; &nbsp;  │ &nbsp; &nbsp;  │ &nbsp; &nbsp;  │</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  │ &nbsp; &nbsp;  │ &nbsp; &nbsp;  │ &nbsp; &nbsp;  └──&gt; Pode executar qualquer comando.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  │ &nbsp; &nbsp;  │ &nbsp; &nbsp;  │</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  │ &nbsp; &nbsp;  │ &nbsp; &nbsp;  └──&gt; Pode assumir qualquer usuário. </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  │ &nbsp; &nbsp;  │</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  │ &nbsp; &nbsp;  └──&gt; A partir de qualquer terminal.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  │</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  └──&gt; Nome do Grupo.</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 222px;"></div><div class="CodeMirror-gutters" style="display: none; height: 222px;"></div></div></div></pre><p><span>Para criar uma variável dentro do arquivo sudoers, usamos o comando </span><code>Cmnd_Alias NOME = &quot;VALOR&quot;</code><span>.</span></p><p>&nbsp;</p><h2><a name="who" class="md-header-anchor"></a><span>who</span></h2><p><span>Comando usado para mostrar quem está logado no momento.</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ who</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">vagrant  pts/0 &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">2021</span><span class="cm-attribute">-06-22</span> <span class="cm-number">12</span>:23 (192.168.121.1)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ who</span> <span class="cm-attribute">-H</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">NAME &nbsp; &nbsp; LINE &nbsp; &nbsp; &nbsp; &nbsp; TIME &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; COMMENT</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">vagrant  pts/0 &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">2021</span><span class="cm-attribute">-06-22</span> <span class="cm-number">12</span>:23 (192.168.121.1)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ who</span> <span class="cm-attribute">-Ha</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">NAME &nbsp; &nbsp; &nbsp; LINE &nbsp; &nbsp; &nbsp; &nbsp; TIME &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; IDLE &nbsp; &nbsp; &nbsp; &nbsp;  PID COMMENT  EXIT</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; system boot &nbsp;<span class="cm-number">2021</span><span class="cm-attribute">-06-22</span> <span class="cm-number">12</span>:20</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; run-level <span class="cm-number">5</span> &nbsp;<span class="cm-number">2021</span><span class="cm-attribute">-06-22</span> <span class="cm-number">12</span>:21</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">LOGIN &nbsp; &nbsp;  tty1 &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-number">2021</span><span class="cm-attribute">-06-22</span> <span class="cm-number">12</span>:21 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-number">623</span> <span class="cm-def">id</span><span class="cm-operator">=</span>tty1</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">vagrant &nbsp;<span class="cm-operator">+</span> pts/0 &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">2021</span><span class="cm-attribute">-06-22</span> <span class="cm-number">12</span>:23 &nbsp; . &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-number">861</span> (192.168.121.1)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 308px;"></div><div class="CodeMirror-gutters" style="display: none; height: 308px;"></div></div></div></pre><p>&nbsp;</p><h2><a name="w" class="md-header-anchor"></a><span>w</span></h2><p><span>Semelhante ao comando </span><code>who</code><span> mas ele da mais detalhes.</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">$ w</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> 18:04:56 up  5:44,  1 user,  load average: 0.00, 0.00, 0.00</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">USER &nbsp; &nbsp; TTY &nbsp; &nbsp;  FROM &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; LOGIN@ &nbsp; IDLE &nbsp; JCPU &nbsp; PCPU WHAT</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">vagrant  pts/0 &nbsp;  192.168.121.1 &nbsp;  12:23 &nbsp;  0.00s  0.95s  0.01s w</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 88px;"></div><div class="CodeMirror-gutters" style="display: none; height: 88px;"></div></div></div></pre><p>&nbsp;</p><h2><a name="last" class="md-header-anchor"></a><span>last</span></h2><p><span>Usado para mostrar o histórico de logins na máquina.</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ last</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">vagrant  pts/0 &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">192</span>.168.121.1 &nbsp;  Tue Jun <span class="cm-number">22</span> <span class="cm-number">12</span>:23 &nbsp; still logged <span class="cm-keyword">in</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">reboot &nbsp; system boot &nbsp;<span class="cm-number">5</span>.4.0-70-generic Tue Jun <span class="cm-number">22</span> <span class="cm-number">12</span>:20 &nbsp; still running</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">vagrant  pts/0 &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">192</span>.168.121.1 &nbsp;  Sun Jun <span class="cm-number">20</span> <span class="cm-number">23</span>:50 <span class="cm-attribute">-</span> <span class="cm-number">00</span>:13  (00:23)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">reboot &nbsp; system boot &nbsp;<span class="cm-number">5</span>.4.0-70-generic Sun Jun <span class="cm-number">20</span> <span class="cm-number">23</span>:50 <span class="cm-attribute">-</span> <span class="cm-number">00</span>:13  (00:23)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">reboot &nbsp; system boot &nbsp;<span class="cm-number">5</span>.4.0-70-generic Fri Apr &nbsp;<span class="cm-number">2</span> <span class="cm-number">12</span>:48 <span class="cm-attribute">-</span> <span class="cm-number">13</span>:05  (00:17)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">reboot &nbsp; system boot &nbsp;<span class="cm-number">5</span>.4.0-42-generic Fri Apr &nbsp;<span class="cm-number">2</span> <span class="cm-number">12</span>:40 <span class="cm-attribute">-</span> <span class="cm-number">12</span>:48  (00:07)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">wtmp begins Fri Apr &nbsp;<span class="cm-number">2</span> <span class="cm-number">12</span>:40:26 <span class="cm-number">2021</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Escolhendo o arquivo de log:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ last</span> <span class="cm-attribute">-f</span> wtmp.1</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Vendo os ultimos logins do usuário:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ last</span> vagrant</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">vagrant  pts/0 &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">192</span>.168.121.1 &nbsp;  Tue Jun <span class="cm-number">22</span> <span class="cm-number">12</span>:23 &nbsp; still logged <span class="cm-keyword">in</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">vagrant  pts/0 &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">192</span>.168.121.1 &nbsp;  Sun Jun <span class="cm-number">20</span> <span class="cm-number">23</span>:50 <span class="cm-attribute">-</span> <span class="cm-number">00</span>:13  (00:23)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">wtmp begins Fri Apr &nbsp;<span class="cm-number">2</span> <span class="cm-number">12</span>:40:26 <span class="cm-number">2021</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 418px;"></div><div class="CodeMirror-gutters" style="display: none; height: 418px;"></div></div></div></pre><p><span>Os logins são armazenadas no arqui </span><code>/var/log/wtmp</code><span>.</span></p><p>&nbsp;</p><h2><a name="lastb" class="md-header-anchor"></a><span>lastb</span></h2><p><span>Mostra as tentativas de logins que falharam.</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> lastb</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">btmp begins Fri Apr &nbsp;<span class="cm-number">2</span> <span class="cm-number">12</span>:32:54 <span class="cm-number">2021</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Vou tentar logar e digitar a senha errada:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> lastb</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">vagrant &nbsp;<span class="cm-builtin">ssh</span>:notty &nbsp; &nbsp;<span class="cm-number">192</span>.168.121.1 &nbsp;  Tue Jun <span class="cm-number">22</span> <span class="cm-number">18</span>:08 <span class="cm-attribute">-</span> <span class="cm-number">18</span>:08  (00:00)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">vagrant &nbsp;<span class="cm-builtin">ssh</span>:notty &nbsp; &nbsp;<span class="cm-number">192</span>.168.121.1 &nbsp;  Tue Jun <span class="cm-number">22</span> <span class="cm-number">18</span>:07 <span class="cm-attribute">-</span> <span class="cm-number">18</span>:07  (00:00)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">vagrant &nbsp;<span class="cm-builtin">ssh</span>:notty &nbsp; &nbsp;<span class="cm-number">192</span>.168.121.1 &nbsp;  Tue Jun <span class="cm-number">22</span> <span class="cm-number">18</span>:07 <span class="cm-attribute">-</span> <span class="cm-number">18</span>:07  (00:00)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">btmp begins Tue Jun <span class="cm-number">22</span> <span class="cm-number">18</span>:07:55 <span class="cm-number">2021</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># No caso, eu fiz 3 tentativas, as 3 falhadas.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Escolhendo o arquivo de log (usa o last mesmo):</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ last</span> <span class="cm-attribute">-f</span> btmp.1</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 330px;"></div><div class="CodeMirror-gutters" style="display: none; height: 330px;"></div></div></div></pre><p><span>As tentativas de logins são armazenadas no arqui </span><code>/var/log/btmp</code><span>.</span></p><p>&nbsp;</p><h2><a name="lastlog" class="md-header-anchor"></a><span>lastlog</span></h2><p><span>Mostra quando o usuário fez login pela ultima vez, mostra de todos os usuários.</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ lastlog</span> </span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Username &nbsp; &nbsp; &nbsp; &nbsp; Port &nbsp; &nbsp; From &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Latest</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">root &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">daemon &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">bin &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">sys &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">sync &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">games &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">man &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">mail &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">news &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">uucp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">proxy &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">www-data &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">backup &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">list &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">irc &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">gnats &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">nobody &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">systemd-network &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">systemd-resolve &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">systemd-timesync &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">messagebus &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">syslog &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">_apt &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">tss &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">uuidd &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">tcpdump &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">landscape &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pollinate &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">sshd &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">vagrant &nbsp; &nbsp; &nbsp; &nbsp;  pts/0 &nbsp; &nbsp;<span class="cm-number">192</span>.168.121.1 &nbsp;  Tue Jun <span class="cm-number">22</span> <span class="cm-number">12</span>:23:40 <span class="cm-operator">+</span><span class="cm-number">0000</span> <span class="cm-number">2021</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">systemd-coredump &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Never logged <span class="cm-keyword">in</span>**</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Vendo a última vez que o usuário fez login:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ lastlog</span> <span class="cm-attribute">-u</span> vagrant</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Username &nbsp; &nbsp; &nbsp; &nbsp; Port &nbsp; &nbsp; From &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Latest</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">vagrant &nbsp; &nbsp; &nbsp; &nbsp;  pts/0 &nbsp; &nbsp;<span class="cm-number">192</span>.168.121.1 &nbsp;  Tue Jun <span class="cm-number">22</span> <span class="cm-number">12</span>:23:40 <span class="cm-operator">+</span><span class="cm-number">0000</span> <span class="cm-number">2021</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 858px;"></div><div class="CodeMirror-gutters" style="display: none; height: 858px;"></div></div></div></pre><p>&nbsp;</p><h2><a name="chage" class="md-header-anchor"></a><span>chage</span></h2><p><span>Para relembrar o comando </span><code>chage</code><span>, </span><a href='../107.1/1071.html#chage'><span>clique aqui</span></a></p><p>&nbsp;</p><h2><a name="passwd" class="md-header-anchor"></a><span>passwd</span></h2><figure><table><thead><tr><th><span>Opções</span></th><th><span>Descrição</span></th></tr></thead><tbody><tr><td><span>-S </span><span>&lt;</span><span>usuário&gt;</span></td><td><span>Mostra o status do usuário. </span><br><span>P = Password, indica que tem senha. </span><br><span>NP = No Password, não tem senha.</span><br><span>L = Locked, não pode usar esse usuário.</span></td></tr><tr><td><span>-x </span><span>&lt;</span><span>number&gt;</span></td><td><span>Define o tempo em dias para expirar a senha (máximo).</span></td></tr><tr><td><span>-n </span><span>&lt;</span><span>number&gt;</span></td><td><span>Define o mínimo de dias que o usuário pode trocar a senha.</span></td></tr><tr><td><span>-w </span><span>&lt;</span><span>number&gt;</span></td><td><span>Quantos dias antes da expiração o usuário vai ser avisado.</span></td></tr><tr><td><span>-i </span><span>&lt;</span><span>number&gt;</span></td><td><span>Depois da senha ter expirado, o usuário vai ter X dias para trocar, se não trocar, a conta vai ser desativada.</span></td></tr><tr><td><span>-l username</span></td><td><span>Tranca a conta do usuário, impedindo o acesso.</span></td></tr><tr><td><span>-u username</span></td><td><span>Destranca a conta do usuário.</span></td></tr></tbody></table></figure><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Exibindo o status:</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ passwd</span> <span class="cm-attribute">-S</span> vagrant</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">vagrant P <span class="cm-number">04</span>/02/2021 <span class="cm-number">0</span> <span class="cm-number">99999</span> <span class="cm-number">7</span> <span class="cm-attribute">-1</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 66px;"></div><div class="CodeMirror-gutters" style="display: none; height: 66px;"></div></div></div></pre><p>&nbsp;</p><h2><a name="usermod" class="md-header-anchor"></a><span>usermod</span></h2><p><span>Outro comando que podemos usar para trancar a conta do usuário é o </span><code>usermod</code><span>, lembrando que, o que estamos vendo aqui, apesar de ser gerência de usuário, está voltada para segurança, como troca de senhas, inativar uma conta etc.</span></p><figure><table><thead><tr><th><span>Opções</span></th><th><span>Descrição</span></th></tr></thead><tbody><tr><td><span>-L username</span></td><td><span>Tranca uma conta.</span></td></tr><tr><td><span>-U username</span></td><td><span>Destranca a conta do usuário.</span></td></tr><tr><td><span>-e </span><span>&lt;</span><span>number&gt;</span></td><td><span>Configura uma data de expiração da conta</span></td></tr><tr><td><span>-f </span><span>&lt;</span><span>number&gt;</span></td><td><span>Depois da senha ter expirado, o usuário vai ter X dias para trocar, se não trocar, a conta vai ser desativada.</span></td></tr></tbody></table></figure><p>&nbsp;</p><h2><a name="suidsgid" class="md-header-anchor"></a><span>SUID/SGID</span></h2><p><span>O </span><code>SUID</code><span> permite que qualquer usuário rode o script/binário (no caso de scripts e binários) como se fosse o dono do script/binário que estivesse executando, dessa forma, caso esse bit especial existisse para o comando </span><code>rm</code><span>, o usuário comum poderia apagar qualquer arquivo do sistema.</span></p><p><span>O </span><code>SGID</code><span> funciona da mesma forma, mas usa a permissão do grupo do script/binário. Observe que isso é para scripts e binários, para diretórios o funcionamento é outro; somente o </span><code>sgid</code><span> se aplica a diretórios, e quando aplicado a diretórios, fará com que cada arquivo ou diretório criado herde o grupo do diretório pai.</span></p><p><span>Para relembrar, </span><a href='../104.5/1045.html#bits-especiais'><span>clique aqui</span></a><span>.</span></p><p>&nbsp;</p><p><span>Para procurar arquivos com esses bits ativos, use o comando abaixo:</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> <span class="cm-builtin">find</span> / <span class="cm-attribute">-perm</span> <span class="cm-attribute">-4000</span> <span class="cm-attribute">-ls</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">find</span>: ‘/proc/3635/task/3635/fd/6’: No such file or directory</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">find</span>: ‘/proc/3635/task/3635/fdinfo/6’: No such file or directory</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">find</span>: ‘/proc/3635/fd/5’: No such file or directory</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">find</span>: ‘/proc/3635/fdinfo/5’: No such file or directory</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-number">7871932</span> &nbsp; &nbsp; <span class="cm-number">40</span> <span class="cm-attribute">-rwsr-xr-x</span> &nbsp; <span class="cm-number">1</span> root &nbsp; &nbsp; root &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">39144</span> Mar &nbsp;<span class="cm-number">7</span> &nbsp;<span class="cm-number">2020</span> /usr/bin/fusermount</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-number">7864550</span> &nbsp; &nbsp; <span class="cm-number">68</span> <span class="cm-attribute">-rwsr-xr-x</span> &nbsp; <span class="cm-number">1</span> root &nbsp; &nbsp; root &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">68208</span> May <span class="cm-number">28</span> &nbsp;<span class="cm-number">2020</span> /usr/bin/passwd</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-number">7864368</span> &nbsp; &nbsp; <span class="cm-number">52</span> <span class="cm-attribute">-rwsr-xr-x</span> &nbsp; <span class="cm-number">1</span> root &nbsp; &nbsp; root &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">53040</span> May <span class="cm-number">28</span> &nbsp;<span class="cm-number">2020</span> /usr/bin/chsh</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-number">7867185</span> &nbsp; &nbsp; <span class="cm-number">40</span> <span class="cm-attribute">-rwsr-xr-x</span> &nbsp; <span class="cm-number">1</span> root &nbsp; &nbsp; root &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">39144</span> Jul <span class="cm-number">21</span> &nbsp;<span class="cm-number">2020</span> /usr/bin/umount</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-number">7873806</span> &nbsp; &nbsp; <span class="cm-number">32</span> <span class="cm-attribute">-rwsr-xr-x</span> &nbsp; <span class="cm-number">1</span> root &nbsp; &nbsp; root &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">31032</span> Aug <span class="cm-number">16</span> &nbsp;<span class="cm-number">2019</span> /usr/bin/pkexec</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-number">7867184</span> &nbsp; &nbsp; <span class="cm-number">56</span> <span class="cm-attribute">-rwsr-xr-x</span> &nbsp; <span class="cm-number">1</span> root &nbsp; &nbsp; root &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">55528</span> Jul <span class="cm-number">21</span> &nbsp;<span class="cm-number">2020</span> /usr/bin/mount</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-number">7873310</span> &nbsp; &nbsp; <span class="cm-number">56</span> <span class="cm-attribute">-rwsr-sr-x</span> &nbsp; <span class="cm-number">1</span> daemon &nbsp; daemon &nbsp; &nbsp; &nbsp;<span class="cm-number">55560</span> Nov <span class="cm-number">12</span> &nbsp;<span class="cm-number">2018</span> /usr/bin/at</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-number">7864537</span> &nbsp; &nbsp; <span class="cm-number">44</span> <span class="cm-attribute">-rwsr-xr-x</span> &nbsp; <span class="cm-number">1</span> root &nbsp; &nbsp; root &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">44784</span> May <span class="cm-number">28</span> &nbsp;<span class="cm-number">2020</span> /usr/bin/newgrp</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-number">7874178</span> &nbsp; &nbsp;<span class="cm-number">164</span> <span class="cm-attribute">-rwsr-xr-x</span> &nbsp; <span class="cm-number">1</span> root &nbsp; &nbsp; root &nbsp; &nbsp; &nbsp; <span class="cm-number">166056</span> Jan <span class="cm-number">19</span> <span class="cm-number">14</span>:21 /usr/bin/sudo</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-number">7864450</span> &nbsp; &nbsp; <span class="cm-number">88</span> <span class="cm-attribute">-rwsr-xr-x</span> &nbsp; <span class="cm-number">1</span> root &nbsp; &nbsp; root &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">88464</span> May <span class="cm-number">28</span> &nbsp;<span class="cm-number">2020</span> /usr/bin/gpasswd</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-number">7866971</span> &nbsp; &nbsp; <span class="cm-number">68</span> <span class="cm-attribute">-rwsr-xr-x</span> &nbsp; <span class="cm-number">1</span> root &nbsp; &nbsp; root &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">67816</span> Jul <span class="cm-number">21</span> &nbsp;<span class="cm-number">2020</span> /usr/bin/su</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-number">7864362</span> &nbsp; &nbsp; <span class="cm-number">84</span> <span class="cm-attribute">-rwsr-xr-x</span> &nbsp; <span class="cm-number">1</span> root &nbsp; &nbsp; root &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">85064</span> May <span class="cm-number">28</span> &nbsp;<span class="cm-number">2020</span> /usr/bin/chfn</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-number">7864799</span> &nbsp; &nbsp; <span class="cm-number">52</span> <span class="cm-attribute">-rwsr-xr--</span> &nbsp; <span class="cm-number">1</span> root &nbsp; &nbsp; messagebus &nbsp; &nbsp;<span class="cm-number">51344</span> Jun <span class="cm-number">11</span> &nbsp;<span class="cm-number">2020</span> /usr/lib/dbus-1.0/dbus-daemon-launch-helper</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-number">1706750</span> &nbsp; &nbsp; <span class="cm-number">24</span> <span class="cm-attribute">-rwsr-xr-x</span> &nbsp; <span class="cm-number">1</span> root &nbsp; &nbsp; root &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">22840</span> Aug <span class="cm-number">16</span> &nbsp;<span class="cm-number">2019</span> /usr/lib/policykit-1/polkit-agent-helper-1</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-number">1705697</span> &nbsp; &nbsp;<span class="cm-number">128</span> <span class="cm-attribute">-rwsr-xr-x</span> &nbsp; <span class="cm-number">1</span> root &nbsp; &nbsp; root &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-number">130152</span> Feb &nbsp;<span class="cm-number">2</span> <span class="cm-number">08</span>:21 /usr/lib/snapd/snap-confine</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-number">1576584</span> &nbsp; &nbsp;<span class="cm-number">464</span> <span class="cm-attribute">-rwsr-xr-x</span> &nbsp; <span class="cm-number">1</span> root &nbsp; &nbsp; root &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-number">473576</span> Mar &nbsp;<span class="cm-number">9</span> <span class="cm-number">14</span>:17 /usr/lib/openssh/ssh-keysign</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-number">7864809</span> &nbsp; &nbsp; <span class="cm-number">16</span> <span class="cm-attribute">-rwsr-xr-x</span> &nbsp; <span class="cm-number">1</span> root &nbsp; &nbsp; root &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">14488</span> Jul &nbsp;<span class="cm-number">8</span> &nbsp;<span class="cm-number">2019</span> /usr/lib/eject/dmcrypt-get-device</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Para ver o SGID</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> <span class="cm-builtin">find</span> / <span class="cm-attribute">-perm</span> <span class="cm-attribute">-2000</span> <span class="cm-attribute">-ls</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Ou para ver os dois:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> <span class="cm-builtin">find</span> / <span class="cm-attribute">-perm</span> <span class="cm-attribute">-4000</span> <span class="cm-attribute">-o</span> <span class="cm-attribute">-perm</span> <span class="cm-attribute">-2000</span> <span class="cm-attribute">-ls</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Procurar arquivos que não tenham nenhum usuário:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> <span class="cm-builtin">find</span> / <span class="cm-attribute">-path</span> /proc <span class="cm-attribute">-prune</span> <span class="cm-attribute">-o</span> <span class="cm-attribute">-nouser</span> <span class="cm-attribute">-ls</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-number">4328915</span> &nbsp; &nbsp; &nbsp;<span class="cm-number">4</span> drwxr-xr-x &nbsp; <span class="cm-number">3</span> <span class="cm-number">62803</span> &nbsp; &nbsp;<span class="cm-number">62803</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">4096</span> Jun <span class="cm-number">22</span> <span class="cm-number">18</span>:36 /var/cache/private/fwupdmgr</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-number">4328968</span> &nbsp; &nbsp; &nbsp;<span class="cm-number">4</span> drwxr-xr-x &nbsp; <span class="cm-number">2</span> <span class="cm-number">62803</span> &nbsp; &nbsp;<span class="cm-number">62803</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">4096</span> Jun <span class="cm-number">22</span> <span class="cm-number">18</span>:36 /var/cache/private/fwupdmgr/fwupd</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-number">4328969</span> &nbsp; &nbsp;<span class="cm-number">612</span> <span class="cm-attribute">-rw-r--r--</span> &nbsp; <span class="cm-number">1</span> <span class="cm-number">62803</span> &nbsp; &nbsp;<span class="cm-number">62803</span> &nbsp; &nbsp; &nbsp;<span class="cm-number">622980</span> Jun <span class="cm-number">22</span> <span class="cm-number">18</span>:36 /var/cache/private/fwupdmgr/fwupd/lvfs-metadata.xml.gz</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-number">4328970</span> &nbsp; &nbsp; &nbsp;<span class="cm-number">4</span> <span class="cm-attribute">-rw-r--r--</span> &nbsp; <span class="cm-number">1</span> <span class="cm-number">62803</span> &nbsp; &nbsp;<span class="cm-number">62803</span> &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-number">488</span> Jun <span class="cm-number">22</span> <span class="cm-number">18</span>:36 /var/cache/private/fwupdmgr/fwupd/lvfs-metadata.xml.gz.asc</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 968px;"></div><div class="CodeMirror-gutters" style="display: none; height: 968px;"></div></div></div></pre><p>&nbsp;</p><h2><a name="ulimit" class="md-header-anchor"></a><span>ulimit</span></h2><p><span>Usado para controlar o que o usuário pode fazer com recursos dado a ele na máquina, dessa forma conseguimos criar um controle até mesmo no que o usuário tem permissão para fazer. Os limites definidos aqui são vão servidor para a sessão atual, para configurar isso de forma definitiva, usamos o arquivo </span><code>/etc/security/limits.conf</code><span>.</span></p><figure><table><thead><tr><th><span>Opção</span></th><th><span>Descrição</span></th></tr></thead><tbody><tr><td><span>-a</span></td><td><span>Mostra todos os limites atuais reportados</span></td></tr><tr><td><span>-u</span></td><td><span>Mostra o número máximo de processos que o usuário pode ter.</span></td></tr><tr><td><span>-H</span></td><td><span>Usa limite Hard</span></td></tr><tr><td><span>-S</span></td><td><span>Usa limite soft</span></td></tr></tbody></table></figure><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Listando todos os limites:</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ ulimit</span> <span class="cm-attribute">-a</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">core file size &nbsp; &nbsp; &nbsp; &nbsp;  (blocks, <span class="cm-attribute">-c</span>) <span class="cm-number">0</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">data seg size &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (kbytes, <span class="cm-attribute">-d</span>) unlimited</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">scheduling priority &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (-e) <span class="cm-number">0</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">file size &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (blocks, <span class="cm-attribute">-f</span>) unlimited</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pending signals &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (-i) <span class="cm-number">7601</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">max locked memory &nbsp; &nbsp; &nbsp; (kbytes, <span class="cm-attribute">-l</span>) <span class="cm-number">65536</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">max memory size &nbsp; &nbsp; &nbsp; &nbsp; (kbytes, <span class="cm-attribute">-m</span>) unlimited</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">open files &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  (-n) <span class="cm-number">1024</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pipe size &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  (512 bytes, <span class="cm-attribute">-p</span>) <span class="cm-number">8</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">POSIX message queues &nbsp; &nbsp; (bytes, <span class="cm-attribute">-q</span>) <span class="cm-number">819200</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">real-time priority &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  (-r) <span class="cm-number">0</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">stack size &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  (kbytes, <span class="cm-attribute">-s</span>) <span class="cm-number">8192</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">cpu time &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (seconds, <span class="cm-attribute">-t</span>) unlimited</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">max user processes &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  (-u) <span class="cm-number">7601</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">virtual memory &nbsp; &nbsp; &nbsp; &nbsp;  (kbytes, <span class="cm-attribute">-v</span>) unlimited</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">file locks &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  (-x) unlimited</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Configurando o limite máximo de processos:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">\# ulimit <span class="cm-attribute">-Hu</span> <span class="cm-number">10000</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">#### Para configurar definitivamente, segue um exemplo abaixo:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">username<span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span>tipo<span class="cm-tab" role="presentation" cm-text="	">    </span>item<span class="cm-tab" role="presentation" cm-text="	">    </span>valor</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">#### tipo pode ser: hard ou soft.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">#### Para 'item' veja em 'man limits.conf'.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Vamos fazer um exemplo:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">vagrant<span class="cm-tab" role="presentation" cm-text="	"> </span><span class="cm-tab" role="presentation" cm-text="	">    </span>soft<span class="cm-tab" role="presentation" cm-text="	">    </span>nofile<span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-number">1000</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">vagrant<span class="cm-tab" role="presentation" cm-text="	"> </span><span class="cm-tab" role="presentation" cm-text="	">    </span>hard<span class="cm-tab" role="presentation" cm-text="	">    </span>nofile<span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-number">2000</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Ao deslogar e logar de novo, já teremos os limites aplicados.</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 754px;"></div><div class="CodeMirror-gutters" style="display: none; height: 754px;"></div></div></div></pre><p>&nbsp;</p><h2><a name="netstat-ou-ss" class="md-header-anchor"></a><span>netstat ou ss</span></h2><p><a href='../109.3/1093.html#ss'><span>Veja aqui</span></a><span>.</span></p><p>&nbsp;</p><h2><a name="lsoft" class="md-header-anchor"></a><span>lsoft</span></h2><p><span>Lista os arquivos abertos, só que no Linux, conexões sao armazenadas em arquivos, os arquivos de sockets, então nós também podemos ver as conexões com esse comando, além de ver qualquer outro arquivo que esteja  aberto.</span></p><figure><table><thead><tr><th><span>Opção</span></th><th><span>Descrição</span></th></tr></thead><tbody><tr><td><span>-u </span><span>&lt;</span><span>username&gt;</span></td><td><span>Lista os arquivos do usuário.</span></td></tr><tr><td><span>-i</span></td><td><span>Mostra as conexões de rede.</span></td></tr></tbody></table></figure><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Listando os arquivos abertos pelo usuário vagrant:</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ lsof</span> <span class="cm-attribute">-u</span> vagrant | head <span class="cm-attribute">-5</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lsof: WARNING: can<span class="cm-string">'t stat() tracefs file system /sys/kernel/debug/tracing</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  Output information may be incomplete.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">COMMAND &nbsp; PID &nbsp;  USER &nbsp; FD &nbsp; &nbsp;  TYPE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DEVICE SIZE/OFF &nbsp; &nbsp; &nbsp; NODE NAME</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">systemd &nbsp; <span class="cm-number">878</span> vagrant  cwd &nbsp; &nbsp; &nbsp; DIR &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">252</span>,3 &nbsp; &nbsp; <span class="cm-number">4096</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">2</span> /</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">systemd &nbsp; <span class="cm-number">878</span> vagrant  rtd &nbsp; &nbsp; &nbsp; DIR &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">252</span>,3 &nbsp; &nbsp; <span class="cm-number">4096</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">2</span> /</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">systemd &nbsp; <span class="cm-number">878</span> vagrant  txt &nbsp; &nbsp; &nbsp; REG &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">252</span>,3 &nbsp;<span class="cm-number">1620224</span> &nbsp; &nbsp;<span class="cm-number">7867979</span> /usr/lib/systemd/systemd</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">systemd &nbsp; <span class="cm-number">878</span> vagrant  mem &nbsp; &nbsp; &nbsp; REG &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">252</span>,3 &nbsp;<span class="cm-number">1369352</span> &nbsp; &nbsp;<span class="cm-number">7867465</span> /usr/lib/x86_64-linux-gnu/libm-2.31.so</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Vendo as conexões de rede estabelecidas:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ lsof</span> <span class="cm-attribute">-i</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">COMMAND &nbsp; &nbsp; PID &nbsp; USER &nbsp; FD &nbsp; TYPE DEVICE SIZE/OFF NODE NAME</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">mosh-clie <span class="cm-number">10802</span> vagrant &nbsp; 14u  IPv4 <span class="cm-number">811695</span> &nbsp; &nbsp;  0t0  UDP *:52506 </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">signal-de <span class="cm-number">13427</span> vagrant &nbsp; 40u  IPv4 <span class="cm-number">479911</span> &nbsp; &nbsp;  0t0  TCP ubuntu:42158-&gt;ac88393aca5853df7.awsglobalaccelerator.com:https (ESTABLISHED)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">signal-de <span class="cm-number">13427</span> vagrant  128u  IPv4 <span class="cm-number">813439</span> &nbsp; &nbsp;  0t0  TCP ubuntu:40408-&gt;65.8.214.66:https (ESTABLISHED)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">signal-de <span class="cm-number">13427</span> vagrant  172u  IPv4 <span class="cm-number">813449</span> &nbsp; &nbsp;  0t0  TCP ubuntu:40418-&gt;65.8.214.66:https (ESTABLISHED)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">signal-de <span class="cm-number">13427</span> vagrant  174u  IPv4 <span class="cm-number">813450</span> &nbsp; &nbsp;  0t0  TCP ubuntu:40420-&gt;65.8.214.66:https (ESTABLISHED)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">firefox &nbsp; <span class="cm-number">21495</span> vagrant &nbsp; 43u  IPv4 <span class="cm-number">812268</span> &nbsp; &nbsp;  0t0  TCP ubuntu:58866-&gt;149.154.175.209:https (ESTABLISHED)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">firefox &nbsp; <span class="cm-number">21495</span> vagrant &nbsp; 54u  IPv4 <span class="cm-number">749147</span> &nbsp; &nbsp;  0t0  TCP ubuntu:57190-&gt;149.154.175.209:https (ESTABLISHED)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Listando uma porta especifica:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ lsof</span> <span class="cm-attribute">-i</span> :22</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">COMMAND &nbsp; PID &nbsp; USER &nbsp; FD &nbsp; TYPE DEVICE SIZE/OFF NODE NAME</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">ssh</span> &nbsp; &nbsp; <span class="cm-number">39693</span> bsilva &nbsp;  3u  IPv4 <span class="cm-number">505052</span> &nbsp; &nbsp;  0t0  TCP krypton:45604-&gt;192.168.121.52:ssh (ESTABLISHED)</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 748px;"></div><div class="CodeMirror-gutters" style="display: none; height: 748px;"></div></div></div></pre><p>&nbsp;</p><h2><a name="nmap" class="md-header-anchor"></a><span>nmap</span></h2><p><span>O Nmap (“Network Mapper”) é uma ferramenta de código aberto para exploração de rede e auditoria de segurança. Ela foi desenhada para escanear rapidamente redes amplas, embora também funcione muito bem contra hosts individuais. O Nmap utiliza pacotes IP em estado bruto (raw) de maneira inovadora para determinar quais hosts estão disponíveis na rede, quais serviços (nome da aplicação e versão) os hosts oferecem, quais sistemas operacionais (e versões de SO) eles estão executando, que tipos de filtro de pacotes/firewalls estão em uso, e dezenas de outras características. Embora o Nmap seja normalmente utilizado para auditorias de segurança, muitos administradores de sistemas e rede consideram-no útil para tarefas rotineiras tais como inventário de rede, gerenciamento de serviços de atualização agendados, e monitoramento de host ou disponibilidade de serviço.</span></p><figure><table><thead><tr><th><span>Opção</span></th><th><span>Descrição</span></th></tr></thead><tbody><tr><td><span>-O</span></td><td><span>Mostra o sistema operacional</span></td></tr><tr><td><span>-sU</span></td><td><span>Faz busca usando UDP.</span></td></tr><tr><td><span>-sT</span></td><td><span>Faz buscas usando TCP.</span></td></tr></tbody></table></figure><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ nmap</span> localhost</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Starting Nmap <span class="cm-number">7</span>.80 ( https://nmap.org ) at <span class="cm-number">2021</span><span class="cm-attribute">-06-22</span> <span class="cm-number">20</span>:24 UTC</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Nmap scan report <span class="cm-keyword">for</span> localhost (127.0.0.1)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Host is up (0.000064s latency).</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Other addresses <span class="cm-keyword">for</span> localhost (not scanned): ::1</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Not shown: <span class="cm-number">999</span> closed ports</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">PORT &nbsp; STATE SERVICE</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-number">22</span>/tcp open &nbsp;<span class="cm-builtin">ssh</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Nmap <span class="cm-keyword">done</span>: <span class="cm-number">1</span> IP address (1 host up) scanned <span class="cm-keyword">in</span> <span class="cm-number">0</span>.05 seconds</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Verificando o S.O.:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> nmap <span class="cm-attribute">-O</span> localhost</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Starting Nmap <span class="cm-number">7</span>.80 ( https://nmap.org ) at <span class="cm-number">2021</span><span class="cm-attribute">-06-22</span> <span class="cm-number">20</span>:26 UTC</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Nmap scan report <span class="cm-keyword">for</span> localhost (127.0.0.1)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Host is up (0.000094s latency).</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Other addresses <span class="cm-keyword">for</span> localhost (not scanned): ::1</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Not shown: <span class="cm-number">999</span> closed ports</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">PORT &nbsp; STATE SERVICE</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-number">22</span>/tcp open &nbsp;<span class="cm-builtin">ssh</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Device type: general purpose</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Running: Linux <span class="cm-number">2</span>.6.X</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">OS CPE: cpe:/o:linux:linux_kernel:2.6.32</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">OS details: Linux <span class="cm-number">2</span>.6.32</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Network Distance: <span class="cm-number">0</span> hops</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Nmap <span class="cm-keyword">done</span>: <span class="cm-number">1</span> IP address (1 host up) scanned <span class="cm-keyword">in</span> <span class="cm-number">1</span>.66 seconds</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 616px;"></div><div class="CodeMirror-gutters" style="display: none; height: 616px;"></div></div></div></pre><p>&nbsp;</p><h2><a name="fuser" class="md-header-anchor"></a><span>fuser</span></h2><p><span>Retorna qual processo está usando uma determinada porta.</span></p><p>&nbsp;</p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> fuser <span class="cm-number">22</span>/tcp</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-number">22</span>/tcp: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">625</span> &nbsp; <span class="cm-number">861</span> &nbsp; <span class="cm-number">955</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Verificando o nome do dono do processo:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> fuser <span class="cm-attribute">-u</span> <span class="cm-number">22</span>/tcp</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-number">22</span>/tcp: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">625</span>(root) &nbsp; <span class="cm-number">861</span>(root) &nbsp; <span class="cm-number">955</span>(vagrant)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Usando verbose:</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">$ sudo</span> fuser <span class="cm-attribute">-vu</span> <span class="cm-number">22</span>/tcp</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; USER &nbsp; &nbsp; &nbsp;  PID ACCESS COMMAND</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-number">22</span>/tcp: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  root &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">625</span> F.... (root)sshd</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; root &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">861</span> F.... (root)sshd</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; vagrant &nbsp; &nbsp; <span class="cm-number">955</span> F.... (vagrant)sshd</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 286px;"></div><div class="CodeMirror-gutters" style="display: none; height: 286px;"></div></div></div></pre><p>&nbsp;</p><p><a href='../109.4/1094.html'><span>Voltar</span></a>
+<a href='../110.2/1102.html'><span>Próximo</span></a><span> </span>
+<a href='../main.html'><span>Índice Geral</span></a></p></div>
+</body>
+</html>
