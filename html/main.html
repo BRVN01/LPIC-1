@@ -2,7 +2,8 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>main</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
 .mac-os-11 { --title-bar-height:28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
@@ -66,7 +67,7 @@ div.hr:focus { cursor: none; }
 #write pre.ty-contain-cm { white-space: normal; }
 .CodeMirror-gutters { margin-right: 4px; }
 .md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
-.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
 #write .md-fences.mock-cm { white-space: pre-wrap; }
 .md-fences.md-fences-with-lineno { padding-left: 0px; }
 #write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
@@ -91,6 +92,7 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
   .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
   .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
@@ -137,11 +139,12 @@ code { text-align: left; vertical-align: initial; }
 a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
 .md-inline-math .MathJax_SVG .noError { display: none !important; }
 .html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
-.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.md-fences-math .MathJax_SVG_Display, .md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: visible; display: block !important; }
 .MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
 .MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
 .MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
-.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; zoom: 90%; }
+#math-inline-preview-content { zoom: 1.1; }
 .MathJax_SVG * { transition: none 0s ease 0s; }
 .MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
@@ -154,7 +157,8 @@ iframe { max-width: 100%; width: 100%; border: none; }
 .highlight td, .highlight tr { border: 0px; }
 mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
 .md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
-mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
 @media print {
   .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
 }
@@ -162,6 +166,50 @@ mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
 .md-diagram-panel .start-state { fill: var(--node-fill); }
 .md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
 .md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-math .MathJax_SVG_Display { margin-top: 8px; cursor: default; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
 
 
 /* Alterado por mim 01/08/2020 */
@@ -1199,14 +1247,14 @@ table {
 
 
 
-</style>
+</style><title>main</title>
 </head>
-<body class='typora-export'>
-<div id='write'  class=''><h1><a name="indice" class="md-header-anchor"></a><span>Indice</span></h1><h2><a name="site-da-lpic-1" class="md-header-anchor"></a><span>Site da LPIC-1</span></h2><p><a href='https://www.lpi.org/pt/our-certifications/exam-101-objectives'><span>Objetivos da LPIC-1 - Oficial</span></a>
-<a href='https://wiki.lpi.org/wiki/LPIC-1_Summary_Version_4.0_To_5.0'><span>Mudanças da Versão 4 para a versão 5 - Oficial</span></a></p><h2><a name="treinamentos" class="md-header-anchor"></a><span>Treinamentos</span></h2><p><a href='https://www.theurbanpenguin.com/lpi-training-from-theurbanpenguin/lpic-1-linux-server-professional/'><span>Treinamento de graça - 1</span></a>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='indice'><span>Indice</span></h1><h2 id='site-da-lpic-1'><span>Site da LPIC-1</span></h2><p><a href='https://www.lpi.org/pt/our-certifications/exam-101-objectives'><span>Objetivos da LPIC-1 - Oficial</span></a>
+<a href='https://wiki.lpi.org/wiki/LPIC-1_Summary_Version_4.0_To_5.0'><span>Mudanças da Versão 4 para a versão 5 - Oficial</span></a></p><h2 id='treinamentos'><span>Treinamentos</span></h2><p><a href='https://www.theurbanpenguin.com/lpi-training-from-theurbanpenguin/lpic-1-linux-server-professional/'><span>Treinamento de graça - 1</span></a>
 <a href='https://learning.lpi.org/en/learning-materials/101-500/'><span>Treinamento de graça - 101 - Oficial</span></a>
-<a href='https://learning.lpi.org/en/learning-materials/102-500/'><span>Treinamento de graça - 102 - Oficial</span></a></p><h2><a name="simulados" class="md-header-anchor"></a><span>Simulados</span></h2><p><a href='https://www.memrise.com/course/1236058/lpic-1-lpi-101-lx0-103/'><span>Simulado prova 101</span></a>
-<a href='https://www.memrise.com/course/1435778/lpic-1-lpi-102-lx0-104/'><span>Simulado prova 102</span></a></p><p>&nbsp;</p><h4><a name="simulados-lpi-101lx0-103" class="md-header-anchor"></a><span>Simulados LPI-101/LX0-103</span></h4><p><strong><span>1- Arquitetura de Sistema:</span></strong>
+<a href='https://learning.lpi.org/en/learning-materials/102-500/'><span>Treinamento de graça - 102 - Oficial</span></a></p><h2 id='simulados'><span>Simulados</span></h2><p><a href='https://www.memrise.com/course/1236058/lpic-1-lpi-101-lx0-103/'><span>Simulado prova 101</span></a>
+<a href='https://www.memrise.com/course/1435778/lpic-1-lpi-102-lx0-104/'><span>Simulado prova 102</span></a></p><p>&nbsp;</p><h4 id='simulados-lpi-101lx0-103'><span>Simulados LPI-101/LX0-103</span></h4><p><strong><span>1- Arquitetura de Sistema:</span></strong>
 <a href='https://www.proprofs.com/quiz-school/story.php?title=otmxndiwob3g&amp;fbclid=IwAR32H6SW4-EASUEqtkobwi404yR75QJwrlW290ONa4z2KfFujFwbZUuw-WA'><span>Simulado 1</span></a>
 <a href='https://www.proprofs.com/quiz-school/story.php?title=lpi-101-arquitetura-de-sistema-2-marcus-vinicius-braga-alcantara&amp;fbclid=IwAR0UMq2d8PH4dIliMVv9YVfpM4IY7VaWnhPIvpE86m1iQd_graWAMDgUEWs'><span>Simulado 2</span></a></p><p><strong><span>2- Instalação e Gerenciamento de Pacotes:</span></strong>
 <a href='https://www.proprofs.com/quiz-school/story.php?title=lpi-101-instalao-e-gerenciamento-de-pacotes-marcus-vincius-braga-alcntara&amp;fbclid=IwAR11NvLLalajPkK4ns1WrBrvQnaa0Np91fgA1CzcXOgtFYadKYzYrpn3o90'><span>Simulado 1</span></a>
@@ -1217,7 +1265,7 @@ table {
 <a href='https://www.proprofs.com/quiz-school/story.php?title=lpi-101-comandos-gnulinux-4-marcus-vinicius-braga-alcantara&amp;fbclid=IwAR1q1ChSPLJwErgFtEaf1pUvvciz1YjuzngWNj0SLAiN04jrWrM11FEybNE'><span>Simulado 4</span></a>
 <strong><span>4- Devices, Linux Filesystems, FHS:</span></strong>
 <a href='https://www.proprofs.com/quiz-school/story.php?title=lpi-101-devices-linux-filesystems-fhs-marcus-vincius-braga-alcntara&amp;fbclid=IwAR2CXfdHQv0dsZGJ36yt7wPDmRAADav_6QZJgrGtxz_HVEb80hxbBBJICi8'><span>Simulado 1</span></a>
-<a href='https://www.proprofs.com/quiz-school/story.php?title=lpi-101-devices-linux-filesystems-fhs-2-marcus-vinicius-braga-alcantara&amp;fbclid=IwAR0YVcHQvscabJZTVvuPCIcz0uHZFBCy_sh3qQ7-2GzzZ9Tz51yc0HiXlXM'><span>Simulado 2</span></a></p><p>&nbsp;</p><h4><a name="simulados-lpi-102lx0-104" class="md-header-anchor"></a><span>Simulados LPI-102/LX0-104</span></h4><p><strong><span>1- Shells, Scripting and Data Management</span></strong>
+<a href='https://www.proprofs.com/quiz-school/story.php?title=lpi-101-devices-linux-filesystems-fhs-2-marcus-vinicius-braga-alcantara&amp;fbclid=IwAR0YVcHQvscabJZTVvuPCIcz0uHZFBCy_sh3qQ7-2GzzZ9Tz51yc0HiXlXM'><span>Simulado 2</span></a></p><p>&nbsp;</p><h4 id='simulados-lpi-102lx0-104'><span>Simulados LPI-102/LX0-104</span></h4><p><strong><span>1- Shells, Scripting and Data Management</span></strong>
 <a href='https://www.proprofs.com/quiz-school/story.php?title=lpi-102-shells-scripting-and-data-management&amp;fbclid=IwAR0JbQ4ouwUrQ564VamXzksEPmoDh76lIS3udYiEaF1ydt60EoCc-Uk5tfI'><span>Simulado 1</span></a>
 <a href='https://www.proprofs.com/quiz-school/story.php?title=lpi-102-shells-scripting-and-data-management-2-marcus-vinicius-braga-alcantara&amp;fbclid=IwAR11NvLLalajPkK4ns1WrBrvQnaa0Np91fgA1CzcXOgtFYadKYzYrpn3o90'><span>Simulado 2</span></a>
 <strong><span>2- Interfaces de usuário e Desktops:</span></strong>
@@ -1233,7 +1281,7 @@ table {
 <a href='https://www.proprofs.com/quiz-school/story.php?title=untitled-quizlpi-102-fundamentos-de-rede-2-marcus-vincius-braga-alcntara&amp;fbclid=IwAR0JbQ4ouwUrQ564VamXzksEPmoDh76lIS3udYiEaF1ydt60EoCc-Uk5tfI'><span>Simulado 2</span></a>
 <strong><span>6- Segurança:</span></strong>
 <a href='https://www.proprofs.com/quiz-school/story.php?title=lpi-102-segurana&amp;fbclid=IwAR1xeRdlHBBucKE3zLNOiVMlj17_2-4VHBmGVi5UKN7yDghdq7AXGcKwAMU'><span>Simulado 1</span></a>
-<a href='https://www.proprofs.com/quiz-school/story.php?title=lpi-102-segurana-2-marcus-vincius-braga-alcntara&amp;fbclid=IwAR3Z8lOQkuOjyS7jQ4sBzqPVV93SrRg6f0-2OfJRT5bQGxrfKGj3d3GyfZw'><span>Simulado 2</span></a></p><h2><a name="conteúdo-para-estudo" class="md-header-anchor"></a><span>Conteúdo para estudo</span></h2><p><a href='intro.html'><span>Introdução</span></a></p><p><strong><span>103: Comandos GNU e Unix</span></strong></p><p><span>		</span><a href='103.1/1031.html'><span>103.1 - Trabalhando na linha de comando</span></a>
+<a href='https://www.proprofs.com/quiz-school/story.php?title=lpi-102-segurana-2-marcus-vincius-braga-alcntara&amp;fbclid=IwAR3Z8lOQkuOjyS7jQ4sBzqPVV93SrRg6f0-2OfJRT5bQGxrfKGj3d3GyfZw'><span>Simulado 2</span></a></p><h2 id='conteúdo-para-estudo'><span>Conteúdo para estudo</span></h2><p><a href='intro.html'><span>Introdução</span></a></p><p><strong><span>103: Comandos GNU e Unix</span></strong></p><p><span>		</span><a href='103.1/1031.html'><span>103.1 - Trabalhando na linha de comando</span></a>
 <span>​</span><span>		</span><a href='103.2/1032.html'><span>103.2 - Processar fluxo de texto usando filtro</span></a>
 <span>​</span><span>		</span><a href='103.3/1033.html'><span>103.3 - Realizar o Gerenciamento Básico de Arquivos</span></a>
 <span>​</span><span>		</span><a href='103.4/1034.html'><span>103.4 Usar Streams, pipes e redirecionadores</span></a>
@@ -1252,6 +1300,6 @@ table {
 <span>​</span><span>		</span><a href='104.3/1043.html'><span>104.3 Controlando a Montagem e Desmontagem de FileSystem </span></a>
 <span>​</span><span>		</span><a href='104.5/1045.html'><span>104.5 Grenciando Permissões e Propriedade </span></a>
 <span>​</span><span>		</span><a href='104.6/1046.html'><span>104.6 Gerenciando Links no Linux </span></a>
-<span>​</span><span>		</span><a href='104.7/1047.html'><span>104.7 Encontrando Arquivos e seus lugares </span></a></p><p><strong><span>105 Shell e Shell Scripting</span></strong></p><p><span>		</span><a href='105.1/1051.html'><span>105.1 Customizando e usando Ambiente Shell </span></a></p><p><strong><span>106 Interface de Usuário e Desktop</span></strong></p><p><span>		</span><a href='106.1/1061.html'><span>106.1 Instalar e Configurar o X11 </span></a></p><p><span>		</span><a href='106.2/1062.html'><span>106.2 Não fiz </span></a></p><p><span>		</span><a href='106.3/1063.html'><span>106.3 Não fiz </span></a></p><p><strong><span>107 Tarefas Administrativas</span></strong></p><p><span>		</span><a href='107.1/1071.html'><span>107.1 Gerenciamento de usuários e grupos </span></a></p><p><span>		</span><a href='107.2/1072.html'><span>107.2 Agendamento de tarefas </span></a></p><p><span>		</span><a href='107.3/1073.html'><span>107.3 Localização e Internacionalização </span></a></p><p><strong><span>108 Serviços Essenciais do Sistema</span></strong></p><p><span>		</span><a href='108.1/1081.html'><span>108.1 Manutenção do Horário do Sistema </span></a></p><p><span>		</span><a href='108.2/1082.html'><span>108.2 Sistema de Logs </span></a></p><p><span>		</span><a href='108.3/1083.html'><span>108.3 Básico sobre E-mail </span></a></p><p><span>		</span><a href='108.4/1084.html'><span>108.4 Gerenciamento de Impressora </span></a></p><p><strong><span>109 Fundamentos de Redes</span></strong></p><p><span>		</span><a href='109.1/1091.html'><span>109.1 Fundamentos de Protocolos da Internet </span></a></p><p><span>		</span><a href='109.2/1092.html'><span>109.2 Configuração Persistente de Rede </span></a></p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></div>
+<span>​</span><span>		</span><a href='104.7/1047.html'><span>104.7 Encontrando Arquivos e seus lugares </span></a></p><p><strong><span>105 Shell e Shell Scripting</span></strong></p><p><span>		</span><a href='105.1/1051.html'><span>105.1 Customizando e usando Ambiente Shell </span></a></p><p><strong><span>106 Interface de Usuário e Desktop</span></strong></p><p><span>		</span><a href='106.1/1061.html'><span>106.1 Instalar e Configurar o X11 </span></a></p><p><span>		</span><a href='106.2/1062.html'><span>106.2 Não fiz </span></a></p><p><span>		</span><a href='106.3/1063.html'><span>106.3 Não fiz </span></a></p><p><strong><span>107 Tarefas Administrativas</span></strong></p><p><span>		</span><a href='107.1/1071.html'><span>107.1 Gerenciamento de usuários e grupos </span></a></p><p><span>		</span><a href='107.2/1072.html'><span>107.2 Agendamento de tarefas </span></a></p><p><span>		</span><a href='107.3/1073.html'><span>107.3 Localização e Internacionalização </span></a></p><p><strong><span>108 Serviços Essenciais do Sistema</span></strong></p><p><span>		</span><a href='108.1/1081.html'><span>108.1 Manutenção do Horário do Sistema </span></a></p><p><span>		</span><a href='108.2/1082.html'><span>108.2 Sistema de Logs </span></a></p><p><span>		</span><a href='108.3/1083.html'><span>108.3 Básico sobre E-mail </span></a></p><p><span>		</span><a href='108.4/1084.html'><span>108.4 Gerenciamento de Impressora </span></a></p><p><strong><span>109 Fundamentos de Redes</span></strong></p><p><span>		</span><a href='109.1/1091.html'><span>109.1 Fundamentos de Protocolos da Internet </span></a></p><p><span>		</span><a href='109.2/1092.html'><span>109.2 Configuração Persistente de Rede </span></a></p><p><span>		</span><a href='109.3/1093.html'><span>109.3 Resolução de problemas de Rede </span></a></p><p><span>		</span><a href='109.4/1094.html'><span>109.4 Configuração de cliente DNS </span></a></p><p><strong><span>110 Segurança</span></strong></p><p><span>		</span><a href='110.1/1101.html'><span>110.1 Realizar tarefas de Segurança </span></a></p><p><span>		</span><a href='110.2/1102.html'><span>110.2 Configurar Segurança do Host </span></a></p><p><span>		</span><a href='110.3/1103.html'><span>110.3 Protegendo dados com Encriptação </span></a></p><p>&nbsp;</p></div></div>
 </body>
 </html>
