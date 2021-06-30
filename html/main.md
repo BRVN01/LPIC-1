@@ -138,9 +138,15 @@ Conteúdo para estudo
 
 ​		[109.2 Configuração Persistente de Rede ](109.2/1092.html)
 
+​		[109.3 Resolução de problemas de Rede ](109.3/1093.html)
 
+​		[109.4 Configuração de cliente DNS ](109.4/1094.html)
 
+**110 Segurança**
 
+​		[110.1 Realizar tarefas de Segurança ](110.1/1101.html)
 
+​		[110.2 Configurar Segurança do Host ](110.2/1102.html)
 
+​		[110.3 Protegendo dados com Encriptação ](110.3/1103.html)
 
